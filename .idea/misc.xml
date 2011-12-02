@@ -17,6 +17,9 @@
     <option name="myUseUcmModel" value="true" />
   </component>
   <component name="CppTools.Loader" reportImplicitCastToBool="false" reportNameReferencedOnce="false" version="3" compilerSelect="AUTO" />
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
   <component name="IdProvider" IDEtalkID="087968260CFDE26123419E334E9893A5" />
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" />

@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Bluetooth SPP Test</string>
+    <string name="table_header">Accelerometer Data</string>
+    <string-array
+            name="sensor_accuracy">
+        <item>unreliable</item>
+        <item>low</item>
+        <item>medium</item>
+        <item>high</item>
+    </string-array>
+
 </resources>
