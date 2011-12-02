@@ -1,11 +1,13 @@
 package de.widemeadows.android.bluetoothspptest;
 
 import android.app.Activity;
+import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.widget.TextView;
 import org.jetbrains.annotations.NotNull;
 
@@ -55,15 +57,27 @@ public class MainActivity extends Activity implements SensorEventListener
 	@NotNull
 	private TextView textViewAccuracy;
 
+	/**
+	 * Der {@link PowerManager.WakeLock}, der das Handy wach hält
+	 */
+	@NotNull
+	private PowerManager.WakeLock wakeLock;
+	
 	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
 
+	    // Sensoren beziehen
 	    sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
 	    accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
+	    // Wake lock beziehen
+	    final PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+	    wakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "do_not_turn_off");
+
+		// UI-Elemente beziehen
 	    setContentView(R.layout.main);
 	    textViewX = (TextView)findViewById(R.id.textViewX);
 	    textViewY = (TextView) findViewById(R.id.textViewY);
@@ -74,12 +88,14 @@ public class MainActivity extends Activity implements SensorEventListener
 	@Override
 	protected void onResume() {
 		super.onResume();
+		wakeLock.acquire();
 		sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL);
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
+		wakeLock.release();
 		sensorManager.unregisterListener(this);
 	}
 
