@@ -1,6 +1,9 @@
 package de.widemeadows.android.bluetoothspptest;
 
 import android.app.Activity;
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothSocket;
 import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -8,10 +11,15 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.PowerManager;
+import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
+import java.io.IOException;
 import java.text.DecimalFormat;
+import java.util.UUID;
 
 public class MainActivity extends Activity implements SensorEventListener
 {
@@ -62,12 +70,37 @@ public class MainActivity extends Activity implements SensorEventListener
 	 */
 	@NotNull
 	private PowerManager.WakeLock wakeLock;
-	
+
+	/**
+	 * The BluetoothAdapter is the gateway to all bluetooth functions *
+	 */
+	@Nullable
+	private BluetoothAdapter bluetoothAdapter = null;
+
+	/**
+	 * Das externe Bluetooth-Gerät, das unsere Anfragen empfängt
+	 */
+	@Nullable
+	private BluetoothDevice bluetoothDevice = null;
+
+	/**
+	 * Die MAC-Adresse der Zielhardware
+	 */
+	@NotNull
+	private static final String targetMac = "00:16:38:3A:3B:A8";
+
 	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+
+	    // UI-Elemente beziehen
+	    setContentView(R.layout.main);
+	    textViewX = (TextView) findViewById(R.id.textViewX);
+	    textViewY = (TextView) findViewById(R.id.textViewY);
+	    textViewZ = (TextView) findViewById(R.id.textViewZ);
+	    textViewAccuracy = (TextView) findViewById(R.id.textViewAccuracy);
 
 	    // Sensoren beziehen
 	    sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -77,12 +110,38 @@ public class MainActivity extends Activity implements SensorEventListener
 	    final PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
 	    wakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "do_not_turn_off");
 
-		// UI-Elemente beziehen
-	    setContentView(R.layout.main);
-	    textViewX = (TextView)findViewById(R.id.textViewX);
-	    textViewY = (TextView) findViewById(R.id.textViewY);
-	    textViewZ = (TextView) findViewById(R.id.textViewZ);
-	    textViewAccuracy = (TextView) findViewById(R.id.textViewAccuracy);
+	    // Bluetooth-Adapter beziehen
+	    bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+		if (bluetoothAdapter == null) {
+			Toast.makeText(this, "Bluetooth nicht verfügbar", Toast.LENGTH_LONG);
+			return;
+		}
+
+		// Mit Gerät verbinden
+	    bluetoothDevice = bluetoothAdapter.getRemoteDevice(targetMac);
+	    if (bluetoothDevice == null) {
+		    Toast.makeText(this, "Konnte nicht mit Gerät verbinden", Toast.LENGTH_LONG);
+		    return;
+	    }
+
+	    // Gerätesuche beenden
+	    bluetoothAdapter.cancelDiscovery();
+	    try {
+		    Log.w(this.toString(), "Erzeuge Socket ...");
+		    BluetoothSocket socket = bluetoothDevice.createRfcommSocketToServiceRecord(UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"));
+		    if (socket != null) {
+			    Log.w(this.toString(), "Sende an Socket ...");
+			    socket.connect();
+			    socket.getOutputStream().write("<Test> What could possibly go wrong? </Test>".getBytes());
+			    socket.close();
+			    Log.w(this.toString(), "Gesendet.");
+		    }
+		    else {
+			    Log.w(this.toString(), "Bluetooth Socket nicht erzeugt!");
+		    }
+	    } catch (IOException e) {
+		    e.printStackTrace();
+	    }
     }
 
 	@Override
