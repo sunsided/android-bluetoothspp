@@ -1,9 +1,6 @@
 package de.widemeadows.android.bluetoothspptest;
 
 import android.app.Activity;
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothSocket;
 import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -11,15 +8,10 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.PowerManager;
-import android.util.Log;
 import android.widget.TextView;
-import android.widget.Toast;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
-import java.io.IOException;
 import java.text.DecimalFormat;
-import java.util.UUID;
 
 public class MainActivity extends Activity implements SensorEventListener
 {
@@ -72,18 +64,6 @@ public class MainActivity extends Activity implements SensorEventListener
 	private PowerManager.WakeLock wakeLock;
 
 	/**
-	 * The BluetoothAdapter is the gateway to all bluetooth functions *
-	 */
-	@Nullable
-	private BluetoothAdapter bluetoothAdapter = null;
-
-	/**
-	 * Das externe Bluetooth-Gerät, das unsere Anfragen empfängt
-	 */
-	@Nullable
-	private BluetoothDevice bluetoothDevice = null;
-
-	/**
 	 * Die MAC-Adresse der Zielhardware
 	 */
 	@NotNull
@@ -109,39 +89,6 @@ public class MainActivity extends Activity implements SensorEventListener
 	    // Wake lock beziehen
 	    final PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
 	    wakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "do_not_turn_off");
-
-	    // Bluetooth-Adapter beziehen
-	    bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-		if (bluetoothAdapter == null) {
-			Toast.makeText(this, "Bluetooth nicht verfügbar", Toast.LENGTH_LONG);
-			return;
-		}
-
-		// Mit Gerät verbinden
-	    bluetoothDevice = bluetoothAdapter.getRemoteDevice(targetMac);
-	    if (bluetoothDevice == null) {
-		    Toast.makeText(this, "Konnte nicht mit Gerät verbinden", Toast.LENGTH_LONG);
-		    return;
-	    }
-
-	    // Gerätesuche beenden
-	    bluetoothAdapter.cancelDiscovery();
-	    try {
-		    Log.w(this.toString(), "Erzeuge Socket ...");
-		    BluetoothSocket socket = bluetoothDevice.createRfcommSocketToServiceRecord(UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"));
-		    if (socket != null) {
-			    Log.w(this.toString(), "Sende an Socket ...");
-			    socket.connect();
-			    socket.getOutputStream().write("<Test> What could possibly go wrong? </Test>".getBytes());
-			    socket.close();
-			    Log.w(this.toString(), "Gesendet.");
-		    }
-		    else {
-			    Log.w(this.toString(), "Bluetooth Socket nicht erzeugt!");
-		    }
-	    } catch (IOException e) {
-		    e.printStackTrace();
-	    }
     }
 
 	@Override
