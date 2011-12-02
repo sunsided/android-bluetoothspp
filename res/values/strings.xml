@@ -10,4 +10,8 @@
         <item>high</item>
     </string-array>
 
+    <string name="no_bluetooth_modem">Bluetooth nicht verfügbar</string>
+    <string name="bluetooth_enabled">Bluetooth aktiviert</string>
+    <string name="bluetooth_not_enabled">Bluetooth nicht aktiviert</string>
+
 </resources>

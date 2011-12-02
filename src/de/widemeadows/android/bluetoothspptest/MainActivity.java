@@ -2,6 +2,7 @@ package de.widemeadows.android.bluetoothspptest;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -89,13 +90,23 @@ public class MainActivity extends Activity implements SensorEventListener
 	    // Wake lock beziehen
 	    final PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
 	    wakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "do_not_turn_off");
+
+	    // Bluetooth initialisieren
+	    BluetoothService.initialize(getApplicationContext());
     }
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+		BluetoothService.requestEnableBluetooth(this);
+	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
 		wakeLock.acquire();
 		sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+		BluetoothService.registerBroadcastReceiver(this);
 	}
 
 	@Override
@@ -103,6 +114,7 @@ public class MainActivity extends Activity implements SensorEventListener
 		super.onPause();
 		wakeLock.release();
 		sensorManager.unregisterListener(this);
+		BluetoothService.unregisterBroadcastReceiver(this);
 	}
 
 	@Override
@@ -126,6 +138,26 @@ public class MainActivity extends Activity implements SensorEventListener
 		}
 		catch(Exception e) {
 			textViewAccuracy.setText(Integer.toString(accuracy));
+		}
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		switch (requestCode) {
+			case IntentRequestCodes.BT_REQUEST_ENABLE: {
+				/*
+				if (resultCode == Activity.RESULT_OK)
+					Toast.makeText(this, R.string.bluetooth_enabled, Toast.LENGTH_SHORT).show();
+				else if (resultCode == Activity.RESULT_CANCELED)
+					Toast.makeText(this, R.string.bluetooth_not_enabled, Toast.LENGTH_SHORT).show();
+				*/
+				break;
+			}
+
+			default: {
+				super.onActivityResult(requestCode, resultCode, data);
+				break;
+			}
 		}
 	}
 }
