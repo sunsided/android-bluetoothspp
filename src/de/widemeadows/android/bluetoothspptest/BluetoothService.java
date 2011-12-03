@@ -2,6 +2,7 @@ package de.widemeadows.android.bluetoothspptest;
 
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -231,6 +232,24 @@ public final class BluetoothService {
 			@Override
 			public void run() {
 				eventReceiver.bluetoothDisabled();
+			}
+		});
+	}
+
+	/**
+	 * Verbindet mit dem angegeben Gerät
+	 * @param macAddress Die MAC-Adresse
+	 */
+	public static void connectToDevice(@NotNull final String macAddress) {
+		assert eventReceiver != null;
+
+		BluetoothDevice device = btAdapter.getRemoteDevice(macAddress);
+		final String deviceName = device.getName();
+
+		eventReceiverHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				eventReceiver.connectedTo(deviceName == null ? "unnamed" : deviceName, macAddress);
 			}
 		});
 	}

@@ -3,6 +3,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:padding="10dp"
     >
     <TextView
             android:layout_width="fill_parent"
@@ -14,7 +15,7 @@
     <TableLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:paddingBottom="10dp"
         >
 
         <TableRow
@@ -99,7 +100,7 @@
     <TableLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:paddingBottom="10dp"
             >
 
         <TableRow>
@@ -125,10 +126,26 @@
                     android:paddingRight="10dp"
                     android:gravity="right"
                     android:textStyle="bold"
-                    android:text="@string/table_row_connected"
+                    android:text="@string/table_row_target"
                     />
             <TextView
-                    android:id="@+id/textViewConnected"
+                    android:id="@+id/textViewTarget"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/value_na"
+                    />
+        </TableRow>
+        <TableRow>
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:text="@string/table_row_connection"
+                    />
+            <TextView
+                    android:id="@+id/textViewConnection"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/value_na"

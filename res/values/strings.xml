@@ -9,7 +9,8 @@
 
     <string name="table_header_bluetooth">Bluetooth</string>
     <string name="table_row_state">State:</string>
-    <string name="table_row_connected">Connected:</string>
+    <string name="table_row_target">Target:</string>
+    <string name="table_row_connection">Connection:</string>
 
     <string name="value_na">n/a</string>
     <string name="value_no">no</string>
@@ -29,5 +30,13 @@
     <string name="no_bluetooth_modem">Bluetooth not available</string>
     <string name="bluetooth_enabled">Bluetooth activated</string>
     <string name="bluetooth_not_enabled">Bluetooth deactivated</string>
+
+    <string name="scanning">scanning for devices...</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
 
 </resources>

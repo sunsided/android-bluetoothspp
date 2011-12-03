@@ -142,20 +142,6 @@ public class MainActivity extends Activity implements SensorEventListener, IBlue
 		}
 	}
 
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		switch (requestCode) {
-			case IntentRequestCodes.BT_REQUEST_ENABLE: {
-				break;
-			}
-
-			default: {
-				super.onActivityResult(requestCode, resultCode, data);
-				break;
-			}
-		}
-	}
-
 	/**
 	 * Bluetooth wird aktiviert
 	 */
@@ -174,6 +160,10 @@ public class MainActivity extends Activity implements SensorEventListener, IBlue
 
 		// Text setzen
 		((TextView) findViewById(R.id.textViewState)).setText(R.string.value_enabled);
+
+		// Gerät suchen
+		Intent serverIntent = new Intent(this, DeviceListActivity.class);
+		startActivityForResult(serverIntent, IntentRequestCodes.BT_SELECT_DEVICE);
 	}
 
 	/**
@@ -194,5 +184,44 @@ public class MainActivity extends Activity implements SensorEventListener, IBlue
 
 		// Text setzen
 		((TextView) findViewById(R.id.textViewState)).setText(R.string.value_disabled);
+		((TextView) findViewById(R.id.textViewTarget)).setText(R.string.value_na);
+	}
+
+	/**
+	 * Bluetooth verbunden mit einem Gerät
+	 *
+	 * @param name    Der Name des Gerätes
+	 * @param address Die MAC-Adresse des Gerätes
+	 */
+	@Override
+	public void connectedTo(@NotNull String name, @NotNull String address) {
+		((TextView)findViewById(R.id.textViewTarget)).setText(name + " (" + address + ")");
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		switch (requestCode) {
+			case IntentRequestCodes.BT_REQUEST_ENABLE: {
+				if (BluetoothService.bluetoothEnabled()) {
+					bluetoothEnabled();
+				}
+				break;
+			}
+
+			case IntentRequestCodes.BT_SELECT_DEVICE: {
+				if (resultCode == Activity.RESULT_OK) {
+					// Get the device MAC address
+					String address = data.getExtras().getString(DeviceListActivity.EXTRA_DEVICE_ADDRESS);
+
+					// Und verbinden
+					BluetoothService.connectToDevice(address);
+				}
+			}
+
+			default: {
+				super.onActivityResult(requestCode, resultCode, data);
+				break;
+			}
+		}
 	}
 }
