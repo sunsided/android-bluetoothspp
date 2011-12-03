@@ -68,6 +68,12 @@ public final class BluetoothService {
 	private static IBluetoothServiceEventReceiver eventReceiver;
 
 	/**
+	 * Handler für den event receiver
+	 */
+	@NotNull
+	private final static Handler eventReceiverHandler = new Handler();
+
+	/**
 	 * Initialisiert Bluetooth.
 	 *
 	 * <p/>
@@ -141,6 +147,21 @@ public final class BluetoothService {
 					int lastState = intent.getIntExtra(BluetoothAdapter.EXTRA_PREVIOUS_STATE, -1);
 
 					Log.v(TAG, "Bluetooth state change received: " + lastState + " --> " + currentState);
+					switch(currentState) {
+						case BluetoothAdapter.STATE_TURNING_ON:
+							onBluetoothEnabling();
+							break;
+						case BluetoothAdapter.STATE_ON:
+							onBluetoothEnabled();
+							break;
+						case BluetoothAdapter.STATE_TURNING_OFF:
+							onBluetoothDisabling();
+							break;
+						case BluetoothAdapter.STATE_OFF:
+							onBluetoothDisabled();
+							break;
+					}
+
 					if (currentState == BluetoothAdapter.STATE_ON)
 						onBluetoothEnabled();
 					if (currentState == BluetoothAdapter.STATE_TURNING_OFF)
@@ -165,10 +186,22 @@ public final class BluetoothService {
 	/**
 	 * Wird gerufen, wenn Bluetooth aktiviert wird
 	 */
+	private static void onBluetoothEnabling() {
+		assert eventReceiver != null;
+		eventReceiverHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				eventReceiver.bluetoothEnabling();
+			}
+		});
+	}
+
+	/**
+	 * Wird gerufen, wenn Bluetooth aktiviert wird
+	 */
 	private static void onBluetoothEnabled() {
-		Toast.makeText(applicationContext, R.string.bluetooth_enabled, Toast.LENGTH_SHORT).show();
-		Handler handler = new Handler();
-		handler.post(new Runnable() {
+		assert eventReceiver != null;
+		eventReceiverHandler.post(new Runnable() {
 			@Override
 			public void run() {
 				eventReceiver.bluetoothEnabled();
@@ -180,9 +213,21 @@ public final class BluetoothService {
 	 * Wird gerufen, wenn Bluetooth aktiviert wurde
 	 */
 	private static void onBluetoothDisabling() {
-		Toast.makeText(applicationContext, R.string.bluetooth_not_enabled, Toast.LENGTH_SHORT).show();
-		Handler handler = new Handler();
-		handler.post(new Runnable() {
+		assert eventReceiver != null;
+		eventReceiverHandler.post(new Runnable() {
+			@Override
+			public void run() {
+				eventReceiver.bluetoothDisabling();
+			}
+		});
+	}
+
+	/**
+	 * Wird gerufen, wenn Bluetooth aktiviert wurde
+	 */
+	private static void onBluetoothDisabled() {
+		assert eventReceiver != null;
+		eventReceiverHandler.post(new Runnable() {
 			@Override
 			public void run() {
 				eventReceiver.bluetoothDisabled();
