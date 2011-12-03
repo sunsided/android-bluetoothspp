@@ -10,11 +10,12 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.widget.TextView;
+import android.widget.Toast;
 import org.jetbrains.annotations.NotNull;
 
 import java.text.DecimalFormat;
 
-public class MainActivity extends Activity implements SensorEventListener
+public class MainActivity extends Activity implements SensorEventListener, IBluetoothServiceEventReceiver
 {
 	/**
 	 * Ausgabeformat für Dezimalzahlen
@@ -89,10 +90,10 @@ public class MainActivity extends Activity implements SensorEventListener
 
 	    // Wake lock beziehen
 	    final PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
-	    wakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "do_not_turn_off");
+	    wakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK | PowerManager.ON_AFTER_RELEASE, "do_not_turn_off");
 
 	    // Bluetooth initialisieren
-	    BluetoothService.initialize(getApplicationContext());
+	    BluetoothService.initialize(getApplicationContext(), this);
     }
 
 	@Override
@@ -145,12 +146,6 @@ public class MainActivity extends Activity implements SensorEventListener
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		switch (requestCode) {
 			case IntentRequestCodes.BT_REQUEST_ENABLE: {
-				/*
-				if (resultCode == Activity.RESULT_OK)
-					Toast.makeText(this, R.string.bluetooth_enabled, Toast.LENGTH_SHORT).show();
-				else if (resultCode == Activity.RESULT_CANCELED)
-					Toast.makeText(this, R.string.bluetooth_not_enabled, Toast.LENGTH_SHORT).show();
-				*/
 				break;
 			}
 
@@ -159,5 +154,45 @@ public class MainActivity extends Activity implements SensorEventListener
 				break;
 			}
 		}
+	}
+
+	/**
+	 * Bluetooth wird aktiviert
+	 */
+	@Override
+	public void bluetoothEnabling() {
+		// Text setzen
+		((TextView) findViewById(R.id.textViewState)).setText(R.string.value_enabling);
+	}
+
+	/**
+	 * Bluetooth wurde aktiviert
+	 */
+	@Override
+	public void bluetoothEnabled() {
+		Toast.makeText(this, R.string.bluetooth_enabled, Toast.LENGTH_SHORT).show();
+
+		// Text setzen
+		((TextView) findViewById(R.id.textViewState)).setText(R.string.value_enabled);
+	}
+
+	/**
+	 * Bluetooth wird deaktiviert
+	 */
+	@Override
+	public void bluetoothDisabling() {
+		// Text setzen
+		((TextView) findViewById(R.id.textViewState)).setText(R.string.value_disabling);
+	}
+
+	/**
+	 * Bluetooth wurde deaktiviert
+	 */
+	@Override
+	public void bluetoothDisabled() {
+		Toast.makeText(this, R.string.bluetooth_not_enabled, Toast.LENGTH_SHORT).show();
+
+		// Text setzen
+		((TextView) findViewById(R.id.textViewState)).setText(R.string.value_disabled);
 	}
 }

@@ -7,7 +7,7 @@
     <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/table_header"
+            android:text="@string/table_header_accelerometer"
             android:textAppearance="@android:style/TextAppearance.Medium"
             android:textStyle="bold"
             />
@@ -26,13 +26,13 @@
                     android:paddingRight="10dp"
                     android:gravity="right"
                     android:textStyle="bold"
-                    android:text="Accuracy:"
+                    android:text="@string/table_row_accuracy"
                     />
             <TextView
                     android:id="@+id/textViewAccuracy"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="n/a"
+                    android:text="@string/value_na"
                     />
         </TableRow>
 
@@ -43,13 +43,13 @@
                     android:paddingRight="10dp"
                     android:gravity="right"
                     android:textStyle="bold"
-                    android:text="X:"
+                    android:text="@string/table_row_x"
                     />
             <TextView
                     android:id="@+id/textViewX"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="n/a"
+                    android:text="@string/value_na"
                     />
         </TableRow>
 
@@ -60,13 +60,13 @@
                     android:paddingRight="10dp"
                     android:gravity="right"
                     android:textStyle="bold"
-                    android:text="Y:"
+                    android:text="@string/table_row_y"
                     />
             <TextView
                 android:id="@+id/textViewY"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="n/a"
+                android:text="@string/value_na"
                 />
         </TableRow>
 
@@ -77,15 +77,64 @@
                     android:paddingRight="10dp"
                     android:gravity="right"
                     android:textStyle="bold"
-                    android:text="Z:"
+                    android:text="@string/table_row_z"
                     />
             <TextView
                 android:id="@+id/textViewZ"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="n/a"
+                android:text="@string/value_na"
                 />
         </TableRow>
+    </TableLayout>
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/table_header_bluetooth"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textStyle="bold"
+            />
+
+    <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+
+        <TableRow>
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:text="@string/table_row_state"
+                    />
+            <TextView
+                    android:id="@+id/textViewState"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/value_na"
+                    />
+        </TableRow>
+        <TableRow>
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:text="@string/table_row_connected"
+                    />
+            <TextView
+                    android:id="@+id/textViewConnected"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/value_na"
+                    />
+        </TableRow>
+
     </TableLayout>
 </LinearLayout>
 

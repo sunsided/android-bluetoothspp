@@ -6,6 +6,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Handler;
+import android.util.Log;
 import android.widget.Toast;
 import org.jetbrains.annotations.NotNull;
 
@@ -17,6 +19,12 @@ import java.util.UUID;
  */
 public final class BluetoothService {
 
+	/**
+	 * Das Logging-Tag
+	 */
+	@NotNull
+	private static final String TAG = "BluetoothService";
+	
 	/**
 	 * UUID für SPP-Protokoll
 	 */
@@ -55,6 +63,11 @@ public final class BluetoothService {
 	private static BluetoothAdapter btAdapter;
 
 	/**
+	 * Der Event-Receiver
+	 */
+	private static IBluetoothServiceEventReceiver eventReceiver;
+
+	/**
 	 * Initialisiert Bluetooth.
 	 *
 	 * <p/>
@@ -65,7 +78,9 @@ public final class BluetoothService {
 	 * @return <code>true</code>, wenn der Service erfolgreich initialisiert wurde (oder bereits initialisiert war)<br/>
 	 *         <code>false</code>, wenn bei der Initialisierung ein Fehler auftrat
 	 */
-	public static synchronized boolean initialize(@NotNull Context applicationContext) {
+	public static synchronized boolean initialize(@NotNull Context applicationContext, @NotNull IBluetoothServiceEventReceiver eventReceiver) {
+		BluetoothService.eventReceiver = eventReceiver;
+
 		if (initialized) return true;
 		BluetoothService.applicationContext = applicationContext;
 
@@ -101,12 +116,15 @@ public final class BluetoothService {
 
 	/**
 	 * Fordert das Aktivieren von Bluetooth an
+	 *
+	 * @return <code>false</code>, wenn Bluetooth schon aktiviert war
 	 */
-	public static void requestEnableBluetooth(@NotNull Activity activity) {
-		if (bluetoothEnabled()) return;
+	public static boolean requestEnableBluetooth(@NotNull Activity activity) {
+		if (bluetoothEnabled()) return false;
 
 		Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
 		activity.startActivityForResult(enableIntent, IntentRequestCodes.BT_REQUEST_ENABLE);
+		return true;
 	}
 
 	/**
@@ -120,7 +138,9 @@ public final class BluetoothService {
 				public void onReceive(Context context, Intent intent) {
 
 					int currentState = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE, -1);
-					if (currentState == -1) return; // TODO: Fehler!
+					int lastState = intent.getIntExtra(BluetoothAdapter.EXTRA_PREVIOUS_STATE, -1);
+
+					Log.v(TAG, "Bluetooth state change received: " + lastState + " --> " + currentState);
 					if (currentState == BluetoothAdapter.STATE_ON)
 						onBluetoothEnabled();
 					if (currentState == BluetoothAdapter.STATE_TURNING_OFF)
@@ -147,6 +167,13 @@ public final class BluetoothService {
 	 */
 	private static void onBluetoothEnabled() {
 		Toast.makeText(applicationContext, R.string.bluetooth_enabled, Toast.LENGTH_SHORT).show();
+		Handler handler = new Handler();
+		handler.post(new Runnable() {
+			@Override
+			public void run() {
+				eventReceiver.bluetoothEnabled();
+			}
+		});
 	}
 
 	/**
@@ -154,5 +181,12 @@ public final class BluetoothService {
 	 */
 	private static void onBluetoothDisabling() {
 		Toast.makeText(applicationContext, R.string.bluetooth_not_enabled, Toast.LENGTH_SHORT).show();
+		Handler handler = new Handler();
+		handler.post(new Runnable() {
+			@Override
+			public void run() {
+				eventReceiver.bluetoothDisabled();
+			}
+		});
 	}
 }

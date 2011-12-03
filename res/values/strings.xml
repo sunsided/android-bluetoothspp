@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Bluetooth SPP Test</string>
-    <string name="table_header">Accelerometer Data</string>
+    <string name="table_header_accelerometer">Accelerometer Data</string>
+    <string name="table_row_x">X:</string>
+    <string name="table_row_y">Y:</string>
+    <string name="table_row_z">Z:</string>
+    <string name="table_row_accuracy">Accuracy:</string>
+
+    <string name="table_header_bluetooth">Bluetooth</string>
+    <string name="table_row_state">State:</string>
+    <string name="table_row_connected">Connected:</string>
+
+    <string name="value_na">n/a</string>
+    <string name="value_no">no</string>
+    <string name="value_yes">yes</string>
+    <string name="value_enabling">enabling ...</string>
+    <string name="value_enabled">enabled</string>
+    <string name="value_disabling">disabling ...</string>
+    <string name="value_disabled">disabled</string>
     <string-array
             name="sensor_accuracy">
         <item>unreliable</item>
@@ -10,8 +26,8 @@
         <item>high</item>
     </string-array>
 
-    <string name="no_bluetooth_modem">Bluetooth nicht verfügbar</string>
-    <string name="bluetooth_enabled">Bluetooth aktiviert</string>
-    <string name="bluetooth_not_enabled">Bluetooth nicht aktiviert</string>
+    <string name="no_bluetooth_modem">Bluetooth not available</string>
+    <string name="bluetooth_enabled">Bluetooth activated</string>
+    <string name="bluetooth_not_enabled">Bluetooth deactivated</string>
 
 </resources>
