@@ -9,6 +9,9 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.PowerManager;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 import org.jetbrains.annotations.NotNull;
@@ -162,6 +165,13 @@ public class MainActivity extends Activity implements SensorEventListener, IBlue
 		((TextView) findViewById(R.id.textViewState)).setText(R.string.value_enabled);
 
 		// Gerät suchen
+		startSearchDeviceIntent();
+	}
+
+	/**
+	 * Sucht nach einem Bluetooth-Gerät zum Verbinden
+	 */
+	private void startSearchDeviceIntent() {
 		Intent serverIntent = new Intent(this, DeviceListActivity.class);
 		startActivityForResult(serverIntent, IntentRequestCodes.BT_SELECT_DEVICE);
 	}
@@ -223,5 +233,32 @@ public class MainActivity extends Activity implements SensorEventListener, IBlue
 				break;
 			}
 		}
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		if (BluetoothService.bluetoothAvailable()) {
+			MenuInflater inflater = getMenuInflater();
+			inflater.inflate(R.menu.option_menu, menu);
+			return true;
+		}
+		return super.onCreateOptionsMenu(menu);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case R.id.scan:
+				
+				if (!BluetoothService.bluetoothEnabled()) {
+					BluetoothService.requestEnableBluetooth(this);
+					return true;
+				}
+				
+				// Gerät suchen
+				startSearchDeviceIntent();
+				return true;
+		}
+		return false;
 	}
 }
