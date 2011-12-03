@@ -69,10 +69,19 @@ public class MainActivity extends Activity implements SensorEventListener, IBlue
 	private PowerManager.WakeLock wakeLock;
 
 	/**
-	 * Die MAC-Adresse der Zielhardware
+	 * Letzte Beschleunigung in X-Richtung
 	 */
-	@NotNull
-	private static final String targetMac = "00:16:38:3A:3B:A8";
+	float lastXAcceleration = 0;
+
+	/**
+	 * Letzte Beschleunigung in Y-Richtung
+	 */
+	float lastYAcceleration = 0;
+
+	/**
+	 * Letzte Beschleunigung in Z-Richtung
+	 */
+	float lastZAcceleration = 0;
 
 	/** Called when the activity is first created. */
     @Override
@@ -102,14 +111,16 @@ public class MainActivity extends Activity implements SensorEventListener, IBlue
 	@Override
 	protected void onStart() {
 		super.onStart();
-		BluetoothService.requestEnableBluetooth(this);
+		if (!BluetoothService.requestEnableBluetooth(this)) {
+			bluetoothEnabled();
+		}
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
 		wakeLock.acquire();
-		sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+		sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_GAME);
 		BluetoothService.registerBroadcastReceiver(this);
 	}
 
@@ -119,6 +130,7 @@ public class MainActivity extends Activity implements SensorEventListener, IBlue
 		wakeLock.release();
 		sensorManager.unregisterListener(this);
 		BluetoothService.unregisterBroadcastReceiver(this);
+		BluetoothService.disconnect();
 	}
 
 	@Override
@@ -129,9 +141,25 @@ public class MainActivity extends Activity implements SensorEventListener, IBlue
 		final float y = sensorEvent.values[1];
 		final float z = sensorEvent.values[2];
 
+		if (x == lastXAcceleration || y == lastYAcceleration || z == lastZAcceleration) {
+			return;
+		}
+
+		// Werte setzen
+		lastXAcceleration = x;
+		lastYAcceleration = y;
+		lastZAcceleration = z;
+
+		// Text anzeigen
 		textViewX.setText(df.format(x));
 		textViewY.setText(df.format(y));
 		textViewZ.setText(df.format(z));
+
+		// an Ziel senden
+		if (BluetoothService.isConnected()) {
+			BluetoothService.sendToTarget(df.format(x) + "; " + df.format(y) + "; " + df.format(z));
+		}
+
 	}
 
 	@Override

@@ -3,6 +3,7 @@ package de.widemeadows.android.bluetoothspptest;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothSocket;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -11,7 +12,9 @@ import android.os.Handler;
 import android.util.Log;
 import android.widget.Toast;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
+import java.io.*;
 import java.util.UUID;
 
 /**
@@ -75,6 +78,30 @@ public final class BluetoothService {
 	private final static Handler eventReceiverHandler = new Handler();
 
 	/**
+	 * Das verbundene Gerät
+	 */
+	@Nullable
+	private static BluetoothDevice connectedDevice;
+
+	/**
+	 * Der Socket des verbundenen Gerätes
+	 */
+	@Nullable
+	private static BluetoothSocket connectedSocket;
+
+	/**
+	 * Der Ausgabestream
+	 */
+	@Nullable
+	private static BufferedOutputStream outputStream;
+
+	/**
+	 * Der Eingabestream
+	 */
+	@Nullable
+	private static BufferedInputStream inputStream;
+
+	/**
 	 * Initialisiert Bluetooth.
 	 *
 	 * <p/>
@@ -108,7 +135,7 @@ public final class BluetoothService {
 	 *
 	 * @return <code>true</code>, wenn Bluetooth prinzipiell vorhanden ist.
 	 */
-	public static boolean bluetoothAvailable() {
+	public static synchronized boolean bluetoothAvailable() {
 		return btAdapter != null;
 	}
 
@@ -117,7 +144,7 @@ public final class BluetoothService {
 	 *
 	 * @return <code>true</code>, wenn Bluetooth aktiviert ist
 	 */
-	public static boolean bluetoothEnabled() {
+	public static synchronized boolean bluetoothEnabled() {
 		return btAdapter != null && btAdapter.isEnabled();
 	}
 
@@ -126,7 +153,7 @@ public final class BluetoothService {
 	 *
 	 * @return <code>false</code>, wenn Bluetooth schon aktiviert war
 	 */
-	public static boolean requestEnableBluetooth(@NotNull Activity activity) {
+	public static synchronized boolean requestEnableBluetooth(@NotNull Activity activity) {
 		if (bluetoothEnabled()) return false;
 
 		Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
@@ -138,7 +165,7 @@ public final class BluetoothService {
 	 * Registriert den Broadcast-Receiver
 	 * @param activity Die Activity
 	 */
-	public static void registerBroadcastReceiver(@NotNull final Activity activity) {
+	public static synchronized void registerBroadcastReceiver(@NotNull final Activity activity) {
 		if (broadcastReceiver == null) {
 			broadcastReceiver = new BroadcastReceiver() {
 				@Override
@@ -179,7 +206,7 @@ public final class BluetoothService {
 	 * Deregistriert den Broadcast-Receiver
 	 * @param activity Die Activity
 	 */
-	public static void unregisterBroadcastReceiver(@NotNull Activity activity) {
+	public static synchronized void unregisterBroadcastReceiver(@NotNull Activity activity) {
 		if (broadcastReceiver == null) return;
 		activity.unregisterReceiver(broadcastReceiver);
 	}
@@ -187,7 +214,7 @@ public final class BluetoothService {
 	/**
 	 * Wird gerufen, wenn Bluetooth aktiviert wird
 	 */
-	private static void onBluetoothEnabling() {
+	private static synchronized void onBluetoothEnabling() {
 		assert eventReceiver != null;
 		eventReceiverHandler.post(new Runnable() {
 			@Override
@@ -200,7 +227,7 @@ public final class BluetoothService {
 	/**
 	 * Wird gerufen, wenn Bluetooth aktiviert wird
 	 */
-	private static void onBluetoothEnabled() {
+	private static synchronized void onBluetoothEnabled() {
 		assert eventReceiver != null;
 		eventReceiverHandler.post(new Runnable() {
 			@Override
@@ -213,7 +240,7 @@ public final class BluetoothService {
 	/**
 	 * Wird gerufen, wenn Bluetooth aktiviert wurde
 	 */
-	private static void onBluetoothDisabling() {
+	private static synchronized void onBluetoothDisabling() {
 		assert eventReceiver != null;
 		eventReceiverHandler.post(new Runnable() {
 			@Override
@@ -226,7 +253,7 @@ public final class BluetoothService {
 	/**
 	 * Wird gerufen, wenn Bluetooth aktiviert wurde
 	 */
-	private static void onBluetoothDisabled() {
+	private static synchronized void onBluetoothDisabled() {
 		assert eventReceiver != null;
 		eventReceiverHandler.post(new Runnable() {
 			@Override
@@ -240,17 +267,158 @@ public final class BluetoothService {
 	 * Verbindet mit dem angegeben Gerät
 	 * @param macAddress Die MAC-Adresse
 	 */
-	public static void connectToDevice(@NotNull final String macAddress) {
+	public static synchronized void connectToDevice(@NotNull final String macAddress) {
 		assert eventReceiver != null;
 
-		BluetoothDevice device = btAdapter.getRemoteDevice(macAddress);
-		final String deviceName = device.getName();
+		// Alte Verbindung trennen
+		disconnect();
 
+		// Bezieht das Gerät
+		BluetoothDevice device = btAdapter.getRemoteDevice(macAddress);
+		Log.i(TAG, "Bluetooth-Gerät ausgewählt: " + device.getName() + "; " + device.getAddress());
+		connectedDevice = device;
+
+		// Benachrichtigung senden
+		final String deviceName = device.getName();
 		eventReceiverHandler.post(new Runnable() {
 			@Override
 			public void run() {
 				eventReceiver.connectedTo(deviceName == null ? "unnamed" : deviceName, macAddress);
 			}
 		});
+		
+		// Socket aufbauen
+		try {
+			BluetoothSocket socket = device.createRfcommSocketToServiceRecord(uuidSpp);
+			connectedSocket = socket;
+			if (socket == null) {
+				Log.e(TAG, "Konnte Bluetooth-Socket nicht erzeugen!"); // TODO: An UI weitergeben!
+				return;
+			}
+
+			// Wenn wir discovern - abbrechen
+			if (btAdapter.isDiscovering()) btAdapter.cancelDiscovery();
+
+			// Verbinden
+			try {
+				Log.i(TAG, "Connecting Socket to " + device.getName()); // TODO: An UI weitergeben!
+				socket.connect();
+			}
+			catch (IOException e) {
+				Log.e(TAG, "Konnte Verbindung nicht herstellen.", e); // TODO: An UI weitergeben!
+				return;
+			}
+
+			// Ausgabestream besorgen
+			try {
+				InputStream realInputStream = socket.getInputStream();
+				if (realInputStream == null) {
+					Log.e(TAG, "Konnte Input-Stream nicht erzeugen"); // TODO: An UI weitergeben!
+					return;
+				}
+				inputStream = new BufferedInputStream(realInputStream);
+			} catch (IOException e) {
+				Log.e(TAG, "Konnte Input-Stream nicht erzeugen", e); // TODO: An UI weitergeben!
+				return;
+			}
+
+			// Ausgabestream besorgen
+			try {
+				OutputStream realOutputStream = socket.getOutputStream();
+				if (realOutputStream  == null) {
+					Log.e(TAG, "Konnte Output-Stream nicht erzeugen"); // TODO: An UI weitergeben!
+					return;
+				}
+				outputStream = new BufferedOutputStream(realOutputStream);
+			} catch (IOException e) {
+				Log.e(TAG, "Konnte Output-Stream nicht erzeugen", e); // TODO: An UI weitergeben!
+				return;
+			}
+
+			// Sync senden
+			sendSyncMessage();
+
+		} catch (IOException e) {
+			e.printStackTrace(); // TODO: An UI weitergeben!
+		} catch (NullPointerException e) {
+			Log.e(TAG, "Nullreferenz-Ausnahmefehler!", e); // TODO: An UI weitergeben!
+		}
+	}
+
+	/**
+	 * Trennt die Verbindung
+	 */
+	public static synchronized void disconnect() {
+
+		// Ausgabestream schließen
+		if (outputStream != null) try {
+			outputStream.flush();
+			outputStream.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (NullPointerException e) {
+		}
+		outputStream = null;
+
+		// Eingabestream schließen
+		if (inputStream != null) try {
+			inputStream.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (NullPointerException e) {
+		}
+		inputStream = null;
+
+		// Eingabestream schließen
+		if (connectedSocket != null) try {
+			connectedSocket.getOutputStream().close();
+			connectedSocket.getInputStream().close();
+			connectedSocket.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (NullPointerException e) {
+		}
+		connectedSocket = null;
+
+		// Gerät freigeben
+		connectedDevice = null;
+	}
+
+	/**
+	 * Sendet eine sync-Nachricht
+	 */
+	private static synchronized void sendSyncMessage() {
+		assert outputStream != null;
+
+		String syncMessage = "SYNC from "+ btAdapter.getName() + " " + btAdapter.getAddress() + "\r\n";
+		try {
+			outputStream.write(syncMessage.getBytes());
+			outputStream.flush();
+		} catch (IOException e) {
+			Log.e(TAG, "Fehler beim Senden der Sync-Nachricht", e);
+		}
+	}
+
+	/**
+	 * Gibt an, ob eine Bluetooth-Verbindung besteht
+	 * @return <code>true</code>, wenn die Verbindung besteht
+	 */
+	public static boolean isConnected() {
+		return connectedSocket != null && outputStream != null;
+	}
+
+	/**
+	 * Sendet eine Nachricht an den Server
+	 * @param message Die zu sendende Nachricht
+	 */
+	public static synchronized void sendToTarget(@NotNull String message) {
+		try {
+			outputStream.write(message.getBytes());
+			outputStream.write('\r');
+			outputStream.write('\n');
+			outputStream.flush();
+		} catch (IOException e) {
+		} catch (NullPointerException e) {
+		}
 	}
 }

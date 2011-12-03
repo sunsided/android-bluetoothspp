@@ -135,22 +135,6 @@
                     android:text="@string/value_na"
                     />
         </TableRow>
-        <TableRow>
-            <TextView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
-                    android:gravity="right"
-                    android:textStyle="bold"
-                    android:text="@string/table_row_connection"
-                    />
-            <TextView
-                    android:id="@+id/textViewConnection"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/value_na"
-                    />
-        </TableRow>
 
     </TableLayout>
 </LinearLayout>

@@ -10,7 +10,6 @@
     <string name="table_header_bluetooth">Bluetooth</string>
     <string name="table_row_state">State:</string>
     <string name="table_row_target">Target:</string>
-    <string name="table_row_connection">Connection:</string>
 
     <string name="value_na">n/a</string>
     <string name="value_no">no</string>
