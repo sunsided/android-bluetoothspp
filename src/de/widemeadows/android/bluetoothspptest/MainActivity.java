@@ -63,10 +63,34 @@ public class MainActivity extends Activity implements SensorEventListener, IBlue
 	private TextView textViewZ;
 
 	/**
+	 * {@link TextView} für X-Orientierung
+	 */
+	@NotNull
+	private TextView textViewXOr;
+
+	/**
+	 * {@link TextView} für Y-Orientierung
+	 */
+	@NotNull
+	private TextView textViewYOr;
+
+	/**
+	 * {@link TextView} für Z-Orientierung
+	 */
+	@NotNull
+	private TextView textViewZOr;
+
+	/**
 	 * {@link TextView} für Genauigkeot
 	 */
 	@NotNull
 	private TextView textViewAccuracy;
+	
+	/**
+	 * {@link TextView} für Genauigkeit
+	 */
+	@NotNull
+	private TextView textViewAccuracyOr;
 
 	/**
 	 * Der {@link PowerManager.WakeLock}, der das Handy wach hält
@@ -115,7 +139,11 @@ public class MainActivity extends Activity implements SensorEventListener, IBlue
 	    textViewX = (TextView) findViewById(R.id.textViewX);
 	    textViewY = (TextView) findViewById(R.id.textViewY);
 	    textViewZ = (TextView) findViewById(R.id.textViewZ);
+	    textViewXOr = (TextView) findViewById(R.id.textViewXOr);
+	    textViewYOr = (TextView) findViewById(R.id.textViewYOr);
+	    textViewZOr = (TextView) findViewById(R.id.textViewZOr);
 	    textViewAccuracy = (TextView) findViewById(R.id.textViewAccuracy);
+	    textViewAccuracyOr = (TextView) findViewById(R.id.textViewAccuracyOr);
 
 	    // Sensoren beziehen
 	    sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -195,6 +223,12 @@ public class MainActivity extends Activity implements SensorEventListener, IBlue
 			lastXOrientation = x;
 			lastYOrientation = y;
 			lastZOrientation = z;
+
+			// Text anzeigen
+			textViewXOr.setText(df.format(x));
+			textViewYOr.setText(df.format(y));
+			textViewZOr.setText(df.format(z));
+
 		}
 
 		// an Ziel senden
@@ -209,7 +243,10 @@ public class MainActivity extends Activity implements SensorEventListener, IBlue
 	public void onAccuracyChanged(Sensor sensor, int accuracy) {
 		try {
 			String accuracyString = getResources().getStringArray(R.array.sensor_accuracy)[accuracy];
-			textViewAccuracy.setText(accuracyString);
+			if (sensor.getType() == Sensor.TYPE_ACCELEROMETER)
+				textViewAccuracy.setText(accuracyString);
+			else if (sensor.getType() == Sensor.TYPE_ORIENTATION)
+				textViewAccuracyOr.setText(accuracyString);
 		}
 		catch(Exception e) {
 			textViewAccuracy.setText(Integer.toString(accuracy));

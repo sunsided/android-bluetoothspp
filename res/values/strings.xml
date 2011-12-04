@@ -6,6 +6,7 @@
     <string name="table_row_y">Y:</string>
     <string name="table_row_z">Z:</string>
     <string name="table_row_accuracy">Accuracy:</string>
+    <string name="table_header_orientation">Orientation Data</string>
 
     <string name="table_header_bluetooth">Bluetooth</string>
     <string name="table_row_state">State:</string>
