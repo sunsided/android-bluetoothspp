@@ -39,6 +39,12 @@ public class MainActivity extends Activity implements SensorEventListener, IBlue
 	private Sensor accelerometer;
 
 	/**
+	 * Der Orientierungssensor
+	 */
+	@NotNull
+	private Sensor orientation;
+
+	/**
 	 * {@link TextView} für X-Beschleunigung
 	 */
 	@NotNull
@@ -83,6 +89,21 @@ public class MainActivity extends Activity implements SensorEventListener, IBlue
 	 */
 	float lastZAcceleration = 0;
 
+	/**
+	 * Letzte Orientierung in X-Richtung
+	 */
+	float lastXOrientation = 0;
+
+	/**
+	 * Letzte Orientierung in Y-Richtung
+	 */
+	float lastYOrientation = 0;
+
+	/**
+	 * Letzte Orientierung in Z-Richtung
+	 */
+	float lastZOrientation = 0;
+
 	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -99,6 +120,7 @@ public class MainActivity extends Activity implements SensorEventListener, IBlue
 	    // Sensoren beziehen
 	    sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
 	    accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+	    orientation = sensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
 
 	    // Wake lock beziehen
 	    final PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
@@ -121,6 +143,7 @@ public class MainActivity extends Activity implements SensorEventListener, IBlue
 		super.onResume();
 		wakeLock.acquire();
 		sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_GAME);
+		sensorManager.registerListener(this, orientation, SensorManager.SENSOR_DELAY_GAME);
 		BluetoothService.registerBroadcastReceiver(this);
 	}
 
@@ -137,27 +160,47 @@ public class MainActivity extends Activity implements SensorEventListener, IBlue
 	public void onSensorChanged(SensorEvent sensorEvent) {
 		// http://developer.android.com/reference/android/hardware/SensorEvent.html#values
 
-		final float x = sensorEvent.values[0];
-		final float y = sensorEvent.values[1];
-		final float z = sensorEvent.values[2];
+		if (sensorEvent.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+		
+			final float x = sensorEvent.values[0];
+			final float y = sensorEvent.values[1];
+			final float z = sensorEvent.values[2];
 
-		if (x == lastXAcceleration || y == lastYAcceleration || z == lastZAcceleration) {
-			return;
+			if (x == lastXAcceleration || y == lastYAcceleration || z == lastZAcceleration) {
+				return;
+			}
+
+			// Werte setzen
+			lastXAcceleration = x;
+			lastYAcceleration = y;
+			lastZAcceleration = z;
+
+			// Text anzeigen
+			textViewX.setText(df.format(x));
+			textViewY.setText(df.format(y));
+			textViewZ.setText(df.format(z));
+
 		}
+		else if (sensorEvent.sensor.getType() == Sensor.TYPE_ORIENTATION) {
 
-		// Werte setzen
-		lastXAcceleration = x;
-		lastYAcceleration = y;
-		lastZAcceleration = z;
+			final float x = sensorEvent.values[0];
+			final float y = sensorEvent.values[1];
+			final float z = sensorEvent.values[2];
 
-		// Text anzeigen
-		textViewX.setText(df.format(x));
-		textViewY.setText(df.format(y));
-		textViewZ.setText(df.format(z));
+			if (x == lastXAcceleration || y == lastYAcceleration || z == lastZAcceleration) {
+				return;
+			}
+
+			// Werte setzen
+			lastXOrientation = x;
+			lastYOrientation = y;
+			lastZOrientation = z;
+		}
 
 		// an Ziel senden
 		if (BluetoothService.isConnected()) {
-			BluetoothService.sendToTarget(df.format(x) + "; " + df.format(y) + "; " + df.format(z));
+			BluetoothService.sendToTarget(df.format(lastXAcceleration) + "; " + df.format(lastYAcceleration) + "; " + df.format(lastZAcceleration) + "; " +
+										  df.format(lastXOrientation) + "; " + df.format(lastYOrientation) + "; " + df.format(lastZOrientation));
 		}
 
 	}
