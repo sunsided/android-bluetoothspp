@@ -1,0 +1,27 @@
+de.widemeadows.android.bluetoothspptest.BluetoothService:
+    private static final java.lang.String TAG
+de.widemeadows.android.bluetoothspptest.DeviceListActivity:
+    private static final java.lang.String TAG
+    private static final boolean D
+de.widemeadows.android.bluetoothspptest.IntentRequestCodes
+de.widemeadows.android.bluetoothspptest.R
+de.widemeadows.android.bluetoothspptest.R$array
+de.widemeadows.android.bluetoothspptest.R$attr
+de.widemeadows.android.bluetoothspptest.R$drawable
+de.widemeadows.android.bluetoothspptest.R$id
+de.widemeadows.android.bluetoothspptest.R$layout
+de.widemeadows.android.bluetoothspptest.R$menu
+de.widemeadows.android.bluetoothspptest.R$string
+org.intellij.lang.annotations.Identifier
+org.intellij.lang.annotations.Language
+org.intellij.lang.annotations.Pattern
+org.intellij.lang.annotations.PrintFormat
+org.intellij.lang.annotations.PrintFormatPattern
+org.intellij.lang.annotations.RegExp
+org.intellij.lang.annotations.Subst
+org.jetbrains.annotations.Nls
+org.jetbrains.annotations.NonNls
+org.jetbrains.annotations.NotNull
+org.jetbrains.annotations.Nullable
+org.jetbrains.annotations.PropertyKey
+org.jetbrains.annotations.TestOnly

@@ -1,0 +1,110 @@
+de.widemeadows.android.bluetoothspptest.BluetoothService -> de.widemeadows.android.bluetoothspptest.d:
+    java.util.UUID uuidSpp -> a
+    android.content.Context applicationContext -> b
+    boolean initialized -> c
+    android.content.IntentFilter broadcastIntentFilter -> d
+    android.content.BroadcastReceiver broadcastReceiver -> e
+    android.bluetooth.BluetoothAdapter btAdapter -> f
+    de.widemeadows.android.bluetoothspptest.IBluetoothServiceEventReceiver eventReceiver -> g
+    android.os.Handler eventReceiverHandler -> h
+    android.bluetooth.BluetoothDevice connectedDevice -> i
+    android.bluetooth.BluetoothSocket connectedSocket -> j
+    java.io.BufferedOutputStream outputStream -> k
+    java.io.BufferedInputStream inputStream -> l
+    boolean $assertionsDisabled -> m
+    boolean initialize(android.content.Context,de.widemeadows.android.bluetoothspptest.IBluetoothServiceEventReceiver) -> a
+    boolean bluetoothAvailable() -> a
+    boolean bluetoothEnabled() -> b
+    boolean requestEnableBluetooth(android.app.Activity) -> a
+    void registerBroadcastReceiver(android.app.Activity) -> b
+    void unregisterBroadcastReceiver(android.app.Activity) -> c
+    void onBluetoothEnabling() -> j
+    void onBluetoothEnabled() -> k
+    void onBluetoothDisabling() -> l
+    void onBluetoothDisabled() -> m
+    void connectToDevice(java.lang.String) -> a
+    void disconnect() -> c
+    void sendSyncMessage() -> n
+    boolean isConnected() -> d
+    void sendToTarget(java.lang.String) -> b
+    void access$000() -> e
+    void access$100() -> f
+    void access$200() -> g
+    void access$300() -> h
+    de.widemeadows.android.bluetoothspptest.IBluetoothServiceEventReceiver access$400() -> i
+de.widemeadows.android.bluetoothspptest.BluetoothService$1 -> de.widemeadows.android.bluetoothspptest.e:
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+de.widemeadows.android.bluetoothspptest.BluetoothService$2 -> de.widemeadows.android.bluetoothspptest.f:
+    void run() -> run
+de.widemeadows.android.bluetoothspptest.BluetoothService$3 -> de.widemeadows.android.bluetoothspptest.g:
+    void run() -> run
+de.widemeadows.android.bluetoothspptest.BluetoothService$4 -> de.widemeadows.android.bluetoothspptest.h:
+    void run() -> run
+de.widemeadows.android.bluetoothspptest.BluetoothService$5 -> de.widemeadows.android.bluetoothspptest.k:
+    void run() -> run
+de.widemeadows.android.bluetoothspptest.BluetoothService$6 -> de.widemeadows.android.bluetoothspptest.j:
+    java.lang.String val$deviceName -> a
+    java.lang.String val$macAddress -> b
+    void run() -> run
+de.widemeadows.android.bluetoothspptest.DeviceListActivity -> de.widemeadows.android.bluetoothspptest.DeviceListActivity:
+    java.lang.String EXTRA_DEVICE_ADDRESS -> a
+    android.bluetooth.BluetoothAdapter mBtAdapter -> b
+    android.widget.ArrayAdapter mPairedDevicesArrayAdapter -> c
+    android.widget.ArrayAdapter mNewDevicesArrayAdapter -> d
+    android.widget.AdapterView$OnItemClickListener mDeviceClickListener -> e
+    android.content.BroadcastReceiver mReceiver -> f
+    void onCreate(android.os.Bundle) -> onCreate
+    void onDestroy() -> onDestroy
+    void access$000(de.widemeadows.android.bluetoothspptest.DeviceListActivity) -> a
+    android.bluetooth.BluetoothAdapter access$100(de.widemeadows.android.bluetoothspptest.DeviceListActivity) -> b
+    android.widget.ArrayAdapter access$200(de.widemeadows.android.bluetoothspptest.DeviceListActivity) -> c
+de.widemeadows.android.bluetoothspptest.DeviceListActivity$1 -> de.widemeadows.android.bluetoothspptest.b:
+    de.widemeadows.android.bluetoothspptest.DeviceListActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+de.widemeadows.android.bluetoothspptest.DeviceListActivity$2 -> de.widemeadows.android.bluetoothspptest.a:
+    de.widemeadows.android.bluetoothspptest.DeviceListActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+de.widemeadows.android.bluetoothspptest.DeviceListActivity$3 -> de.widemeadows.android.bluetoothspptest.c:
+    de.widemeadows.android.bluetoothspptest.DeviceListActivity this$0 -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+de.widemeadows.android.bluetoothspptest.IBluetoothServiceEventReceiver -> de.widemeadows.android.bluetoothspptest.i:
+    void bluetoothEnabling() -> a
+    void bluetoothEnabled() -> b
+    void bluetoothDisabling() -> c
+    void bluetoothDisabled() -> d
+    void connectedTo(java.lang.String,java.lang.String) -> a
+de.widemeadows.android.bluetoothspptest.MainActivity -> de.widemeadows.android.bluetoothspptest.MainActivity:
+    java.text.DecimalFormat df -> a
+    android.hardware.SensorManager sensorManager -> b
+    android.hardware.Sensor accelerometer -> c
+    android.hardware.Sensor orientation -> d
+    android.widget.TextView textViewX -> e
+    android.widget.TextView textViewY -> f
+    android.widget.TextView textViewZ -> g
+    android.widget.TextView textViewXOr -> h
+    android.widget.TextView textViewYOr -> i
+    android.widget.TextView textViewZOr -> j
+    android.widget.TextView textViewAccuracy -> k
+    android.widget.TextView textViewAccuracyOr -> l
+    android.os.PowerManager$WakeLock wakeLock -> m
+    float lastXAcceleration -> n
+    float lastYAcceleration -> o
+    float lastZAcceleration -> p
+    float lastXOrientation -> q
+    float lastYOrientation -> r
+    float lastZOrientation -> s
+    void onCreate(android.os.Bundle) -> onCreate
+    void onStart() -> onStart
+    void onResume() -> onResume
+    void onPause() -> onPause
+    void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
+    void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
+    void bluetoothEnabling() -> a
+    void bluetoothEnabled() -> b
+    void startSearchDeviceIntent() -> e
+    void bluetoothDisabling() -> c
+    void bluetoothDisabled() -> d
+    void connectedTo(java.lang.String,java.lang.String) -> a
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected

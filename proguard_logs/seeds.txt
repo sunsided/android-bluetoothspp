@@ -1,0 +1,2 @@
+de.widemeadows.android.bluetoothspptest.MainActivity
+de.widemeadows.android.bluetoothspptest.DeviceListActivity

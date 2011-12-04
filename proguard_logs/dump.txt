@@ -1,0 +1,4402 @@
+_____________________________________________________________________
++ Program class: de/widemeadows/android/bluetoothspptest/a
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x30
+    = final class de.widemeadows.android.bluetoothspptest.a extends java.lang.Object
+
+Interfaces (count = 1):
+  - Class [android/widget/AdapterView$OnItemClickListener]
+
+Constant Pool (count = 70):
+  - Class [android/bluetooth/BluetoothAdapter]
+  - Class [android/content/Intent]
+  - Class [android/widget/AdapterView]
+  - Class [android/widget/AdapterView$OnItemClickListener]
+  - Class [android/widget/TextView]
+  - Class [de/widemeadows/android/bluetoothspptest/DeviceListActivity]
+  - Class [de/widemeadows/android/bluetoothspptest/a]
+  - Class [java/lang/Object]
+  - Class [java/lang/String]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.a Ljava/lang/String;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/a.a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+  - Methodref [android/bluetooth/BluetoothAdapter.cancelDiscovery ()Z]
+  - Methodref [android/content/Intent.<init> ()V]
+  - Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+  - Methodref [android/widget/TextView.getText ()Ljava/lang/CharSequence;]
+  - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.b (Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)Landroid/bluetooth/BluetoothAdapter;]
+  - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.finish ()V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.setResult (ILandroid/content/Intent;)V]
+  - Methodref [java/lang/Object.<init> ()V]
+  - Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+  - Methodref [java/lang/String.length ()I]
+  - Methodref [java/lang/String.substring (I)Ljava/lang/String;]
+  + NameAndType [<init> ()V]
+  + NameAndType [a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+  + NameAndType [a Ljava/lang/String;]
+  + NameAndType [b (Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)Landroid/bluetooth/BluetoothAdapter;]
+  + NameAndType [cancelDiscovery ()Z]
+  + NameAndType [finish ()V]
+  + NameAndType [getText ()Ljava/lang/CharSequence;]
+  + NameAndType [length ()I]
+  + NameAndType [putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+  + NameAndType [setResult (ILandroid/content/Intent;)V]
+  + NameAndType [substring (I)Ljava/lang/String;]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + Utf8 [()I]
+  + Utf8 [()Ljava/lang/CharSequence;]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()V]
+  + Utf8 [()Z]
+  + Utf8 [(I)Ljava/lang/String;]
+  + Utf8 [(ILandroid/content/Intent;)V]
+  + Utf8 [(Landroid/widget/AdapterView;Landroid/view/View;IJ)V]
+  + Utf8 [(Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)Landroid/bluetooth/BluetoothAdapter;]
+  + Utf8 [(Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [a]
+  + Utf8 [android/bluetooth/BluetoothAdapter]
+  + Utf8 [android/content/Intent]
+  + Utf8 [android/widget/AdapterView]
+  + Utf8 [android/widget/AdapterView$OnItemClickListener]
+  + Utf8 [android/widget/TextView]
+  + Utf8 [b]
+  + Utf8 [cancelDiscovery]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/DeviceListActivity]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/a]
+  + Utf8 [finish]
+  + Utf8 [getText]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/String]
+  + Utf8 [length]
+  + Utf8 [onItemClick]
+  + Utf8 [putExtra]
+  + Utf8 [setResult]
+  + Utf8 [substring]
+  + Utf8 [toString]
+
+Fields (count = 1):
+  + Field:        a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;
+    Access flags: 0x1002
+      = private de.widemeadows.android.bluetoothspptest.DeviceListActivity a
+
+Methods (count = 2):
+  - Method:       <init>(Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)V
+    Access flags: 0x0
+      = a(de.widemeadows.android.bluetoothspptest.DeviceListActivity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #11
+        - Fieldref [de/widemeadows/android/bluetoothspptest/a.a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+      [5] aload_0 v0
+      [6] invokespecial #19
+        - Methodref [java/lang/Object.<init> ()V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    Access flags: 0x11
+      = public final void onItemClick(android.widget.AdapterView,android.view.View,int,long)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 66, locals = 6, stack = 3):
+      [0] aload_0 v0
+      [1] getfield #11
+        - Fieldref [de/widemeadows/android/bluetoothspptest/a.a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+      [4] invokestatic #16
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.b (Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)Landroid/bluetooth/BluetoothAdapter;]
+      [7] invokevirtual #12
+        - Methodref [android/bluetooth/BluetoothAdapter.cancelDiscovery ()Z]
+      [10] pop
+      [11] aload_2 v2
+      [12] checkcast #5
+        - Class [android/widget/TextView]
+      [15] invokevirtual #15
+        - Methodref [android/widget/TextView.getText ()Ljava/lang/CharSequence;]
+      [18] invokevirtual #20
+        - Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+      [21] dup
+      [22] invokevirtual #21
+        - Methodref [java/lang/String.length ()I]
+      [25] bipush 17
+      [27] isub
+      [28] invokevirtual #22
+        - Methodref [java/lang/String.substring (I)Ljava/lang/String;]
+      [31] astore_1 v1
+      [32] new #2
+        - Class [android/content/Intent]
+      [35] dup
+      [36] invokespecial #13
+        - Methodref [android/content/Intent.<init> ()V]
+      [39] dup
+      [40] astore_2 v2
+      [41] getstatic #10
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.a Ljava/lang/String;]
+      [44] aload_1 v1
+      [45] invokevirtual #14
+        - Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+      [48] pop
+      [49] aload_0 v0
+      [50] getfield #11
+        - Fieldref [de/widemeadows/android/bluetoothspptest/a.a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+      [53] iconst_m1
+      [54] aload_2 v2
+      [55] invokevirtual #18
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.setResult (ILandroid/content/Intent;)V]
+      [58] aload_0 v0
+      [59] getfield #11
+        - Fieldref [de/widemeadows/android/bluetoothspptest/a.a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+      [62] invokevirtual #17
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.finish ()V]
+      [65] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: de/widemeadows/android/bluetoothspptest/b
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x30
+    = final class de.widemeadows.android.bluetoothspptest.b extends java.lang.Object
+
+Interfaces (count = 1):
+  - Class [android/view/View$OnClickListener]
+
+Constant Pool (count = 29):
+  - Class [android/view/View]
+  - Class [android/view/View$OnClickListener]
+  - Class [de/widemeadows/android/bluetoothspptest/DeviceListActivity]
+  - Class [de/widemeadows/android/bluetoothspptest/b]
+  - Class [java/lang/Object]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/b.a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+  - Methodref [android/view/View.setVisibility (I)V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.a (Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)V]
+  - Methodref [java/lang/Object.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [a (Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)V]
+  + NameAndType [a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+  + NameAndType [setVisibility (I)V]
+  + Utf8 [()V]
+  + Utf8 [(I)V]
+  + Utf8 [(Landroid/view/View;)V]
+  + Utf8 [(Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+  + Utf8 [a]
+  + Utf8 [android/view/View]
+  + Utf8 [android/view/View$OnClickListener]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/DeviceListActivity]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/b]
+  + Utf8 [java/lang/Object]
+  + Utf8 [onClick]
+  + Utf8 [setVisibility]
+
+Fields (count = 1):
+  + Field:        a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;
+    Access flags: 0x1002
+      = private de.widemeadows.android.bluetoothspptest.DeviceListActivity a
+
+Methods (count = 2):
+  - Method:       <init>(Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)V
+    Access flags: 0x0
+      = b(de.widemeadows.android.bluetoothspptest.DeviceListActivity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #6
+        - Fieldref [de/widemeadows/android/bluetoothspptest/b.a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+      [5] aload_0 v0
+      [6] invokespecial #9
+        - Methodref [java/lang/Object.<init> ()V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onClick(Landroid/view/View;)V
+    Access flags: 0x11
+      = public final void onClick(android.view.View)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 14, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] getfield #6
+        - Fieldref [de/widemeadows/android/bluetoothspptest/b.a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+      [4] invokestatic #8
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.a (Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)V]
+      [7] aload_1 v1
+      [8] bipush 8
+      [10] invokevirtual #7
+        - Methodref [android/view/View.setVisibility (I)V]
+      [13] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: de/widemeadows/android/bluetoothspptest/c
+  Superclass:    android/content/BroadcastReceiver
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x30
+    = final class de.widemeadows.android.bluetoothspptest.c extends android.content.BroadcastReceiver
+
+Interfaces (count = 0):
+
+Constant Pool (count = 102):
+  - Integer [2130968597]
+  - Integer [2130968599]
+  - String [
+]
+  - String [android.bluetooth.adapter.action.DISCOVERY_FINISHED]
+  - String [android.bluetooth.device.action.FOUND]
+  - String [android.bluetooth.device.extra.DEVICE]
+  - Class [android/bluetooth/BluetoothDevice]
+  - Class [android/content/BroadcastReceiver]
+  - Class [android/content/Intent]
+  - Class [android/content/res/Resources]
+  - Class [android/widget/ArrayAdapter]
+  - Class [de/widemeadows/android/bluetoothspptest/DeviceListActivity]
+  - Class [de/widemeadows/android/bluetoothspptest/c]
+  - Class [java/lang/Object]
+  - Class [java/lang/String]
+  - Class [java/lang/StringBuilder]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/c.a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+  - Methodref [android/bluetooth/BluetoothDevice.getAddress ()Ljava/lang/String;]
+  - Methodref [android/bluetooth/BluetoothDevice.getBondState ()I]
+  - Methodref [android/bluetooth/BluetoothDevice.getName ()Ljava/lang/String;]
+  - Methodref [android/content/BroadcastReceiver.<init> ()V]
+  - Methodref [android/content/Intent.getAction ()Ljava/lang/String;]
+  - Methodref [android/content/Intent.getParcelableExtra (Ljava/lang/String;)Landroid/os/Parcelable;]
+  - Methodref [android/content/res/Resources.getText (I)Ljava/lang/CharSequence;]
+  - Methodref [android/widget/ArrayAdapter.add (Ljava/lang/Object;)V]
+  - Methodref [android/widget/ArrayAdapter.getCount ()I]
+  - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.c (Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)Landroid/widget/ArrayAdapter;]
+  - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.getResources ()Landroid/content/res/Resources;]
+  - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.setProgressBarIndeterminateVisibility (Z)V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.setTitle (I)V]
+  - Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+  - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+  - Methodref [java/lang/StringBuilder.<init> ()V]
+  - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + NameAndType [<init> ()V]
+  + NameAndType [a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+  + NameAndType [add (Ljava/lang/Object;)V]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [c (Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)Landroid/widget/ArrayAdapter;]
+  + NameAndType [equals (Ljava/lang/Object;)Z]
+  + NameAndType [getAction ()Ljava/lang/String;]
+  + NameAndType [getAddress ()Ljava/lang/String;]
+  + NameAndType [getBondState ()I]
+  + NameAndType [getCount ()I]
+  + NameAndType [getName ()Ljava/lang/String;]
+  + NameAndType [getParcelableExtra (Ljava/lang/String;)Landroid/os/Parcelable;]
+  + NameAndType [getResources ()Landroid/content/res/Resources;]
+  + NameAndType [getText (I)Ljava/lang/CharSequence;]
+  + NameAndType [setProgressBarIndeterminateVisibility (Z)V]
+  + NameAndType [setTitle (I)V]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + Utf8 [
+]
+  + Utf8 [()I]
+  + Utf8 [()Landroid/content/res/Resources;]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()V]
+  + Utf8 [(I)Ljava/lang/CharSequence;]
+  + Utf8 [(I)V]
+  + Utf8 [(Landroid/content/Context;Landroid/content/Intent;)V]
+  + Utf8 [(Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)Landroid/widget/ArrayAdapter;]
+  + Utf8 [(Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)V]
+  + Utf8 [(Ljava/lang/Object;)V]
+  + Utf8 [(Ljava/lang/Object;)Z]
+  + Utf8 [(Ljava/lang/String;)Landroid/os/Parcelable;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Z)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+  + Utf8 [StackMapTable]
+  + Utf8 [a]
+  + Utf8 [add]
+  + Utf8 [android.bluetooth.adapter.action.DISCOVERY_FINISHED]
+  + Utf8 [android.bluetooth.device.action.FOUND]
+  + Utf8 [android.bluetooth.device.extra.DEVICE]
+  + Utf8 [android/bluetooth/BluetoothDevice]
+  + Utf8 [android/content/BroadcastReceiver]
+  + Utf8 [android/content/Intent]
+  + Utf8 [android/content/res/Resources]
+  + Utf8 [android/widget/ArrayAdapter]
+  + Utf8 [append]
+  + Utf8 [c]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/DeviceListActivity]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/c]
+  + Utf8 [equals]
+  + Utf8 [getAction]
+  + Utf8 [getAddress]
+  + Utf8 [getBondState]
+  + Utf8 [getCount]
+  + Utf8 [getName]
+  + Utf8 [getParcelableExtra]
+  + Utf8 [getResources]
+  + Utf8 [getText]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/String]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [onReceive]
+  + Utf8 [setProgressBarIndeterminateVisibility]
+  + Utf8 [setTitle]
+  + Utf8 [toString]
+
+Fields (count = 1):
+  + Field:        a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;
+    Access flags: 0x1002
+      = private de.widemeadows.android.bluetoothspptest.DeviceListActivity a
+
+Methods (count = 2):
+  - Method:       <init>(Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)V
+    Access flags: 0x0
+      = c(de.widemeadows.android.bluetoothspptest.DeviceListActivity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #17
+        - Fieldref [de/widemeadows/android/bluetoothspptest/c.a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+      [5] aload_0 v0
+      [6] invokespecial #21
+        - Methodref [android/content/BroadcastReceiver.<init> ()V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    Access flags: 0x11
+      = public final void onReceive(android.content.Context,android.content.Intent)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 140, locals = 3, stack = 3):
+      [0] aload_2 v2
+      [1] invokevirtual #22
+        - Methodref [android/content/Intent.getAction ()Ljava/lang/String;]
+      [4] astore_1 v1
+      [5] ldc #5
+        - String [android.bluetooth.device.action.FOUND]
+      [7] aload_1 v1
+      [8] invokevirtual #32
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [11] ifeq +62 (target=73)
+      [14] aload_2 v2
+      [15] ldc #6
+        - String [android.bluetooth.device.extra.DEVICE]
+      [17] invokevirtual #23
+        - Methodref [android/content/Intent.getParcelableExtra (Ljava/lang/String;)Landroid/os/Parcelable;]
+      [20] checkcast #7
+        - Class [android/bluetooth/BluetoothDevice]
+      [23] dup
+      [24] astore_1 v1
+      [25] invokevirtual #19
+        - Methodref [android/bluetooth/BluetoothDevice.getBondState ()I]
+      [28] bipush 12
+      [30] ificmpeq +42 (target=72)
+      [33] aload_0 v0
+      [34] getfield #17
+        - Fieldref [de/widemeadows/android/bluetoothspptest/c.a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+      [37] invokestatic #27
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.c (Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)Landroid/widget/ArrayAdapter;]
+      [40] new #16
+        - Class [java/lang/StringBuilder]
+      [43] dup
+      [44] invokespecial #33
+        - Methodref [java/lang/StringBuilder.<init> ()V]
+      [47] aload_1 v1
+      [48] invokevirtual #20
+        - Methodref [android/bluetooth/BluetoothDevice.getName ()Ljava/lang/String;]
+      [51] invokevirtual #34
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [54] ldc #3
+        - String [
+]
+      [56] invokevirtual #34
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [59] aload_1 v1
+      [60] invokevirtual #18
+        - Methodref [android/bluetooth/BluetoothDevice.getAddress ()Ljava/lang/String;]
+      [63] invokevirtual #34
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [66] invokevirtual #35
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [69] invokevirtual #25
+        - Methodref [android/widget/ArrayAdapter.add (Ljava/lang/Object;)V]
+      [72] return
+      [73] ldc #4
+        - String [android.bluetooth.adapter.action.DISCOVERY_FINISHED]
+      [75] aload_1 v1
+      [76] invokevirtual #32
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [79] ifeq +60 (target=139)
+      [82] aload_0 v0
+      [83] getfield #17
+        - Fieldref [de/widemeadows/android/bluetoothspptest/c.a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+      [86] iconst_0
+      [87] invokevirtual #29
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.setProgressBarIndeterminateVisibility (Z)V]
+      [90] aload_0 v0
+      [91] getfield #17
+        - Fieldref [de/widemeadows/android/bluetoothspptest/c.a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+      [94] ldc #1
+        - Integer [2130968597]
+      [96] invokevirtual #30
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.setTitle (I)V]
+      [99] aload_0 v0
+      [100] getfield #17
+        - Fieldref [de/widemeadows/android/bluetoothspptest/c.a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+      [103] invokestatic #27
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.c (Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)Landroid/widget/ArrayAdapter;]
+      [106] invokevirtual #26
+        - Methodref [android/widget/ArrayAdapter.getCount ()I]
+      [109] ifne +30 (target=139)
+      [112] aload_0 v0
+      [113] getfield #17
+        - Fieldref [de/widemeadows/android/bluetoothspptest/c.a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+      [116] invokevirtual #28
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.getResources ()Landroid/content/res/Resources;]
+      [119] ldc #2
+        - Integer [2130968599]
+      [121] invokevirtual #24
+        - Methodref [android/content/res/Resources.getText (I)Ljava/lang/CharSequence;]
+      [124] invokevirtual #31
+        - Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+      [127] astore_1 v1
+      [128] aload_0 v0
+      [129] getfield #17
+        - Fieldref [de/widemeadows/android/bluetoothspptest/c.a Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;]
+      [132] invokestatic #27
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.c (Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)Landroid/widget/ArrayAdapter;]
+      [135] aload_1 v1
+      [136] invokevirtual #25
+        - Methodref [android/widget/ArrayAdapter.add (Ljava/lang/Object;)V]
+      [139] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 3):
+        - [72] Var: ...[a:java/lang/String], Stack: (empty)
+        - [73] Var: ..., Stack: (empty)
+        - [139] Var: ..., Stack: (empty)
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: de/widemeadows/android/bluetoothspptest/d
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x31
+    = public final class de.widemeadows.android.bluetoothspptest.d extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 319):
+  - Integer [2130968593]
+  - String [
+]
+  - String [ ]
+  - String [00001101-0000-1000-8000-00805F9B34FB]
+  - String [; ]
+  - String [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.connectToDevice must not be null]
+  - String [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.initialize must not be null]
+  - String [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.registerBroadcastReceiver must not be null]
+  - String [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.requestEnableBluetooth must not be null]
+  - String [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.sendToTarget must not be null]
+  - String [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.unregisterBroadcastReceiver must not be null]
+  - String [Argument 1 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.initialize must not be null]
+  - String [Bluetooth-Gerät ausgewählt: ]
+  - String [BluetoothService]
+  - String [Connecting Socket to ]
+  - String [Fehler beim Senden der Sync-Nachricht]
+  - String [Konnte Bluetooth-Socket nicht erzeugen!]
+  - String [Konnte Input-Stream nicht erzeugen]
+  - String [Konnte Output-Stream nicht erzeugen]
+  - String [Konnte Verbindung nicht herstellen.]
+  - String [Nullreferenz-Ausnahmefehler!]
+  - String [SYNC from ]
+  - String [android.bluetooth.adapter.action.REQUEST_ENABLE]
+  - String [android.bluetooth.adapter.action.STATE_CHANGED]
+  - Class [android/app/Activity]
+  - Class [android/bluetooth/BluetoothAdapter]
+  - Class [android/bluetooth/BluetoothDevice]
+  - Class [android/bluetooth/BluetoothSocket]
+  - Class [android/content/Intent]
+  - Class [android/content/IntentFilter]
+  - Class [android/os/Handler]
+  - Class [android/util/Log]
+  - Class [android/widget/Toast]
+  - Class [de/widemeadows/android/bluetoothspptest/d]
+  - Class [de/widemeadows/android/bluetoothspptest/e]
+  - Class [de/widemeadows/android/bluetoothspptest/f]
+  - Class [de/widemeadows/android/bluetoothspptest/g]
+  - Class [de/widemeadows/android/bluetoothspptest/h]
+  - Class [de/widemeadows/android/bluetoothspptest/j]
+  - Class [de/widemeadows/android/bluetoothspptest/k]
+  - Class [java/io/BufferedInputStream]
+  - Class [java/io/BufferedOutputStream]
+  - Class [java/io/IOException]
+  - Class [java/io/InputStream]
+  - Class [java/io/OutputStream]
+  - Class [java/lang/AssertionError]
+  - Class [java/lang/Class]
+  - Class [java/lang/IllegalArgumentException]
+  - Class [java/lang/NullPointerException]
+  - Class [java/lang/Object]
+  - Class [java/lang/String]
+  - Class [java/lang/StringBuilder]
+  - Class [java/util/UUID]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/d.a Ljava/util/UUID;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/d.b Landroid/content/Context;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/d.c Z]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/d.d Landroid/content/IntentFilter;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/d.e Landroid/content/BroadcastReceiver;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/d.f Landroid/bluetooth/BluetoothAdapter;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/d.g Lde/widemeadows/android/bluetoothspptest/i;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/d.h Landroid/os/Handler;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/d.i Landroid/bluetooth/BluetoothDevice;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/d.j Landroid/bluetooth/BluetoothSocket;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/d.k Ljava/io/BufferedOutputStream;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/d.l Ljava/io/BufferedInputStream;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/d.m Z]
+  - Methodref [android/app/Activity.registerReceiver (Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;]
+  - Methodref [android/app/Activity.startActivityForResult (Landroid/content/Intent;I)V]
+  - Methodref [android/app/Activity.unregisterReceiver (Landroid/content/BroadcastReceiver;)V]
+  - Methodref [android/bluetooth/BluetoothAdapter.cancelDiscovery ()Z]
+  - Methodref [android/bluetooth/BluetoothAdapter.getAddress ()Ljava/lang/String;]
+  - Methodref [android/bluetooth/BluetoothAdapter.getDefaultAdapter ()Landroid/bluetooth/BluetoothAdapter;]
+  - Methodref [android/bluetooth/BluetoothAdapter.getName ()Ljava/lang/String;]
+  - Methodref [android/bluetooth/BluetoothAdapter.getRemoteDevice (Ljava/lang/String;)Landroid/bluetooth/BluetoothDevice;]
+  - Methodref [android/bluetooth/BluetoothAdapter.isDiscovering ()Z]
+  - Methodref [android/bluetooth/BluetoothAdapter.isEnabled ()Z]
+  - Methodref [android/bluetooth/BluetoothDevice.createRfcommSocketToServiceRecord (Ljava/util/UUID;)Landroid/bluetooth/BluetoothSocket;]
+  - Methodref [android/bluetooth/BluetoothDevice.getAddress ()Ljava/lang/String;]
+  - Methodref [android/bluetooth/BluetoothDevice.getName ()Ljava/lang/String;]
+  - Methodref [android/bluetooth/BluetoothSocket.close ()V]
+  - Methodref [android/bluetooth/BluetoothSocket.connect ()V]
+  - Methodref [android/bluetooth/BluetoothSocket.getInputStream ()Ljava/io/InputStream;]
+  - Methodref [android/bluetooth/BluetoothSocket.getOutputStream ()Ljava/io/OutputStream;]
+  - Methodref [android/content/Intent.<init> (Ljava/lang/String;)V]
+  - Methodref [android/content/IntentFilter.<init> ()V]
+  - Methodref [android/content/IntentFilter.addAction (Ljava/lang/String;)V]
+  - Methodref [android/os/Handler.<init> ()V]
+  - Methodref [android/os/Handler.post (Ljava/lang/Runnable;)Z]
+  - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+  - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I]
+  - Methodref [android/util/Log.i (Ljava/lang/String;Ljava/lang/String;)I]
+  - Methodref [android/widget/Toast.makeText (Landroid/content/Context;II)Landroid/widget/Toast;]
+  - Methodref [android/widget/Toast.show ()V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.b ()Z]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.c ()V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.j ()V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.k ()V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.l ()V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.m ()V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.n ()V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/e.<init> ()V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/f.<init> ()V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/g.<init> ()V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/h.<init> ()V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/j.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/k.<init> ()V]
+  - Methodref [java/io/BufferedInputStream.<init> (Ljava/io/InputStream;)V]
+  - Methodref [java/io/BufferedInputStream.close ()V]
+  - Methodref [java/io/BufferedOutputStream.<init> (Ljava/io/OutputStream;)V]
+  - Methodref [java/io/BufferedOutputStream.close ()V]
+  - Methodref [java/io/BufferedOutputStream.flush ()V]
+  - Methodref [java/io/BufferedOutputStream.write (I)V]
+  - Methodref [java/io/BufferedOutputStream.write ([B)V]
+  - Methodref [java/io/IOException.printStackTrace ()V]
+  - Methodref [java/io/InputStream.close ()V]
+  - Methodref [java/io/OutputStream.close ()V]
+  - Methodref [java/lang/AssertionError.<init> ()V]
+  - Methodref [java/lang/Class.desiredAssertionStatus ()Z]
+  - Methodref [java/lang/IllegalArgumentException.<init> (Ljava/lang/String;)V]
+  - Methodref [java/lang/Object.<init> ()V]
+  - Methodref [java/lang/String.getBytes ()[B]
+  - Methodref [java/lang/StringBuilder.<init> ()V]
+  - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  - Methodref [java/util/UUID.fromString (Ljava/lang/String;)Ljava/util/UUID;]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Ljava/io/InputStream;)V]
+  + NameAndType [<init> (Ljava/io/OutputStream;)V]
+  + NameAndType [<init> (Ljava/lang/String;)V]
+  + NameAndType [<init> (Ljava/lang/String;Ljava/lang/String;)V]
+  + NameAndType [a Ljava/util/UUID;]
+  + NameAndType [addAction (Ljava/lang/String;)V]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [b ()Z]
+  + NameAndType [b Landroid/content/Context;]
+  + NameAndType [c ()V]
+  + NameAndType [c Z]
+  + NameAndType [cancelDiscovery ()Z]
+  + NameAndType [close ()V]
+  + NameAndType [connect ()V]
+  + NameAndType [createRfcommSocketToServiceRecord (Ljava/util/UUID;)Landroid/bluetooth/BluetoothSocket;]
+  + NameAndType [d Landroid/content/IntentFilter;]
+  + NameAndType [desiredAssertionStatus ()Z]
+  + NameAndType [e (Ljava/lang/String;Ljava/lang/String;)I]
+  + NameAndType [e (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I]
+  + NameAndType [e Landroid/content/BroadcastReceiver;]
+  + NameAndType [f Landroid/bluetooth/BluetoothAdapter;]
+  + NameAndType [flush ()V]
+  + NameAndType [fromString (Ljava/lang/String;)Ljava/util/UUID;]
+  + NameAndType [g Lde/widemeadows/android/bluetoothspptest/i;]
+  + NameAndType [getAddress ()Ljava/lang/String;]
+  + NameAndType [getBytes ()[B]
+  + NameAndType [getDefaultAdapter ()Landroid/bluetooth/BluetoothAdapter;]
+  + NameAndType [getInputStream ()Ljava/io/InputStream;]
+  + NameAndType [getName ()Ljava/lang/String;]
+  + NameAndType [getOutputStream ()Ljava/io/OutputStream;]
+  + NameAndType [getRemoteDevice (Ljava/lang/String;)Landroid/bluetooth/BluetoothDevice;]
+  + NameAndType [h Landroid/os/Handler;]
+  + NameAndType [i (Ljava/lang/String;Ljava/lang/String;)I]
+  + NameAndType [i Landroid/bluetooth/BluetoothDevice;]
+  + NameAndType [isDiscovering ()Z]
+  + NameAndType [isEnabled ()Z]
+  + NameAndType [j ()V]
+  + NameAndType [j Landroid/bluetooth/BluetoothSocket;]
+  + NameAndType [k ()V]
+  + NameAndType [k Ljava/io/BufferedOutputStream;]
+  + NameAndType [l ()V]
+  + NameAndType [l Ljava/io/BufferedInputStream;]
+  + NameAndType [m ()V]
+  + NameAndType [m Z]
+  + NameAndType [makeText (Landroid/content/Context;II)Landroid/widget/Toast;]
+  + NameAndType [n ()V]
+  + NameAndType [post (Ljava/lang/Runnable;)Z]
+  + NameAndType [printStackTrace ()V]
+  + NameAndType [registerReceiver (Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;]
+  + NameAndType [show ()V]
+  + NameAndType [startActivityForResult (Landroid/content/Intent;I)V]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + NameAndType [unregisterReceiver (Landroid/content/BroadcastReceiver;)V]
+  + NameAndType [write (I)V]
+  + NameAndType [write ([B)V]
+  + Utf8 [
+]
+  + Utf8 [ ]
+  + Utf8 [()Landroid/bluetooth/BluetoothAdapter;]
+  + Utf8 [()Lde/widemeadows/android/bluetoothspptest/i;]
+  + Utf8 [()Ljava/io/InputStream;]
+  + Utf8 [()Ljava/io/OutputStream;]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()V]
+  + Utf8 [()Z]
+  + Utf8 [()[B]
+  + Utf8 [(I)V]
+  + Utf8 [(Landroid/app/Activity;)V]
+  + Utf8 [(Landroid/app/Activity;)Z]
+  + Utf8 [(Landroid/content/BroadcastReceiver;)V]
+  + Utf8 [(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;]
+  + Utf8 [(Landroid/content/Context;II)Landroid/widget/Toast;]
+  + Utf8 [(Landroid/content/Context;Lde/widemeadows/android/bluetoothspptest/i;)Z]
+  + Utf8 [(Landroid/content/Intent;I)V]
+  + Utf8 [(Ljava/io/InputStream;)V]
+  + Utf8 [(Ljava/io/OutputStream;)V]
+  + Utf8 [(Ljava/lang/Runnable;)Z]
+  + Utf8 [(Ljava/lang/String;)Landroid/bluetooth/BluetoothDevice;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/String;)Ljava/util/UUID;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I]
+  + Utf8 [(Ljava/util/UUID;)Landroid/bluetooth/BluetoothSocket;]
+  + Utf8 [([B)V]
+  + Utf8 [00001101-0000-1000-8000-00805F9B34FB]
+  + Utf8 [; ]
+  + Utf8 [<clinit>]
+  + Utf8 [<init>]
+  + Utf8 [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.connectToDevice must not be null]
+  + Utf8 [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.initialize must not be null]
+  + Utf8 [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.registerBroadcastReceiver must not be null]
+  + Utf8 [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.requestEnableBluetooth must not be null]
+  + Utf8 [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.sendToTarget must not be null]
+  + Utf8 [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.unregisterBroadcastReceiver must not be null]
+  + Utf8 [Argument 1 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.initialize must not be null]
+  + Utf8 [Bluetooth-Gerät ausgewählt: ]
+  + Utf8 [BluetoothService]
+  + Utf8 [Code]
+  + Utf8 [Connecting Socket to ]
+  + Utf8 [Fehler beim Senden der Sync-Nachricht]
+  + Utf8 [Konnte Bluetooth-Socket nicht erzeugen!]
+  + Utf8 [Konnte Input-Stream nicht erzeugen]
+  + Utf8 [Konnte Output-Stream nicht erzeugen]
+  + Utf8 [Konnte Verbindung nicht herstellen.]
+  + Utf8 [Landroid/bluetooth/BluetoothAdapter;]
+  + Utf8 [Landroid/bluetooth/BluetoothDevice;]
+  + Utf8 [Landroid/bluetooth/BluetoothSocket;]
+  + Utf8 [Landroid/content/BroadcastReceiver;]
+  + Utf8 [Landroid/content/Context;]
+  + Utf8 [Landroid/content/IntentFilter;]
+  + Utf8 [Landroid/os/Handler;]
+  + Utf8 [Lde/widemeadows/android/bluetoothspptest/i;]
+  + Utf8 [Ljava/io/BufferedInputStream;]
+  + Utf8 [Ljava/io/BufferedOutputStream;]
+  + Utf8 [Ljava/util/UUID;]
+  + Utf8 [Nullreferenz-Ausnahmefehler!]
+  + Utf8 [SYNC from ]
+  + Utf8 [StackMapTable]
+  + Utf8 [Z]
+  + Utf8 [a]
+  + Utf8 [addAction]
+  + Utf8 [android.bluetooth.adapter.action.REQUEST_ENABLE]
+  + Utf8 [android.bluetooth.adapter.action.STATE_CHANGED]
+  + Utf8 [android/app/Activity]
+  + Utf8 [android/bluetooth/BluetoothAdapter]
+  + Utf8 [android/bluetooth/BluetoothDevice]
+  + Utf8 [android/bluetooth/BluetoothSocket]
+  + Utf8 [android/content/Intent]
+  + Utf8 [android/content/IntentFilter]
+  + Utf8 [android/os/Handler]
+  + Utf8 [android/util/Log]
+  + Utf8 [android/widget/Toast]
+  + Utf8 [append]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [cancelDiscovery]
+  + Utf8 [close]
+  + Utf8 [connect]
+  + Utf8 [createRfcommSocketToServiceRecord]
+  + Utf8 [d]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/d]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/e]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/f]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/g]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/h]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/j]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/k]
+  + Utf8 [desiredAssertionStatus]
+  + Utf8 [e]
+  + Utf8 [f]
+  + Utf8 [flush]
+  + Utf8 [fromString]
+  + Utf8 [g]
+  + Utf8 [getAddress]
+  + Utf8 [getBytes]
+  + Utf8 [getDefaultAdapter]
+  + Utf8 [getInputStream]
+  + Utf8 [getName]
+  + Utf8 [getOutputStream]
+  + Utf8 [getRemoteDevice]
+  + Utf8 [h]
+  + Utf8 [i]
+  + Utf8 [isDiscovering]
+  + Utf8 [isEnabled]
+  + Utf8 [j]
+  + Utf8 [java/io/BufferedInputStream]
+  + Utf8 [java/io/BufferedOutputStream]
+  + Utf8 [java/io/IOException]
+  + Utf8 [java/io/InputStream]
+  + Utf8 [java/io/OutputStream]
+  + Utf8 [java/lang/AssertionError]
+  + Utf8 [java/lang/Class]
+  + Utf8 [java/lang/IllegalArgumentException]
+  + Utf8 [java/lang/NullPointerException]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/String]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [java/util/UUID]
+  + Utf8 [k]
+  + Utf8 [l]
+  + Utf8 [m]
+  + Utf8 [makeText]
+  + Utf8 [n]
+  + Utf8 [post]
+  + Utf8 [printStackTrace]
+  + Utf8 [registerReceiver]
+  + Utf8 [show]
+  + Utf8 [startActivityForResult]
+  + Utf8 [toString]
+  + Utf8 [unregisterReceiver]
+  + Utf8 [write]
+
+Fields (count = 13):
+  + Field:        a Ljava/util/UUID;
+    Access flags: 0x1a
+      = private static final java.util.UUID a
+  + Field:        b Landroid/content/Context;
+    Access flags: 0xa
+      = private static android.content.Context b
+  + Field:        c Z
+    Access flags: 0xa
+      = private static boolean c
+  + Field:        d Landroid/content/IntentFilter;
+    Access flags: 0x1a
+      = private static final android.content.IntentFilter d
+  + Field:        e Landroid/content/BroadcastReceiver;
+    Access flags: 0xa
+      = private static android.content.BroadcastReceiver e
+  + Field:        f Landroid/bluetooth/BluetoothAdapter;
+    Access flags: 0xa
+      = private static android.bluetooth.BluetoothAdapter f
+  + Field:        g Lde/widemeadows/android/bluetoothspptest/i;
+    Access flags: 0xa
+      = private static de.widemeadows.android.bluetoothspptest.i g
+  + Field:        h Landroid/os/Handler;
+    Access flags: 0x1a
+      = private static final android.os.Handler h
+  + Field:        i Landroid/bluetooth/BluetoothDevice;
+    Access flags: 0xa
+      = private static android.bluetooth.BluetoothDevice i
+  + Field:        j Landroid/bluetooth/BluetoothSocket;
+    Access flags: 0xa
+      = private static android.bluetooth.BluetoothSocket j
+  + Field:        k Ljava/io/BufferedOutputStream;
+    Access flags: 0xa
+      = private static java.io.BufferedOutputStream k
+  + Field:        l Ljava/io/BufferedInputStream;
+    Access flags: 0xa
+      = private static java.io.BufferedInputStream l
+  + Field:        m Z
+    Access flags: 0x100a
+      = private static boolean m
+
+Methods (count = 22):
+  - Method:       <init>()V
+    Access flags: 0x2
+      = private d()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #120
+        - Methodref [java/lang/Object.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a(Landroid/content/Context;Lde/widemeadows/android/bluetoothspptest/i;)Z
+    Access flags: 0x29
+      = public static synchronized boolean a(android.content.Context,de.widemeadows.android.bluetoothspptest.i)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 72, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] ifnonnull +13 (target=14)
+      [4] new #48
+        - Class [java/lang/IllegalArgumentException]
+      [7] dup
+      [8] ldc #7
+        - String [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.initialize must not be null]
+      [10] invokespecial #119
+        - Methodref [java/lang/IllegalArgumentException.<init> (Ljava/lang/String;)V]
+      [13] athrow
+      [14] aload_1 v1
+      [15] ifnonnull +13 (target=28)
+      [18] new #48
+        - Class [java/lang/IllegalArgumentException]
+      [21] dup
+      [22] ldc #12
+        - String [Argument 1 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.initialize must not be null]
+      [24] invokespecial #119
+        - Methodref [java/lang/IllegalArgumentException.<init> (Ljava/lang/String;)V]
+      [27] athrow
+      [28] aload_1 v1
+      [29] putstatic #60
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.g Lde/widemeadows/android/bluetoothspptest/i;]
+      [32] getstatic #56
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.c Z]
+      [35] ifeq +5 (target=40)
+      [38] iconst_1
+      [39] ireturn
+      [40] aload_0 v0
+      [41] putstatic #55
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.b Landroid/content/Context;]
+      [44] invokestatic #72
+        - Methodref [android/bluetooth/BluetoothAdapter.getDefaultAdapter ()Landroid/bluetooth/BluetoothAdapter;]
+      [47] dup
+      [48] putstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.f Landroid/bluetooth/BluetoothAdapter;]
+      [51] ifnonnull +15 (target=66)
+      [54] aload_0 v0
+      [55] ldc #1
+        - Integer [2130968593]
+      [57] iconst_1
+      [58] invokestatic #92
+        - Methodref [android/widget/Toast.makeText (Landroid/content/Context;II)Landroid/widget/Toast;]
+      [61] invokevirtual #93
+        - Methodref [android/widget/Toast.show ()V]
+      [64] iconst_0
+      [65] ireturn
+      [66] iconst_1
+      [67] putstatic #56
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.c Z]
+      [70] iconst_1
+      [71] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 4):
+        - [14] Var: ..., Stack: (empty)
+        - [28] Var: ..., Stack: (empty)
+        - [40] Var: ..., Stack: (empty)
+        - [66] Var: ..., Stack: (empty)
+  + Method:       a()Z
+    Access flags: 0x29
+      = public static synchronized boolean a()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 0, stack = 1):
+      [0] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.f Landroid/bluetooth/BluetoothAdapter;]
+      [3] ifnull +5 (target=8)
+      [6] iconst_1
+      [7] ireturn
+      [8] iconst_0
+      [9] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [8] Var: ..., Stack: (empty)
+        - [9] Var: ..., Stack: [i]
+  + Method:       b()Z
+    Access flags: 0x29
+      = public static synchronized boolean b()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 19, locals = 0, stack = 1):
+      [0] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.f Landroid/bluetooth/BluetoothAdapter;]
+      [3] ifnull +14 (target=17)
+      [6] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.f Landroid/bluetooth/BluetoothAdapter;]
+      [9] invokevirtual #76
+        - Methodref [android/bluetooth/BluetoothAdapter.isEnabled ()Z]
+      [12] ifeq +5 (target=17)
+      [15] iconst_1
+      [16] ireturn
+      [17] iconst_0
+      [18] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [17] Var: ..., Stack: (empty)
+        - [18] Var: ..., Stack: [i]
+  + Method:       a(Landroid/app/Activity;)Z
+    Access flags: 0x29
+      = public static synchronized boolean a(android.app.Activity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 42, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] ifnonnull +13 (target=14)
+      [4] new #48
+        - Class [java/lang/IllegalArgumentException]
+      [7] dup
+      [8] ldc #9
+        - String [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.requestEnableBluetooth must not be null]
+      [10] invokespecial #119
+        - Methodref [java/lang/IllegalArgumentException.<init> (Ljava/lang/String;)V]
+      [13] athrow
+      [14] invokestatic #94
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.b ()Z]
+      [17] ifeq +5 (target=22)
+      [20] iconst_0
+      [21] ireturn
+      [22] new #29
+        - Class [android/content/Intent]
+      [25] dup
+      [26] ldc #23
+        - String [android.bluetooth.adapter.action.REQUEST_ENABLE]
+      [28] invokespecial #84
+        - Methodref [android/content/Intent.<init> (Ljava/lang/String;)V]
+      [31] astore_1 v1
+      [32] aload_0 v0
+      [33] aload_1 v1
+      [34] sipush 1001
+      [37] invokevirtual #68
+        - Methodref [android/app/Activity.startActivityForResult (Landroid/content/Intent;I)V]
+      [40] iconst_1
+      [41] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [14] Var: ..., Stack: (empty)
+        - [22] Var: ..., Stack: (empty)
+  + Method:       b(Landroid/app/Activity;)V
+    Access flags: 0x29
+      = public static synchronized void b(android.app.Activity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 50, locals = 1, stack = 3):
+      [0] aload_0 v0
+      [1] ifnonnull +13 (target=14)
+      [4] new #48
+        - Class [java/lang/IllegalArgumentException]
+      [7] dup
+      [8] ldc #8
+        - String [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.registerBroadcastReceiver must not be null]
+      [10] invokespecial #119
+        - Methodref [java/lang/IllegalArgumentException.<init> (Ljava/lang/String;)V]
+      [13] athrow
+      [14] getstatic #58
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.e Landroid/content/BroadcastReceiver;]
+      [17] ifnonnull +21 (target=38)
+      [20] new #35
+        - Class [de/widemeadows/android/bluetoothspptest/e]
+      [23] dup
+      [24] invokespecial #101
+        - Methodref [de/widemeadows/android/bluetoothspptest/e.<init> ()V]
+      [27] putstatic #58
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.e Landroid/content/BroadcastReceiver;]
+      [30] getstatic #57
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.d Landroid/content/IntentFilter;]
+      [33] ldc #24
+        - String [android.bluetooth.adapter.action.STATE_CHANGED]
+      [35] invokevirtual #86
+        - Methodref [android/content/IntentFilter.addAction (Ljava/lang/String;)V]
+      [38] aload_0 v0
+      [39] getstatic #58
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.e Landroid/content/BroadcastReceiver;]
+      [42] getstatic #57
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.d Landroid/content/IntentFilter;]
+      [45] invokevirtual #67
+        - Methodref [android/app/Activity.registerReceiver (Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;]
+      [48] pop
+      [49] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [14] Var: ..., Stack: (empty)
+        - [38] Var: ..., Stack: (empty)
+  + Method:       c(Landroid/app/Activity;)V
+    Access flags: 0x29
+      = public static synchronized void c(android.app.Activity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 29, locals = 1, stack = 3):
+      [0] aload_0 v0
+      [1] ifnonnull +13 (target=14)
+      [4] new #48
+        - Class [java/lang/IllegalArgumentException]
+      [7] dup
+      [8] ldc #11
+        - String [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.unregisterBroadcastReceiver must not be null]
+      [10] invokespecial #119
+        - Methodref [java/lang/IllegalArgumentException.<init> (Ljava/lang/String;)V]
+      [13] athrow
+      [14] getstatic #58
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.e Landroid/content/BroadcastReceiver;]
+      [17] ifnonnull +4 (target=21)
+      [20] return
+      [21] aload_0 v0
+      [22] getstatic #58
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.e Landroid/content/BroadcastReceiver;]
+      [25] invokevirtual #69
+        - Methodref [android/app/Activity.unregisterReceiver (Landroid/content/BroadcastReceiver;)V]
+      [28] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [14] Var: ..., Stack: (empty)
+        - [21] Var: ..., Stack: (empty)
+  + Method:       j()V
+    Access flags: 0x2a
+      = private static synchronized void j()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 35, locals = 0, stack = 3):
+      [0] getstatic #66
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.m Z]
+      [3] ifne +17 (target=20)
+      [6] getstatic #60
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.g Lde/widemeadows/android/bluetoothspptest/i;]
+      [9] ifnonnull +11 (target=20)
+      [12] new #46
+        - Class [java/lang/AssertionError]
+      [15] dup
+      [16] invokespecial #117
+        - Methodref [java/lang/AssertionError.<init> ()V]
+      [19] athrow
+      [20] getstatic #61
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.h Landroid/os/Handler;]
+      [23] new #36
+        - Class [de/widemeadows/android/bluetoothspptest/f]
+      [26] dup
+      [27] invokespecial #102
+        - Methodref [de/widemeadows/android/bluetoothspptest/f.<init> ()V]
+      [30] invokevirtual #88
+        - Methodref [android/os/Handler.post (Ljava/lang/Runnable;)Z]
+      [33] pop
+      [34] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 1):
+        - [20] Var: ..., Stack: (empty)
+  + Method:       k()V
+    Access flags: 0x2a
+      = private static synchronized void k()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 35, locals = 0, stack = 3):
+      [0] getstatic #66
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.m Z]
+      [3] ifne +17 (target=20)
+      [6] getstatic #60
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.g Lde/widemeadows/android/bluetoothspptest/i;]
+      [9] ifnonnull +11 (target=20)
+      [12] new #46
+        - Class [java/lang/AssertionError]
+      [15] dup
+      [16] invokespecial #117
+        - Methodref [java/lang/AssertionError.<init> ()V]
+      [19] athrow
+      [20] getstatic #61
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.h Landroid/os/Handler;]
+      [23] new #37
+        - Class [de/widemeadows/android/bluetoothspptest/g]
+      [26] dup
+      [27] invokespecial #103
+        - Methodref [de/widemeadows/android/bluetoothspptest/g.<init> ()V]
+      [30] invokevirtual #88
+        - Methodref [android/os/Handler.post (Ljava/lang/Runnable;)Z]
+      [33] pop
+      [34] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 1):
+        - [20] Var: ..., Stack: (empty)
+  + Method:       l()V
+    Access flags: 0x2a
+      = private static synchronized void l()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 35, locals = 0, stack = 3):
+      [0] getstatic #66
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.m Z]
+      [3] ifne +17 (target=20)
+      [6] getstatic #60
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.g Lde/widemeadows/android/bluetoothspptest/i;]
+      [9] ifnonnull +11 (target=20)
+      [12] new #46
+        - Class [java/lang/AssertionError]
+      [15] dup
+      [16] invokespecial #117
+        - Methodref [java/lang/AssertionError.<init> ()V]
+      [19] athrow
+      [20] getstatic #61
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.h Landroid/os/Handler;]
+      [23] new #38
+        - Class [de/widemeadows/android/bluetoothspptest/h]
+      [26] dup
+      [27] invokespecial #104
+        - Methodref [de/widemeadows/android/bluetoothspptest/h.<init> ()V]
+      [30] invokevirtual #88
+        - Methodref [android/os/Handler.post (Ljava/lang/Runnable;)Z]
+      [33] pop
+      [34] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 1):
+        - [20] Var: ..., Stack: (empty)
+  + Method:       m()V
+    Access flags: 0x2a
+      = private static synchronized void m()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 35, locals = 0, stack = 3):
+      [0] getstatic #66
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.m Z]
+      [3] ifne +17 (target=20)
+      [6] getstatic #60
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.g Lde/widemeadows/android/bluetoothspptest/i;]
+      [9] ifnonnull +11 (target=20)
+      [12] new #46
+        - Class [java/lang/AssertionError]
+      [15] dup
+      [16] invokespecial #117
+        - Methodref [java/lang/AssertionError.<init> ()V]
+      [19] athrow
+      [20] getstatic #61
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.h Landroid/os/Handler;]
+      [23] new #40
+        - Class [de/widemeadows/android/bluetoothspptest/k]
+      [26] dup
+      [27] invokespecial #106
+        - Methodref [de/widemeadows/android/bluetoothspptest/k.<init> ()V]
+      [30] invokevirtual #88
+        - Methodref [android/os/Handler.post (Ljava/lang/Runnable;)Z]
+      [33] pop
+      [34] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 1):
+        - [20] Var: ..., Stack: (empty)
+  + Method:       a(Ljava/lang/String;)V
+    Access flags: 0x29
+      = public static synchronized void a(java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 302, locals = 3, stack = 5):
+      [0] aload_0 v0
+      [1] ifnonnull +13 (target=14)
+      [4] new #48
+        - Class [java/lang/IllegalArgumentException]
+      [7] dup
+      [8] ldc #6
+        - String [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.connectToDevice must not be null]
+      [10] invokespecial #119
+        - Methodref [java/lang/IllegalArgumentException.<init> (Ljava/lang/String;)V]
+      [13] athrow
+      [14] getstatic #66
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.m Z]
+      [17] ifne +17 (target=34)
+      [20] getstatic #60
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.g Lde/widemeadows/android/bluetoothspptest/i;]
+      [23] ifnonnull +11 (target=34)
+      [26] new #46
+        - Class [java/lang/AssertionError]
+      [29] dup
+      [30] invokespecial #117
+        - Methodref [java/lang/AssertionError.<init> ()V]
+      [33] athrow
+      [34] invokestatic #95
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.c ()V]
+      [37] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.f Landroid/bluetooth/BluetoothAdapter;]
+      [40] aload_0 v0
+      [41] invokevirtual #74
+        - Methodref [android/bluetooth/BluetoothAdapter.getRemoteDevice (Ljava/lang/String;)Landroid/bluetooth/BluetoothDevice;]
+      [44] astore_1 v1
+      [45] ldc #14
+        - String [BluetoothService]
+      [47] new #52
+        - Class [java/lang/StringBuilder]
+      [50] dup
+      [51] invokespecial #122
+        - Methodref [java/lang/StringBuilder.<init> ()V]
+      [54] ldc #13
+        - String [Bluetooth-Gerät ausgewählt: ]
+      [56] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [59] aload_1 v1
+      [60] invokevirtual #79
+        - Methodref [android/bluetooth/BluetoothDevice.getName ()Ljava/lang/String;]
+      [63] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [66] ldc #5
+        - String [; ]
+      [68] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [71] aload_1 v1
+      [72] invokevirtual #78
+        - Methodref [android/bluetooth/BluetoothDevice.getAddress ()Ljava/lang/String;]
+      [75] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [78] invokevirtual #124
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [81] invokestatic #91
+        - Methodref [android/util/Log.i (Ljava/lang/String;Ljava/lang/String;)I]
+      [84] pop
+      [85] aload_1 v1
+      [86] putstatic #62
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.i Landroid/bluetooth/BluetoothDevice;]
+      [89] aload_1 v1
+      [90] invokevirtual #79
+        - Methodref [android/bluetooth/BluetoothDevice.getName ()Ljava/lang/String;]
+      [93] astore_2 v2
+      [94] getstatic #61
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.h Landroid/os/Handler;]
+      [97] new #39
+        - Class [de/widemeadows/android/bluetoothspptest/j]
+      [100] dup
+      [101] aload_2 v2
+      [102] aload_0 v0
+      [103] invokespecial #105
+        - Methodref [de/widemeadows/android/bluetoothspptest/j.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+      [106] invokevirtual #88
+        - Methodref [android/os/Handler.post (Ljava/lang/Runnable;)Z]
+      [109] pop
+      [110] aload_1 v1
+      [111] getstatic #54
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.a Ljava/util/UUID;]
+      [114] invokevirtual #77
+        - Methodref [android/bluetooth/BluetoothDevice.createRfcommSocketToServiceRecord (Ljava/util/UUID;)Landroid/bluetooth/BluetoothSocket;]
+      [117] dup
+      [118] astore_0 v0
+      [119] putstatic #63
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.j Landroid/bluetooth/BluetoothSocket;]
+      [122] aload_0 v0
+      [123] ifnonnull +12 (target=135)
+      [126] ldc #14
+        - String [BluetoothService]
+      [128] ldc #17
+        - String [Konnte Bluetooth-Socket nicht erzeugen!]
+      [130] invokestatic #89
+        - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+      [133] pop
+      [134] return
+      [135] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.f Landroid/bluetooth/BluetoothAdapter;]
+      [138] invokevirtual #75
+        - Methodref [android/bluetooth/BluetoothAdapter.isDiscovering ()Z]
+      [141] ifeq +10 (target=151)
+      [144] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.f Landroid/bluetooth/BluetoothAdapter;]
+      [147] invokevirtual #70
+        - Methodref [android/bluetooth/BluetoothAdapter.cancelDiscovery ()Z]
+      [150] pop
+      [151] ldc #14
+        - String [BluetoothService]
+      [153] new #52
+        - Class [java/lang/StringBuilder]
+      [156] dup
+      [157] invokespecial #122
+        - Methodref [java/lang/StringBuilder.<init> ()V]
+      [160] ldc #15
+        - String [Connecting Socket to ]
+      [162] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [165] aload_1 v1
+      [166] invokevirtual #79
+        - Methodref [android/bluetooth/BluetoothDevice.getName ()Ljava/lang/String;]
+      [169] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [172] invokevirtual #124
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [175] invokestatic #91
+        - Methodref [android/util/Log.i (Ljava/lang/String;Ljava/lang/String;)I]
+      [178] pop
+      [179] aload_0 v0
+      [180] invokevirtual #81
+        - Methodref [android/bluetooth/BluetoothSocket.connect ()V]
+      [183] goto +14 (target=197)
+      [186] astore_1 v1
+      [187] ldc #14
+        - String [BluetoothService]
+      [189] ldc #20
+        - String [Konnte Verbindung nicht herstellen.]
+      [191] aload_1 v1
+      [192] invokestatic #90
+        - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I]
+      [195] pop
+      [196] return
+      [197] aload_0 v0
+      [198] invokevirtual #82
+        - Methodref [android/bluetooth/BluetoothSocket.getInputStream ()Ljava/io/InputStream;]
+      [201] dup
+      [202] astore_1 v1
+      [203] ifnonnull +12 (target=215)
+      [206] ldc #14
+        - String [BluetoothService]
+      [208] ldc #18
+        - String [Konnte Input-Stream nicht erzeugen]
+      [210] invokestatic #89
+        - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+      [213] pop
+      [214] return
+      [215] new #41
+        - Class [java/io/BufferedInputStream]
+      [218] dup
+      [219] aload_1 v1
+      [220] invokespecial #107
+        - Methodref [java/io/BufferedInputStream.<init> (Ljava/io/InputStream;)V]
+      [223] putstatic #65
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.l Ljava/io/BufferedInputStream;]
+      [226] goto +14 (target=240)
+      [229] astore_1 v1
+      [230] ldc #14
+        - String [BluetoothService]
+      [232] ldc #18
+        - String [Konnte Input-Stream nicht erzeugen]
+      [234] aload_1 v1
+      [235] invokestatic #90
+        - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I]
+      [238] pop
+      [239] return
+      [240] aload_0 v0
+      [241] invokevirtual #83
+        - Methodref [android/bluetooth/BluetoothSocket.getOutputStream ()Ljava/io/OutputStream;]
+      [244] dup
+      [245] astore_1 v1
+      [246] ifnonnull +12 (target=258)
+      [249] ldc #14
+        - String [BluetoothService]
+      [251] ldc #19
+        - String [Konnte Output-Stream nicht erzeugen]
+      [253] invokestatic #89
+        - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+      [256] pop
+      [257] return
+      [258] new #42
+        - Class [java/io/BufferedOutputStream]
+      [261] dup
+      [262] aload_1 v1
+      [263] invokespecial #109
+        - Methodref [java/io/BufferedOutputStream.<init> (Ljava/io/OutputStream;)V]
+      [266] putstatic #64
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.k Ljava/io/BufferedOutputStream;]
+      [269] goto +14 (target=283)
+      [272] astore_1 v1
+      [273] ldc #14
+        - String [BluetoothService]
+      [275] ldc #19
+        - String [Konnte Output-Stream nicht erzeugen]
+      [277] aload_1 v1
+      [278] invokestatic #90
+        - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I]
+      [281] pop
+      [282] return
+      [283] invokestatic #100
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.n ()V]
+      [286] return
+      [287] invokevirtual #114
+        - Methodref [java/io/IOException.printStackTrace ()V]
+      [290] return
+      [291] astore_0 v0
+      [292] ldc #14
+        - String [BluetoothService]
+      [294] ldc #21
+        - String [Nullreferenz-Ausnahmefehler!]
+      [296] aload_0 v0
+      [297] invokestatic #90
+        - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I]
+      [300] pop
+      [301] return
+      Code attribute exceptions (count = 19):
+      - ExceptionInfo (151 -> 183: 186):
+      - Class [java/io/IOException]
+      - ExceptionInfo (197 -> 214: 229):
+      - Class [java/io/IOException]
+      - ExceptionInfo (215 -> 226: 229):
+      - Class [java/io/IOException]
+      - ExceptionInfo (240 -> 257: 272):
+      - Class [java/io/IOException]
+      - ExceptionInfo (258 -> 269: 272):
+      - Class [java/io/IOException]
+      - ExceptionInfo (110 -> 134: 287):
+      - Class [java/io/IOException]
+      - ExceptionInfo (135 -> 196: 287):
+      - Class [java/io/IOException]
+      - ExceptionInfo (197 -> 214: 287):
+      - Class [java/io/IOException]
+      - ExceptionInfo (215 -> 239: 287):
+      - Class [java/io/IOException]
+      - ExceptionInfo (240 -> 257: 287):
+      - Class [java/io/IOException]
+      - ExceptionInfo (258 -> 282: 287):
+      - Class [java/io/IOException]
+      - ExceptionInfo (283 -> 286: 287):
+      - Class [java/io/IOException]
+      - ExceptionInfo (110 -> 134: 291):
+      - Class [java/lang/NullPointerException]
+      - ExceptionInfo (135 -> 196: 291):
+      - Class [java/lang/NullPointerException]
+      - ExceptionInfo (197 -> 214: 291):
+      - Class [java/lang/NullPointerException]
+      - ExceptionInfo (215 -> 239: 291):
+      - Class [java/lang/NullPointerException]
+      - ExceptionInfo (240 -> 257: 291):
+      - Class [java/lang/NullPointerException]
+      - ExceptionInfo (258 -> 282: 291):
+      - Class [java/lang/NullPointerException]
+      - ExceptionInfo (283 -> 286: 291):
+      - Class [java/lang/NullPointerException]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 15):
+        - [14] Var: ..., Stack: (empty)
+        - [34] Var: ..., Stack: (empty)
+        - [135] Var: ...[a:android/bluetooth/BluetoothDevice][a:java/lang/String][a:android/bluetooth/BluetoothSocket], Stack: (empty)
+        - [151] Var: ..., Stack: (empty)
+        - [186] Var: ..., Stack: [a:java/io/IOException]
+        - [197] Var: ..., Stack: (empty)
+        - [215] Var: ...[a:java/io/InputStream], Stack: (empty)
+        - [229] Var: [a:java/lang/String][a:android/bluetooth/BluetoothDevice][a:java/lang/String][a:android/bluetooth/BluetoothSocket], Stack: [a:java/io/IOException]
+        - [240] Var: ...[a:java/io/InputStream], Stack: (empty)
+        - [258] Var: [a:java/lang/String][a:android/bluetooth/BluetoothDevice][a:java/lang/String][a:android/bluetooth/BluetoothSocket][a:java/io/OutputStream], Stack: 
+        - [272] Var: [a:java/lang/String][a:android/bluetooth/BluetoothDevice][a:java/lang/String][a:android/bluetooth/BluetoothSocket][a:java/lang/Object], Stack: [a:java/io/IOException]
+        - [283] Var: [a:java/lang/String][a:android/bluetooth/BluetoothDevice][a:java/lang/String][a:android/bluetooth/BluetoothSocket][a:java/io/OutputStream], Stack: 
+        - [287] Var: [a:java/lang/String][a:android/bluetooth/BluetoothDevice][a:java/lang/String], Stack: [a:java/io/IOException]
+        - [291] Var: ..., Stack: [a:java/lang/NullPointerException]
+        - [301] Var: ...[a:java/lang/Object], Stack: (empty)
+  + Method:       c()V
+    Access flags: 0x29
+      = public static synchronized void c()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 107, locals = 0, stack = 1):
+      [0] getstatic #64
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.k Ljava/io/BufferedOutputStream;]
+      [3] ifnull +25 (target=28)
+      [6] getstatic #64
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.k Ljava/io/BufferedOutputStream;]
+      [9] invokevirtual #111
+        - Methodref [java/io/BufferedOutputStream.flush ()V]
+      [12] getstatic #64
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.k Ljava/io/BufferedOutputStream;]
+      [15] invokevirtual #110
+        - Methodref [java/io/BufferedOutputStream.close ()V]
+      [18] goto +10 (target=28)
+      [21] invokevirtual #114
+        - Methodref [java/io/IOException.printStackTrace ()V]
+      [24] goto +4 (target=28)
+      [27] pop
+      [28] aconst_null
+      [29] putstatic #64
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.k Ljava/io/BufferedOutputStream;]
+      [32] getstatic #65
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.l Ljava/io/BufferedInputStream;]
+      [35] ifnull +19 (target=54)
+      [38] getstatic #65
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.l Ljava/io/BufferedInputStream;]
+      [41] invokevirtual #108
+        - Methodref [java/io/BufferedInputStream.close ()V]
+      [44] goto +10 (target=54)
+      [47] invokevirtual #114
+        - Methodref [java/io/IOException.printStackTrace ()V]
+      [50] goto +4 (target=54)
+      [53] pop
+      [54] aconst_null
+      [55] putstatic #65
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.l Ljava/io/BufferedInputStream;]
+      [58] getstatic #63
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.j Landroid/bluetooth/BluetoothSocket;]
+      [61] ifnull +37 (target=98)
+      [64] getstatic #63
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.j Landroid/bluetooth/BluetoothSocket;]
+      [67] invokevirtual #83
+        - Methodref [android/bluetooth/BluetoothSocket.getOutputStream ()Ljava/io/OutputStream;]
+      [70] invokevirtual #116
+        - Methodref [java/io/OutputStream.close ()V]
+      [73] getstatic #63
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.j Landroid/bluetooth/BluetoothSocket;]
+      [76] invokevirtual #82
+        - Methodref [android/bluetooth/BluetoothSocket.getInputStream ()Ljava/io/InputStream;]
+      [79] invokevirtual #115
+        - Methodref [java/io/InputStream.close ()V]
+      [82] getstatic #63
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.j Landroid/bluetooth/BluetoothSocket;]
+      [85] invokevirtual #80
+        - Methodref [android/bluetooth/BluetoothSocket.close ()V]
+      [88] goto +10 (target=98)
+      [91] invokevirtual #114
+        - Methodref [java/io/IOException.printStackTrace ()V]
+      [94] goto +4 (target=98)
+      [97] pop
+      [98] aconst_null
+      [99] putstatic #63
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.j Landroid/bluetooth/BluetoothSocket;]
+      [102] aconst_null
+      [103] putstatic #62
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.i Landroid/bluetooth/BluetoothDevice;]
+      [106] return
+      Code attribute exceptions (count = 6):
+      - ExceptionInfo (6 -> 18: 21):
+      - Class [java/io/IOException]
+      - ExceptionInfo (6 -> 18: 27):
+      - Class [java/lang/NullPointerException]
+      - ExceptionInfo (38 -> 44: 47):
+      - Class [java/io/IOException]
+      - ExceptionInfo (38 -> 44: 53):
+      - Class [java/lang/NullPointerException]
+      - ExceptionInfo (64 -> 88: 91):
+      - Class [java/io/IOException]
+      - ExceptionInfo (64 -> 88: 97):
+      - Class [java/lang/NullPointerException]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 9):
+        - [21] Var: ..., Stack: [a:java/io/IOException]
+        - [27] Var: ..., Stack: [a:java/lang/NullPointerException]
+        - [28] Var: ..., Stack: (empty)
+        - [47] Var: ..., Stack: [a:java/io/IOException]
+        - [53] Var: ..., Stack: [a:java/lang/NullPointerException]
+        - [54] Var: ..., Stack: (empty)
+        - [91] Var: ..., Stack: [a:java/io/IOException]
+        - [97] Var: ..., Stack: [a:java/lang/NullPointerException]
+        - [98] Var: ..., Stack: (empty)
+  + Method:       n()V
+    Access flags: 0x2a
+      = private static synchronized void n()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 92, locals = 1, stack = 3):
+      [0] getstatic #66
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.m Z]
+      [3] ifne +17 (target=20)
+      [6] getstatic #64
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.k Ljava/io/BufferedOutputStream;]
+      [9] ifnonnull +11 (target=20)
+      [12] new #46
+        - Class [java/lang/AssertionError]
+      [15] dup
+      [16] invokespecial #117
+        - Methodref [java/lang/AssertionError.<init> ()V]
+      [19] athrow
+      [20] new #52
+        - Class [java/lang/StringBuilder]
+      [23] dup
+      [24] invokespecial #122
+        - Methodref [java/lang/StringBuilder.<init> ()V]
+      [27] ldc #22
+        - String [SYNC from ]
+      [29] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [32] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.f Landroid/bluetooth/BluetoothAdapter;]
+      [35] invokevirtual #73
+        - Methodref [android/bluetooth/BluetoothAdapter.getName ()Ljava/lang/String;]
+      [38] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [41] ldc #3
+        - String [ ]
+      [43] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [46] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.f Landroid/bluetooth/BluetoothAdapter;]
+      [49] invokevirtual #71
+        - Methodref [android/bluetooth/BluetoothAdapter.getAddress ()Ljava/lang/String;]
+      [52] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [55] ldc #2
+        - String [
+]
+      [57] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [60] invokevirtual #124
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [63] astore_0 v0
+      [64] getstatic #64
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.k Ljava/io/BufferedOutputStream;]
+      [67] aload_0 v0
+      [68] invokevirtual #121
+        - Methodref [java/lang/String.getBytes ()[B]
+      [71] invokevirtual #113
+        - Methodref [java/io/BufferedOutputStream.write ([B)V]
+      [74] getstatic #64
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.k Ljava/io/BufferedOutputStream;]
+      [77] invokevirtual #111
+        - Methodref [java/io/BufferedOutputStream.flush ()V]
+      [80] return
+      [81] astore_0 v0
+      [82] ldc #14
+        - String [BluetoothService]
+      [84] ldc #16
+        - String [Fehler beim Senden der Sync-Nachricht]
+      [86] aload_0 v0
+      [87] invokestatic #90
+        - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I]
+      [90] pop
+      [91] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (64 -> 80: 81):
+      - Class [java/io/IOException]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 3):
+        - [20] Var: ..., Stack: (empty)
+        - [81] Var: [a:java/lang/String], Stack: [a:java/io/IOException]
+        - [91] Var: ..., Stack: (empty)
+  + Method:       d()Z
+    Access flags: 0x9
+      = public static boolean d()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 16, locals = 0, stack = 1):
+      [0] getstatic #63
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.j Landroid/bluetooth/BluetoothSocket;]
+      [3] ifnull +11 (target=14)
+      [6] getstatic #64
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.k Ljava/io/BufferedOutputStream;]
+      [9] ifnull +5 (target=14)
+      [12] iconst_1
+      [13] ireturn
+      [14] iconst_0
+      [15] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [14] Var: ..., Stack: (empty)
+        - [15] Var: ..., Stack: [i]
+  + Method:       b(Ljava/lang/String;)V
+    Access flags: 0x29
+      = public static synchronized void b(java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 51, locals = 1, stack = 3):
+      [0] aload_0 v0
+      [1] ifnonnull +13 (target=14)
+      [4] new #48
+        - Class [java/lang/IllegalArgumentException]
+      [7] dup
+      [8] ldc #10
+        - String [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/BluetoothService.sendToTarget must not be null]
+      [10] invokespecial #119
+        - Methodref [java/lang/IllegalArgumentException.<init> (Ljava/lang/String;)V]
+      [13] athrow
+      [14] getstatic #64
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.k Ljava/io/BufferedOutputStream;]
+      [17] aload_0 v0
+      [18] invokevirtual #121
+        - Methodref [java/lang/String.getBytes ()[B]
+      [21] invokevirtual #113
+        - Methodref [java/io/BufferedOutputStream.write ([B)V]
+      [24] getstatic #64
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.k Ljava/io/BufferedOutputStream;]
+      [27] bipush 13
+      [29] invokevirtual #112
+        - Methodref [java/io/BufferedOutputStream.write (I)V]
+      [32] getstatic #64
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.k Ljava/io/BufferedOutputStream;]
+      [35] bipush 10
+      [37] invokevirtual #112
+        - Methodref [java/io/BufferedOutputStream.write (I)V]
+      [40] getstatic #64
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.k Ljava/io/BufferedOutputStream;]
+      [43] invokevirtual #111
+        - Methodref [java/io/BufferedOutputStream.flush ()V]
+      [46] return
+      [47] pop
+      [48] return
+      [49] pop
+      [50] return
+      Code attribute exceptions (count = 2):
+      - ExceptionInfo (14 -> 46: 47):
+      - Class [java/io/IOException]
+      - ExceptionInfo (14 -> 46: 49):
+      - Class [java/lang/NullPointerException]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 4):
+        - [14] Var: ..., Stack: (empty)
+        - [47] Var: ..., Stack: [a:java/io/IOException]
+        - [49] Var: ..., Stack: [a:java/lang/NullPointerException]
+        - [50] Var: ..., Stack: (empty)
+  + Method:       e()V
+    Access flags: 0x1008
+      = static void e()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 4, locals = 0, stack = 0):
+      [0] invokestatic #96
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.j ()V]
+      [3] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       f()V
+    Access flags: 0x1008
+      = static void f()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 4, locals = 0, stack = 0):
+      [0] invokestatic #97
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.k ()V]
+      [3] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       g()V
+    Access flags: 0x1008
+      = static void g()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 4, locals = 0, stack = 0):
+      [0] invokestatic #98
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.l ()V]
+      [3] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       h()V
+    Access flags: 0x1008
+      = static void h()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 4, locals = 0, stack = 0):
+      [0] invokestatic #99
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.m ()V]
+      [3] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       i()Lde/widemeadows/android/bluetoothspptest/i;
+    Access flags: 0x1008
+      = static de.widemeadows.android.bluetoothspptest.i i()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 4, locals = 0, stack = 1):
+      [0] getstatic #60
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.g Lde/widemeadows/android/bluetoothspptest/i;]
+      [3] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       <clinit>()V
+    Access flags: 0x8
+      = static void <clinit>()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 45, locals = 0, stack = 2):
+      [0] ldc #34
+        - Class [de/widemeadows/android/bluetoothspptest/d]
+      [2] invokevirtual #118
+        - Methodref [java/lang/Class.desiredAssertionStatus ()Z]
+      [5] ifne +7 (target=12)
+      [8] iconst_1
+      [9] goto +4 (target=13)
+      [12] iconst_0
+      [13] putstatic #66
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.m Z]
+      [16] ldc #4
+        - String [00001101-0000-1000-8000-00805F9B34FB]
+      [18] invokestatic #125
+        - Methodref [java/util/UUID.fromString (Ljava/lang/String;)Ljava/util/UUID;]
+      [21] putstatic #54
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.a Ljava/util/UUID;]
+      [24] new #30
+        - Class [android/content/IntentFilter]
+      [27] dup
+      [28] invokespecial #85
+        - Methodref [android/content/IntentFilter.<init> ()V]
+      [31] putstatic #57
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.d Landroid/content/IntentFilter;]
+      [34] new #31
+        - Class [android/os/Handler]
+      [37] dup
+      [38] invokespecial #87
+        - Methodref [android/os/Handler.<init> ()V]
+      [41] putstatic #61
+        - Fieldref [de/widemeadows/android/bluetoothspptest/d.h Landroid/os/Handler;]
+      [44] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [12] Var: ..., Stack: (empty)
+        - [13] Var: ..., Stack: [i]
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: de/widemeadows/android/bluetoothspptest/e
+  Superclass:    android/content/BroadcastReceiver
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x30
+    = final class de.widemeadows.android.bluetoothspptest.e extends android.content.BroadcastReceiver
+
+Interfaces (count = 0):
+
+Constant Pool (count = 63):
+  - String [ --> ]
+  - String [Bluetooth state change received: ]
+  - String [BluetoothService]
+  - String [android.bluetooth.adapter.extra.PREVIOUS_STATE]
+  - String [android.bluetooth.adapter.extra.STATE]
+  - Class [android/content/BroadcastReceiver]
+  - Class [android/content/Intent]
+  - Class [android/util/Log]
+  - Class [de/widemeadows/android/bluetoothspptest/d]
+  - Class [de/widemeadows/android/bluetoothspptest/e]
+  - Class [java/lang/StringBuilder]
+  - Methodref [android/content/BroadcastReceiver.<init> ()V]
+  - Methodref [android/content/Intent.getIntExtra (Ljava/lang/String;I)I]
+  - Methodref [android/util/Log.v (Ljava/lang/String;Ljava/lang/String;)I]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.e ()V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.f ()V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.g ()V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.h ()V]
+  - Methodref [java/lang/StringBuilder.<init> ()V]
+  - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
+  - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + NameAndType [<init> ()V]
+  + NameAndType [append (I)Ljava/lang/StringBuilder;]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [e ()V]
+  + NameAndType [f ()V]
+  + NameAndType [g ()V]
+  + NameAndType [getIntExtra (Ljava/lang/String;I)I]
+  + NameAndType [h ()V]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + NameAndType [v (Ljava/lang/String;Ljava/lang/String;)I]
+  + Utf8 [ --> ]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()V]
+  + Utf8 [(I)Ljava/lang/StringBuilder;]
+  + Utf8 [(Landroid/content/Context;Landroid/content/Intent;)V]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/String;I)I]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
+  + Utf8 [<init>]
+  + Utf8 [Bluetooth state change received: ]
+  + Utf8 [BluetoothService]
+  + Utf8 [Code]
+  + Utf8 [StackMapTable]
+  + Utf8 [android.bluetooth.adapter.extra.PREVIOUS_STATE]
+  + Utf8 [android.bluetooth.adapter.extra.STATE]
+  + Utf8 [android/content/BroadcastReceiver]
+  + Utf8 [android/content/Intent]
+  + Utf8 [android/util/Log]
+  + Utf8 [append]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/d]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/e]
+  + Utf8 [e]
+  + Utf8 [f]
+  + Utf8 [g]
+  + Utf8 [getIntExtra]
+  + Utf8 [h]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [onReceive]
+  + Utf8 [toString]
+  + Utf8 [v]
+
+Fields (count = 0):
+
+Methods (count = 2):
+  - Method:       <init>()V
+    Access flags: 0x0
+      = e()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #12
+        - Methodref [android/content/BroadcastReceiver.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    Access flags: 0x11
+      = public final void onReceive(android.content.Context,android.content.Intent)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 120, locals = 3, stack = 3):
+      [0] aload_2 v2
+      [1] ldc #5
+        - String [android.bluetooth.adapter.extra.STATE]
+      [3] iconst_m1
+      [4] invokevirtual #13
+        - Methodref [android/content/Intent.getIntExtra (Ljava/lang/String;I)I]
+      [7] istore_1 v1
+      [8] aload_2 v2
+      [9] ldc #4
+        - String [android.bluetooth.adapter.extra.PREVIOUS_STATE]
+      [11] iconst_m1
+      [12] invokevirtual #13
+        - Methodref [android/content/Intent.getIntExtra (Ljava/lang/String;I)I]
+      [15] istore_2 v2
+      [16] ldc #3
+        - String [BluetoothService]
+      [18] new #11
+        - Class [java/lang/StringBuilder]
+      [21] dup
+      [22] invokespecial #19
+        - Methodref [java/lang/StringBuilder.<init> ()V]
+      [25] ldc #2
+        - String [Bluetooth state change received: ]
+      [27] invokevirtual #21
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [30] iload_2 v2
+      [31] invokevirtual #20
+        - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
+      [34] ldc #1
+        - String [ --> ]
+      [36] invokevirtual #21
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [39] iload_1 v1
+      [40] invokevirtual #20
+        - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
+      [43] invokevirtual #22
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [46] invokestatic #14
+        - Methodref [android/util/Log.v (Ljava/lang/String;Ljava/lang/String;)I]
+      [49] pop
+      [50] iload_1 v1
+      [51] tableswitch (4 offsets, default=50) (target=101)
+        10: offset = 47, target = 98
+        11: offset = 29, target = 80
+        12: offset = 35, target = 86
+        13: offset = 41, target = 92
+        default: offset = 50, target = 101
+      [80] invokestatic #15
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.e ()V]
+      [83] goto +18 (target=101)
+      [86] invokestatic #16
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.f ()V]
+      [89] goto +12 (target=101)
+      [92] invokestatic #17
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.g ()V]
+      [95] goto +6 (target=101)
+      [98] invokestatic #18
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.h ()V]
+      [101] iload_1 v1
+      [102] bipush 12
+      [104] ificmpne +6 (target=110)
+      [107] invokestatic #16
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.f ()V]
+      [110] iload_1 v1
+      [111] bipush 13
+      [113] ificmpne +6 (target=119)
+      [116] invokestatic #17
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.g ()V]
+      [119] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 7):
+        - [80] Var: ...[i][i], Stack: (empty)
+        - [86] Var: ..., Stack: (empty)
+        - [92] Var: ..., Stack: (empty)
+        - [98] Var: ..., Stack: (empty)
+        - [101] Var: ..., Stack: (empty)
+        - [110] Var: ..., Stack: (empty)
+        - [119] Var: ..., Stack: (empty)
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: de/widemeadows/android/bluetoothspptest/f
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x30
+    = final class de.widemeadows.android.bluetoothspptest.f extends java.lang.Object
+
+Interfaces (count = 1):
+  - Class [java/lang/Runnable]
+
+Constant Pool (count = 24):
+  - Class [de/widemeadows/android/bluetoothspptest/d]
+  - Class [de/widemeadows/android/bluetoothspptest/f]
+  - Class [de/widemeadows/android/bluetoothspptest/i]
+  - Class [java/lang/Object]
+  - Class [java/lang/Runnable]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.i ()Lde/widemeadows/android/bluetoothspptest/i;]
+  - Methodref [java/lang/Object.<init> ()V]
+  - InterfaceMethodref [de/widemeadows/android/bluetoothspptest/i.a ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [a ()V]
+  + NameAndType [i ()Lde/widemeadows/android/bluetoothspptest/i;]
+  + Utf8 [()Lde/widemeadows/android/bluetoothspptest/i;]
+  + Utf8 [()V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [a]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/d]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/f]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/i]
+  + Utf8 [i]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/Runnable]
+  + Utf8 [run]
+
+Fields (count = 0):
+
+Methods (count = 2):
+  - Method:       <init>()V
+    Access flags: 0x0
+      = f()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #7
+        - Methodref [java/lang/Object.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       run()V
+    Access flags: 0x11
+      = public final void run()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 9, locals = 1, stack = 1):
+      [0] invokestatic #6
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.i ()Lde/widemeadows/android/bluetoothspptest/i;]
+      [3] invokeinterface #8
+        - InterfaceMethodref [de/widemeadows/android/bluetoothspptest/i.a ()V]
+      [8] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: de/widemeadows/android/bluetoothspptest/g
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x30
+    = final class de.widemeadows.android.bluetoothspptest.g extends java.lang.Object
+
+Interfaces (count = 1):
+  - Class [java/lang/Runnable]
+
+Constant Pool (count = 24):
+  - Class [de/widemeadows/android/bluetoothspptest/d]
+  - Class [de/widemeadows/android/bluetoothspptest/g]
+  - Class [de/widemeadows/android/bluetoothspptest/i]
+  - Class [java/lang/Object]
+  - Class [java/lang/Runnable]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.i ()Lde/widemeadows/android/bluetoothspptest/i;]
+  - Methodref [java/lang/Object.<init> ()V]
+  - InterfaceMethodref [de/widemeadows/android/bluetoothspptest/i.b ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [b ()V]
+  + NameAndType [i ()Lde/widemeadows/android/bluetoothspptest/i;]
+  + Utf8 [()Lde/widemeadows/android/bluetoothspptest/i;]
+  + Utf8 [()V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [b]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/d]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/g]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/i]
+  + Utf8 [i]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/Runnable]
+  + Utf8 [run]
+
+Fields (count = 0):
+
+Methods (count = 2):
+  - Method:       <init>()V
+    Access flags: 0x0
+      = g()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #7
+        - Methodref [java/lang/Object.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       run()V
+    Access flags: 0x11
+      = public final void run()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 9, locals = 1, stack = 1):
+      [0] invokestatic #6
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.i ()Lde/widemeadows/android/bluetoothspptest/i;]
+      [3] invokeinterface #8
+        - InterfaceMethodref [de/widemeadows/android/bluetoothspptest/i.b ()V]
+      [8] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: de/widemeadows/android/bluetoothspptest/h
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x30
+    = final class de.widemeadows.android.bluetoothspptest.h extends java.lang.Object
+
+Interfaces (count = 1):
+  - Class [java/lang/Runnable]
+
+Constant Pool (count = 24):
+  - Class [de/widemeadows/android/bluetoothspptest/d]
+  - Class [de/widemeadows/android/bluetoothspptest/h]
+  - Class [de/widemeadows/android/bluetoothspptest/i]
+  - Class [java/lang/Object]
+  - Class [java/lang/Runnable]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.i ()Lde/widemeadows/android/bluetoothspptest/i;]
+  - Methodref [java/lang/Object.<init> ()V]
+  - InterfaceMethodref [de/widemeadows/android/bluetoothspptest/i.c ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [c ()V]
+  + NameAndType [i ()Lde/widemeadows/android/bluetoothspptest/i;]
+  + Utf8 [()Lde/widemeadows/android/bluetoothspptest/i;]
+  + Utf8 [()V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [c]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/d]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/h]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/i]
+  + Utf8 [i]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/Runnable]
+  + Utf8 [run]
+
+Fields (count = 0):
+
+Methods (count = 2):
+  - Method:       <init>()V
+    Access flags: 0x0
+      = h()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #7
+        - Methodref [java/lang/Object.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       run()V
+    Access flags: 0x11
+      = public final void run()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 9, locals = 1, stack = 1):
+      [0] invokestatic #6
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.i ()Lde/widemeadows/android/bluetoothspptest/i;]
+      [3] invokeinterface #8
+        - InterfaceMethodref [de/widemeadows/android/bluetoothspptest/i.c ()V]
+      [8] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: de/widemeadows/android/bluetoothspptest/MainActivity
+  Superclass:    android/app/Activity
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class de.widemeadows.android.bluetoothspptest.MainActivity extends android.app.Activity
+
+Interfaces (count = 2):
+  - Class [android/hardware/SensorEventListener]
+  - Class [de/widemeadows/android/bluetoothspptest/i]
+
+Constant Pool (count = 334):
+  - Integer [536870918]
+  - Integer [2130903042]
+  - Integer [2130968586]
+  - Integer [2130968589]
+  - Integer [2130968590]
+  - Integer [2130968591]
+  - Integer [2130968592]
+  - Integer [2130968594]
+  - Integer [2130968595]
+  - Integer [2131034112]
+  - Integer [2131099648]
+  - Integer [2131165189]
+  - Integer [2131165190]
+  - Integer [2131165191]
+  - Integer [2131165192]
+  - Integer [2131165193]
+  - Integer [2131165194]
+  - Integer [2131165195]
+  - Integer [2131165196]
+  - Integer [2131165197]
+  - Integer [2131165198]
+  - String [ (]
+  - String [)]
+  - String [,##0.00000]
+  - String [; ]
+  - String [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/MainActivity.connectedTo must not be null]
+  - String [Argument 1 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/MainActivity.connectedTo must not be null]
+  - String [do_not_turn_off]
+  - String [power]
+  - String [sensor]
+  - Class [android/app/Activity]
+  - Class [android/content/Intent]
+  - Class [android/content/res/Resources]
+  - Class [android/hardware/Sensor]
+  - Class [android/hardware/SensorEvent]
+  - Class [android/hardware/SensorEventListener]
+  - Class [android/hardware/SensorManager]
+  - Class [android/os/Bundle]
+  - Class [android/os/PowerManager]
+  - Class [android/os/PowerManager$WakeLock]
+  - Class [android/view/MenuInflater]
+  - Class [android/view/MenuItem]
+  - Class [android/widget/TextView]
+  - Class [android/widget/Toast]
+  - Class [de/widemeadows/android/bluetoothspptest/DeviceListActivity]
+  - Class [de/widemeadows/android/bluetoothspptest/MainActivity]
+  - Class [de/widemeadows/android/bluetoothspptest/d]
+  - Class [de/widemeadows/android/bluetoothspptest/i]
+  - Class [java/lang/Exception]
+  - Class [java/lang/IllegalArgumentException]
+  - Class [java/lang/Integer]
+  - Class [java/lang/Object]
+  - Class [java/lang/String]
+  - Class [java/lang/StringBuilder]
+  - Class [java/text/DecimalFormat]
+  - Fieldref [android/hardware/SensorEvent.sensor Landroid/hardware/Sensor;]
+  - Fieldref [android/hardware/SensorEvent.values [F]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.a Ljava/lang/String;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.a Ljava/text/DecimalFormat;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.b Landroid/hardware/SensorManager;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.c Landroid/hardware/Sensor;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.d Landroid/hardware/Sensor;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.e Landroid/widget/TextView;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.f Landroid/widget/TextView;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.g Landroid/widget/TextView;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.h Landroid/widget/TextView;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.i Landroid/widget/TextView;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.j Landroid/widget/TextView;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.k Landroid/widget/TextView;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.l Landroid/widget/TextView;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.m Landroid/os/PowerManager$WakeLock;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.n F]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.o F]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.p F]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.q F]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.r F]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.s F]
+  - Methodref [android/app/Activity.<init> ()V]
+  - Methodref [android/app/Activity.onActivityResult (IILandroid/content/Intent;)V]
+  - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+  - Methodref [android/app/Activity.onCreateOptionsMenu (Landroid/view/Menu;)Z]
+  - Methodref [android/app/Activity.onPause ()V]
+  - Methodref [android/app/Activity.onResume ()V]
+  - Methodref [android/app/Activity.onStart ()V]
+  - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  - Methodref [android/content/Intent.getExtras ()Landroid/os/Bundle;]
+  - Methodref [android/content/res/Resources.getStringArray (I)[Ljava/lang/String;]
+  - Methodref [android/hardware/Sensor.getType ()I]
+  - Methodref [android/hardware/SensorManager.getDefaultSensor (I)Landroid/hardware/Sensor;]
+  - Methodref [android/hardware/SensorManager.registerListener (Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z]
+  - Methodref [android/hardware/SensorManager.unregisterListener (Landroid/hardware/SensorEventListener;)V]
+  - Methodref [android/os/Bundle.getString (Ljava/lang/String;)Ljava/lang/String;]
+  - Methodref [android/os/PowerManager.newWakeLock (ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;]
+  - Methodref [android/os/PowerManager$WakeLock.acquire ()V]
+  - Methodref [android/os/PowerManager$WakeLock.release ()V]
+  - Methodref [android/view/MenuInflater.inflate (ILandroid/view/Menu;)V]
+  - Methodref [android/widget/TextView.setText (I)V]
+  - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+  - Methodref [android/widget/Toast.makeText (Landroid/content/Context;II)Landroid/widget/Toast;]
+  - Methodref [android/widget/Toast.show ()V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.b ()V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.e ()V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.findViewById (I)Landroid/view/View;]
+  - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.getApplicationContext ()Landroid/content/Context;]
+  - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.getMenuInflater ()Landroid/view/MenuInflater;]
+  - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.getResources ()Landroid/content/res/Resources;]
+  - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.setContentView (I)V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.startActivityForResult (Landroid/content/Intent;I)V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.a ()Z]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.a (Landroid/app/Activity;)Z]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.a (Landroid/content/Context;Lde/widemeadows/android/bluetoothspptest/i;)Z]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.a (Ljava/lang/String;)V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.b ()Z]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.b (Landroid/app/Activity;)V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.b (Ljava/lang/String;)V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.c ()V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.c (Landroid/app/Activity;)V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.d ()Z]
+  - Methodref [java/lang/IllegalArgumentException.<init> (Ljava/lang/String;)V]
+  - Methodref [java/lang/Integer.toString (I)Ljava/lang/String;]
+  - Methodref [java/lang/StringBuilder.<init> ()V]
+  - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  - Methodref [java/text/DecimalFormat.<init> (Ljava/lang/String;)V]
+  - Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
+  - InterfaceMethodref [android/view/MenuItem.getItemId ()I]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  + NameAndType [<init> (Ljava/lang/String;)V]
+  + NameAndType [a ()Z]
+  + NameAndType [a (Landroid/app/Activity;)Z]
+  + NameAndType [a (Landroid/content/Context;Lde/widemeadows/android/bluetoothspptest/i;)Z]
+  + NameAndType [a (Ljava/lang/String;)V]
+  + NameAndType [a Ljava/lang/String;]
+  + NameAndType [a Ljava/text/DecimalFormat;]
+  + NameAndType [acquire ()V]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [b ()V]
+  + NameAndType [b ()Z]
+  + NameAndType [b (Landroid/app/Activity;)V]
+  + NameAndType [b (Ljava/lang/String;)V]
+  + NameAndType [b Landroid/hardware/SensorManager;]
+  + NameAndType [c ()V]
+  + NameAndType [c (Landroid/app/Activity;)V]
+  + NameAndType [c Landroid/hardware/Sensor;]
+  + NameAndType [d ()Z]
+  + NameAndType [d Landroid/hardware/Sensor;]
+  + NameAndType [e ()V]
+  + NameAndType [e Landroid/widget/TextView;]
+  + NameAndType [f Landroid/widget/TextView;]
+  + NameAndType [findViewById (I)Landroid/view/View;]
+  + NameAndType [format (D)Ljava/lang/String;]
+  + NameAndType [g Landroid/widget/TextView;]
+  + NameAndType [getApplicationContext ()Landroid/content/Context;]
+  + NameAndType [getDefaultSensor (I)Landroid/hardware/Sensor;]
+  + NameAndType [getExtras ()Landroid/os/Bundle;]
+  + NameAndType [getItemId ()I]
+  + NameAndType [getMenuInflater ()Landroid/view/MenuInflater;]
+  + NameAndType [getResources ()Landroid/content/res/Resources;]
+  + NameAndType [getString (Ljava/lang/String;)Ljava/lang/String;]
+  + NameAndType [getStringArray (I)[Ljava/lang/String;]
+  + NameAndType [getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  + NameAndType [getType ()I]
+  + NameAndType [h Landroid/widget/TextView;]
+  + NameAndType [i Landroid/widget/TextView;]
+  + NameAndType [inflate (ILandroid/view/Menu;)V]
+  + NameAndType [j Landroid/widget/TextView;]
+  + NameAndType [k Landroid/widget/TextView;]
+  + NameAndType [l Landroid/widget/TextView;]
+  + NameAndType [m Landroid/os/PowerManager$WakeLock;]
+  + NameAndType [makeText (Landroid/content/Context;II)Landroid/widget/Toast;]
+  + NameAndType [n F]
+  + NameAndType [newWakeLock (ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;]
+  + NameAndType [o F]
+  + NameAndType [onActivityResult (IILandroid/content/Intent;)V]
+  + NameAndType [onCreate (Landroid/os/Bundle;)V]
+  + NameAndType [onCreateOptionsMenu (Landroid/view/Menu;)Z]
+  + NameAndType [onPause ()V]
+  + NameAndType [onResume ()V]
+  + NameAndType [onStart ()V]
+  + NameAndType [p F]
+  + NameAndType [q F]
+  + NameAndType [r F]
+  + NameAndType [registerListener (Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z]
+  + NameAndType [release ()V]
+  + NameAndType [s F]
+  + NameAndType [sensor Landroid/hardware/Sensor;]
+  + NameAndType [setContentView (I)V]
+  + NameAndType [setText (I)V]
+  + NameAndType [setText (Ljava/lang/CharSequence;)V]
+  + NameAndType [show ()V]
+  + NameAndType [startActivityForResult (Landroid/content/Intent;I)V]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + NameAndType [toString (I)Ljava/lang/String;]
+  + NameAndType [unregisterListener (Landroid/hardware/SensorEventListener;)V]
+  + NameAndType [values [F]
+  + Utf8 [ (]
+  + Utf8 [()I]
+  + Utf8 [()Landroid/content/Context;]
+  + Utf8 [()Landroid/content/res/Resources;]
+  + Utf8 [()Landroid/os/Bundle;]
+  + Utf8 [()Landroid/view/MenuInflater;]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()V]
+  + Utf8 [()Z]
+  + Utf8 [(D)Ljava/lang/String;]
+  + Utf8 [(I)Landroid/hardware/Sensor;]
+  + Utf8 [(I)Landroid/view/View;]
+  + Utf8 [(I)Ljava/lang/String;]
+  + Utf8 [(I)V]
+  + Utf8 [(I)[Ljava/lang/String;]
+  + Utf8 [(IILandroid/content/Intent;)V]
+  + Utf8 [(ILandroid/view/Menu;)V]
+  + Utf8 [(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;]
+  + Utf8 [(Landroid/app/Activity;)V]
+  + Utf8 [(Landroid/app/Activity;)Z]
+  + Utf8 [(Landroid/content/Context;II)Landroid/widget/Toast;]
+  + Utf8 [(Landroid/content/Context;Lde/widemeadows/android/bluetoothspptest/i;)Z]
+  + Utf8 [(Landroid/content/Context;Ljava/lang/Class;)V]
+  + Utf8 [(Landroid/content/Intent;I)V]
+  + Utf8 [(Landroid/hardware/Sensor;I)V]
+  + Utf8 [(Landroid/hardware/SensorEvent;)V]
+  + Utf8 [(Landroid/hardware/SensorEventListener;)V]
+  + Utf8 [(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z]
+  + Utf8 [(Landroid/os/Bundle;)V]
+  + Utf8 [(Landroid/view/Menu;)Z]
+  + Utf8 [(Landroid/view/MenuItem;)Z]
+  + Utf8 [(Ljava/lang/CharSequence;)V]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/Object;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/String;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [)]
+  + Utf8 [,##0.00000]
+  + Utf8 [; ]
+  + Utf8 [<clinit>]
+  + Utf8 [<init>]
+  + Utf8 [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/MainActivity.connectedTo must not be null]
+  + Utf8 [Argument 1 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/MainActivity.connectedTo must not be null]
+  + Utf8 [Code]
+  + Utf8 [F]
+  + Utf8 [Landroid/hardware/Sensor;]
+  + Utf8 [Landroid/hardware/SensorManager;]
+  + Utf8 [Landroid/os/PowerManager$WakeLock;]
+  + Utf8 [Landroid/widget/TextView;]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [Ljava/text/DecimalFormat;]
+  + Utf8 [StackMapTable]
+  + Utf8 [[F]
+  + Utf8 [a]
+  + Utf8 [acquire]
+  + Utf8 [android/app/Activity]
+  + Utf8 [android/content/Intent]
+  + Utf8 [android/content/res/Resources]
+  + Utf8 [android/hardware/Sensor]
+  + Utf8 [android/hardware/SensorEvent]
+  + Utf8 [android/hardware/SensorEventListener]
+  + Utf8 [android/hardware/SensorManager]
+  + Utf8 [android/os/Bundle]
+  + Utf8 [android/os/PowerManager]
+  + Utf8 [android/os/PowerManager$WakeLock]
+  + Utf8 [android/view/MenuInflater]
+  + Utf8 [android/view/MenuItem]
+  + Utf8 [android/widget/TextView]
+  + Utf8 [android/widget/Toast]
+  + Utf8 [append]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [d]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/DeviceListActivity]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/MainActivity]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/d]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/i]
+  + Utf8 [do_not_turn_off]
+  + Utf8 [e]
+  + Utf8 [f]
+  + Utf8 [findViewById]
+  + Utf8 [format]
+  + Utf8 [g]
+  + Utf8 [getApplicationContext]
+  + Utf8 [getDefaultSensor]
+  + Utf8 [getExtras]
+  + Utf8 [getItemId]
+  + Utf8 [getMenuInflater]
+  + Utf8 [getResources]
+  + Utf8 [getString]
+  + Utf8 [getStringArray]
+  + Utf8 [getSystemService]
+  + Utf8 [getType]
+  + Utf8 [h]
+  + Utf8 [i]
+  + Utf8 [inflate]
+  + Utf8 [j]
+  + Utf8 [java/lang/Exception]
+  + Utf8 [java/lang/IllegalArgumentException]
+  + Utf8 [java/lang/Integer]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/String]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [java/text/DecimalFormat]
+  + Utf8 [k]
+  + Utf8 [l]
+  + Utf8 [m]
+  + Utf8 [makeText]
+  + Utf8 [n]
+  + Utf8 [newWakeLock]
+  + Utf8 [o]
+  + Utf8 [onAccuracyChanged]
+  + Utf8 [onActivityResult]
+  + Utf8 [onCreate]
+  + Utf8 [onCreateOptionsMenu]
+  + Utf8 [onOptionsItemSelected]
+  + Utf8 [onPause]
+  + Utf8 [onResume]
+  + Utf8 [onSensorChanged]
+  + Utf8 [onStart]
+  + Utf8 [p]
+  + Utf8 [power]
+  + Utf8 [q]
+  + Utf8 [r]
+  + Utf8 [registerListener]
+  + Utf8 [release]
+  + Utf8 [s]
+  + Utf8 [sensor]
+  + Utf8 [setContentView]
+  + Utf8 [setText]
+  + Utf8 [show]
+  + Utf8 [startActivityForResult]
+  + Utf8 [toString]
+  + Utf8 [unregisterListener]
+  + Utf8 [values]
+
+Fields (count = 19):
+  + Field:        a Ljava/text/DecimalFormat;
+    Access flags: 0x1a
+      = private static final java.text.DecimalFormat a
+  + Field:        b Landroid/hardware/SensorManager;
+    Access flags: 0x2
+      = private android.hardware.SensorManager b
+  + Field:        c Landroid/hardware/Sensor;
+    Access flags: 0x2
+      = private android.hardware.Sensor c
+  + Field:        d Landroid/hardware/Sensor;
+    Access flags: 0x2
+      = private android.hardware.Sensor d
+  + Field:        e Landroid/widget/TextView;
+    Access flags: 0x2
+      = private android.widget.TextView e
+  + Field:        f Landroid/widget/TextView;
+    Access flags: 0x2
+      = private android.widget.TextView f
+  + Field:        g Landroid/widget/TextView;
+    Access flags: 0x2
+      = private android.widget.TextView g
+  + Field:        h Landroid/widget/TextView;
+    Access flags: 0x2
+      = private android.widget.TextView h
+  + Field:        i Landroid/widget/TextView;
+    Access flags: 0x2
+      = private android.widget.TextView i
+  + Field:        j Landroid/widget/TextView;
+    Access flags: 0x2
+      = private android.widget.TextView j
+  + Field:        k Landroid/widget/TextView;
+    Access flags: 0x2
+      = private android.widget.TextView k
+  + Field:        l Landroid/widget/TextView;
+    Access flags: 0x2
+      = private android.widget.TextView l
+  + Field:        m Landroid/os/PowerManager$WakeLock;
+    Access flags: 0x2
+      = private android.os.PowerManager$WakeLock m
+  + Field:        n F
+    Access flags: 0x2
+      = private float n
+  + Field:        o F
+    Access flags: 0x2
+      = private float o
+  + Field:        p F
+    Access flags: 0x2
+      = private float p
+  + Field:        q F
+    Access flags: 0x2
+      = private float q
+  + Field:        r F
+    Access flags: 0x2
+      = private float r
+  + Field:        s F
+    Access flags: 0x2
+      = private float s
+
+Methods (count = 17):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public MainActivity()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 35, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] invokespecial #78
+        - Methodref [android/app/Activity.<init> ()V]
+      [4] aload_0 v0
+      [5] fconst_0
+      [6] putfield #72
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.n F]
+      [9] aload_0 v0
+      [10] fconst_0
+      [11] putfield #73
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.o F]
+      [14] aload_0 v0
+      [15] fconst_0
+      [16] putfield #74
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.p F]
+      [19] aload_0 v0
+      [20] fconst_0
+      [21] putfield #75
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.q F]
+      [24] aload_0 v0
+      [25] fconst_0
+      [26] putfield #76
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.r F]
+      [29] aload_0 v0
+      [30] fconst_0
+      [31] putfield #77
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.s F]
+      [34] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x1
+      = public void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 184, locals = 2, stack = 4):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #80
+        - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] ldc #2
+        - Integer [2130903042]
+      [8] invokevirtual #108
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.setContentView (I)V]
+      [11] aload_0 v0
+      [12] aload_0 v0
+      [13] ldc #13
+        - Integer [2131165190]
+      [15] invokevirtual #103
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.findViewById (I)Landroid/view/View;]
+      [18] checkcast #43
+        - Class [android/widget/TextView]
+      [21] putfield #63
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.e Landroid/widget/TextView;]
+      [24] aload_0 v0
+      [25] aload_0 v0
+      [26] ldc #14
+        - Integer [2131165191]
+      [28] invokevirtual #103
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.findViewById (I)Landroid/view/View;]
+      [31] checkcast #43
+        - Class [android/widget/TextView]
+      [34] putfield #64
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.f Landroid/widget/TextView;]
+      [37] aload_0 v0
+      [38] aload_0 v0
+      [39] ldc #15
+        - Integer [2131165192]
+      [41] invokevirtual #103
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.findViewById (I)Landroid/view/View;]
+      [44] checkcast #43
+        - Class [android/widget/TextView]
+      [47] putfield #65
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.g Landroid/widget/TextView;]
+      [50] aload_0 v0
+      [51] aload_0 v0
+      [52] ldc #17
+        - Integer [2131165194]
+      [54] invokevirtual #103
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.findViewById (I)Landroid/view/View;]
+      [57] checkcast #43
+        - Class [android/widget/TextView]
+      [60] putfield #66
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.h Landroid/widget/TextView;]
+      [63] aload_0 v0
+      [64] aload_0 v0
+      [65] ldc #18
+        - Integer [2131165195]
+      [67] invokevirtual #103
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.findViewById (I)Landroid/view/View;]
+      [70] checkcast #43
+        - Class [android/widget/TextView]
+      [73] putfield #67
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.i Landroid/widget/TextView;]
+      [76] aload_0 v0
+      [77] aload_0 v0
+      [78] ldc #19
+        - Integer [2131165196]
+      [80] invokevirtual #103
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.findViewById (I)Landroid/view/View;]
+      [83] checkcast #43
+        - Class [android/widget/TextView]
+      [86] putfield #68
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.j Landroid/widget/TextView;]
+      [89] aload_0 v0
+      [90] aload_0 v0
+      [91] ldc #12
+        - Integer [2131165189]
+      [93] invokevirtual #103
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.findViewById (I)Landroid/view/View;]
+      [96] checkcast #43
+        - Class [android/widget/TextView]
+      [99] putfield #69
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.k Landroid/widget/TextView;]
+      [102] aload_0 v0
+      [103] aload_0 v0
+      [104] ldc #16
+        - Integer [2131165193]
+      [106] invokevirtual #103
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.findViewById (I)Landroid/view/View;]
+      [109] checkcast #43
+        - Class [android/widget/TextView]
+      [112] putfield #70
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.l Landroid/widget/TextView;]
+      [115] aload_0 v0
+      [116] aload_0 v0
+      [117] ldc #30
+        - String [sensor]
+      [119] invokevirtual #107
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+      [122] checkcast #37
+        - Class [android/hardware/SensorManager]
+      [125] putfield #60
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.b Landroid/hardware/SensorManager;]
+      [128] aload_0 v0
+      [129] aload_0 v0
+      [130] getfield #60
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.b Landroid/hardware/SensorManager;]
+      [133] iconst_1
+      [134] invokevirtual #89
+        - Methodref [android/hardware/SensorManager.getDefaultSensor (I)Landroid/hardware/Sensor;]
+      [137] putfield #61
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.c Landroid/hardware/Sensor;]
+      [140] aload_0 v0
+      [141] aload_0 v0
+      [142] getfield #60
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.b Landroid/hardware/SensorManager;]
+      [145] iconst_3
+      [146] invokevirtual #89
+        - Methodref [android/hardware/SensorManager.getDefaultSensor (I)Landroid/hardware/Sensor;]
+      [149] putfield #62
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.d Landroid/hardware/Sensor;]
+      [152] aload_0 v0
+      [153] ldc #29
+        - String [power]
+      [155] invokevirtual #107
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+      [158] checkcast #39
+        - Class [android/os/PowerManager]
+      [161] astore_1 v1
+      [162] aload_0 v0
+      [163] aload_1 v1
+      [164] ldc #1
+        - Integer [536870918]
+      [166] ldc #28
+        - String [do_not_turn_off]
+      [168] invokevirtual #93
+        - Methodref [android/os/PowerManager.newWakeLock (ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;]
+      [171] putfield #71
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.m Landroid/os/PowerManager$WakeLock;]
+      [174] aload_0 v0
+      [175] invokevirtual #104
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.getApplicationContext ()Landroid/content/Context;]
+      [178] aload_0 v0
+      [179] invokestatic #112
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.a (Landroid/content/Context;Lde/widemeadows/android/bluetoothspptest/i;)Z]
+      [182] pop
+      [183] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onStart()V
+    Access flags: 0x4
+      = protected void onStart()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 16, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #84
+        - Methodref [android/app/Activity.onStart ()V]
+      [4] aload_0 v0
+      [5] invokestatic #111
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.a (Landroid/app/Activity;)Z]
+      [8] ifne +7 (target=15)
+      [11] aload_0 v0
+      [12] invokevirtual #101
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.b ()V]
+      [15] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 1):
+        - [15] Var: ..., Stack: (empty)
+  + Method:       onResume()V
+    Access flags: 0x4
+      = protected void onResume()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 44, locals = 1, stack = 4):
+      [0] aload_0 v0
+      [1] invokespecial #83
+        - Methodref [android/app/Activity.onResume ()V]
+      [4] aload_0 v0
+      [5] getfield #71
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.m Landroid/os/PowerManager$WakeLock;]
+      [8] invokevirtual #94
+        - Methodref [android/os/PowerManager$WakeLock.acquire ()V]
+      [11] aload_0 v0
+      [12] getfield #60
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.b Landroid/hardware/SensorManager;]
+      [15] aload_0 v0
+      [16] aload_0 v0
+      [17] getfield #61
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.c Landroid/hardware/Sensor;]
+      [20] iconst_1
+      [21] invokevirtual #90
+        - Methodref [android/hardware/SensorManager.registerListener (Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z]
+      [24] pop
+      [25] aload_0 v0
+      [26] getfield #60
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.b Landroid/hardware/SensorManager;]
+      [29] aload_0 v0
+      [30] aload_0 v0
+      [31] getfield #62
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.d Landroid/hardware/Sensor;]
+      [34] iconst_1
+      [35] invokevirtual #90
+        - Methodref [android/hardware/SensorManager.registerListener (Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z]
+      [38] pop
+      [39] aload_0 v0
+      [40] invokestatic #115
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.b (Landroid/app/Activity;)V]
+      [43] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onPause()V
+    Access flags: 0x4
+      = protected void onPause()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 27, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] invokespecial #82
+        - Methodref [android/app/Activity.onPause ()V]
+      [4] aload_0 v0
+      [5] getfield #71
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.m Landroid/os/PowerManager$WakeLock;]
+      [8] invokevirtual #95
+        - Methodref [android/os/PowerManager$WakeLock.release ()V]
+      [11] aload_0 v0
+      [12] getfield #60
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.b Landroid/hardware/SensorManager;]
+      [15] aload_0 v0
+      [16] invokevirtual #91
+        - Methodref [android/hardware/SensorManager.unregisterListener (Landroid/hardware/SensorEventListener;)V]
+      [19] aload_0 v0
+      [20] invokestatic #118
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.c (Landroid/app/Activity;)V]
+      [23] invokestatic #117
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.c ()V]
+      [26] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onSensorChanged(Landroid/hardware/SensorEvent;)V
+    Access flags: 0x1
+      = public void onSensorChanged(android.hardware.SensorEvent)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 372, locals = 4, stack = 4):
+      [0] aload_1 v1
+      [1] getfield #56
+        - Fieldref [android/hardware/SensorEvent.sensor Landroid/hardware/Sensor;]
+      [4] invokevirtual #88
+        - Methodref [android/hardware/Sensor.getType ()I]
+      [7] iconst_1
+      [8] ificmpne +115 (target=123)
+      [11] aload_1 v1
+      [12] getfield #57
+        - Fieldref [android/hardware/SensorEvent.values [F]
+      [15] iconst_0
+      [16] faload
+      [17] fstore_2 v2
+      [18] aload_1 v1
+      [19] getfield #57
+        - Fieldref [android/hardware/SensorEvent.values [F]
+      [22] iconst_1
+      [23] faload
+      [24] fstore_3 v3
+      [25] aload_1 v1
+      [26] getfield #57
+        - Fieldref [android/hardware/SensorEvent.values [F]
+      [29] iconst_2
+      [30] faload
+      [31] fstore_1 v1
+      [32] fload_2 v2
+      [33] aload_0 v0
+      [34] getfield #72
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.n F]
+      [37] fcmpl
+      [38] ifeq +21 (target=59)
+      [41] fload_3 v3
+      [42] aload_0 v0
+      [43] getfield #73
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.o F]
+      [46] fcmpl
+      [47] ifeq +12 (target=59)
+      [50] fload_1 v1
+      [51] aload_0 v0
+      [52] getfield #74
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.p F]
+      [55] fcmpl
+      [56] ifne +4 (target=60)
+      [59] return
+      [60] aload_0 v0
+      [61] fload_2 v2
+      [62] putfield #72
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.n F]
+      [65] aload_0 v0
+      [66] fload_3 v3
+      [67] putfield #73
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.o F]
+      [70] aload_0 v0
+      [71] fload_1 v1
+      [72] putfield #74
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.p F]
+      [75] aload_0 v0
+      [76] getfield #63
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.e Landroid/widget/TextView;]
+      [79] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.a Ljava/text/DecimalFormat;]
+      [82] fload_2 v2
+      [83] f2d
+      [84] invokevirtual #126
+        - Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
+      [87] invokevirtual #98
+        - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [90] aload_0 v0
+      [91] getfield #64
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.f Landroid/widget/TextView;]
+      [94] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.a Ljava/text/DecimalFormat;]
+      [97] fload_3 v3
+      [98] f2d
+      [99] invokevirtual #126
+        - Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
+      [102] invokevirtual #98
+        - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [105] aload_0 v0
+      [106] getfield #65
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.g Landroid/widget/TextView;]
+      [109] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.a Ljava/text/DecimalFormat;]
+      [112] fload_1 v1
+      [113] f2d
+      [114] invokevirtual #126
+        - Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
+      [117] invokevirtual #98
+        - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [120] goto +123 (target=243)
+      [123] aload_1 v1
+      [124] getfield #56
+        - Fieldref [android/hardware/SensorEvent.sensor Landroid/hardware/Sensor;]
+      [127] invokevirtual #88
+        - Methodref [android/hardware/Sensor.getType ()I]
+      [130] iconst_3
+      [131] ificmpne +112 (target=243)
+      [134] aload_1 v1
+      [135] getfield #57
+        - Fieldref [android/hardware/SensorEvent.values [F]
+      [138] iconst_0
+      [139] faload
+      [140] fstore_2 v2
+      [141] aload_1 v1
+      [142] getfield #57
+        - Fieldref [android/hardware/SensorEvent.values [F]
+      [145] iconst_1
+      [146] faload
+      [147] fstore_3 v3
+      [148] aload_1 v1
+      [149] getfield #57
+        - Fieldref [android/hardware/SensorEvent.values [F]
+      [152] iconst_2
+      [153] faload
+      [154] fstore_1 v1
+      [155] fload_2 v2
+      [156] aload_0 v0
+      [157] getfield #72
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.n F]
+      [160] fcmpl
+      [161] ifeq +21 (target=182)
+      [164] fload_3 v3
+      [165] aload_0 v0
+      [166] getfield #73
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.o F]
+      [169] fcmpl
+      [170] ifeq +12 (target=182)
+      [173] fload_1 v1
+      [174] aload_0 v0
+      [175] getfield #74
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.p F]
+      [178] fcmpl
+      [179] ifne +4 (target=183)
+      [182] return
+      [183] aload_0 v0
+      [184] fload_2 v2
+      [185] putfield #75
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.q F]
+      [188] aload_0 v0
+      [189] fload_3 v3
+      [190] putfield #76
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.r F]
+      [193] aload_0 v0
+      [194] fload_1 v1
+      [195] putfield #77
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.s F]
+      [198] aload_0 v0
+      [199] getfield #66
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.h Landroid/widget/TextView;]
+      [202] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.a Ljava/text/DecimalFormat;]
+      [205] fload_2 v2
+      [206] f2d
+      [207] invokevirtual #126
+        - Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
+      [210] invokevirtual #98
+        - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [213] aload_0 v0
+      [214] getfield #67
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.i Landroid/widget/TextView;]
+      [217] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.a Ljava/text/DecimalFormat;]
+      [220] fload_3 v3
+      [221] f2d
+      [222] invokevirtual #126
+        - Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
+      [225] invokevirtual #98
+        - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [228] aload_0 v0
+      [229] getfield #68
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.j Landroid/widget/TextView;]
+      [232] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.a Ljava/text/DecimalFormat;]
+      [235] fload_1 v1
+      [236] f2d
+      [237] invokevirtual #126
+        - Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
+      [240] invokevirtual #98
+        - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [243] invokestatic #119
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.d ()Z]
+      [246] ifeq +125 (target=371)
+      [249] new #54
+        - Class [java/lang/StringBuilder]
+      [252] dup
+      [253] invokespecial #122
+        - Methodref [java/lang/StringBuilder.<init> ()V]
+      [256] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.a Ljava/text/DecimalFormat;]
+      [259] aload_0 v0
+      [260] getfield #72
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.n F]
+      [263] f2d
+      [264] invokevirtual #126
+        - Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
+      [267] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [270] ldc #25
+        - String [; ]
+      [272] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [275] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.a Ljava/text/DecimalFormat;]
+      [278] aload_0 v0
+      [279] getfield #73
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.o F]
+      [282] f2d
+      [283] invokevirtual #126
+        - Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
+      [286] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [289] ldc #25
+        - String [; ]
+      [291] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [294] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.a Ljava/text/DecimalFormat;]
+      [297] aload_0 v0
+      [298] getfield #74
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.p F]
+      [301] f2d
+      [302] invokevirtual #126
+        - Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
+      [305] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [308] ldc #25
+        - String [; ]
+      [310] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [313] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.a Ljava/text/DecimalFormat;]
+      [316] aload_0 v0
+      [317] getfield #75
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.q F]
+      [320] f2d
+      [321] invokevirtual #126
+        - Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
+      [324] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [327] ldc #25
+        - String [; ]
+      [329] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [332] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.a Ljava/text/DecimalFormat;]
+      [335] aload_0 v0
+      [336] getfield #76
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.r F]
+      [339] f2d
+      [340] invokevirtual #126
+        - Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
+      [343] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [346] ldc #25
+        - String [; ]
+      [348] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [351] getstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.a Ljava/text/DecimalFormat;]
+      [354] aload_0 v0
+      [355] getfield #77
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.s F]
+      [358] f2d
+      [359] invokevirtual #126
+        - Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
+      [362] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [365] invokevirtual #124
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [368] invokestatic #116
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.b (Ljava/lang/String;)V]
+      [371] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 7):
+        - [59] Var: ...[f][f][f], Stack: (empty)
+        - [60] Var: ..., Stack: (empty)
+        - [123] Var: -3, Stack: (empty)
+        - [182] Var: ...[f][f][f], Stack: (empty)
+        - [183] Var: ..., Stack: (empty)
+        - [243] Var: -3, Stack: (empty)
+        - [371] Var: ..., Stack: (empty)
+  + Method:       onAccuracyChanged(Landroid/hardware/Sensor;I)V
+    Access flags: 0x1
+      = public void onAccuracyChanged(android.hardware.Sensor,int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 59, locals = 4, stack = 2):
+      [0] aload_0 v0
+      [1] invokevirtual #106
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.getResources ()Landroid/content/res/Resources;]
+      [4] ldc #10
+        - Integer [2131034112]
+      [6] invokevirtual #87
+        - Methodref [android/content/res/Resources.getStringArray (I)[Ljava/lang/String;]
+      [9] iload_2 v2
+      [10] aaload
+      [11] astore_3 v3
+      [12] aload_1 v1
+      [13] invokevirtual #88
+        - Methodref [android/hardware/Sensor.getType ()I]
+      [16] iconst_1
+      [17] ificmpne +12 (target=29)
+      [20] aload_0 v0
+      [21] getfield #69
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.k Landroid/widget/TextView;]
+      [24] aload_3 v3
+      [25] invokevirtual #98
+        - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [28] return
+      [29] aload_1 v1
+      [30] invokevirtual #88
+        - Methodref [android/hardware/Sensor.getType ()I]
+      [33] iconst_3
+      [34] ificmpne +11 (target=45)
+      [37] aload_0 v0
+      [38] getfield #70
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.l Landroid/widget/TextView;]
+      [41] aload_3 v3
+      [42] invokevirtual #98
+        - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [45] return
+      [46] pop
+      [47] aload_0 v0
+      [48] getfield #69
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.k Landroid/widget/TextView;]
+      [51] iload_2 v2
+      [52] invokestatic #121
+        - Methodref [java/lang/Integer.toString (I)Ljava/lang/String;]
+      [55] invokevirtual #98
+        - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [58] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (0 -> 45: 46):
+      - Class [java/lang/Exception]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 4):
+        - [29] Var: ...[a:java/lang/String], Stack: (empty)
+        - [45] Var: ..., Stack: (empty)
+        - [46] Var: [a:de/widemeadows/android/bluetoothspptest/MainActivity][a:android/hardware/Sensor][i], Stack: [a:java/lang/Exception]
+        - [58] Var: ...[a:java/lang/Object], Stack: (empty)
+  + Method:       a()V
+    Access flags: 0x11
+      = public final void a()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 15, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] ldc #20
+        - Integer [2131165197]
+      [3] invokevirtual #103
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.findViewById (I)Landroid/view/View;]
+      [6] checkcast #43
+        - Class [android/widget/TextView]
+      [9] ldc #4
+        - Integer [2130968589]
+      [11] invokevirtual #97
+        - Methodref [android/widget/TextView.setText (I)V]
+      [14] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       b()V
+    Access flags: 0x11
+      = public final void b()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 29, locals = 1, stack = 3):
+      [0] aload_0 v0
+      [1] ldc #8
+        - Integer [2130968594]
+      [3] iconst_0
+      [4] invokestatic #99
+        - Methodref [android/widget/Toast.makeText (Landroid/content/Context;II)Landroid/widget/Toast;]
+      [7] invokevirtual #100
+        - Methodref [android/widget/Toast.show ()V]
+      [10] aload_0 v0
+      [11] ldc #20
+        - Integer [2131165197]
+      [13] invokevirtual #103
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.findViewById (I)Landroid/view/View;]
+      [16] checkcast #43
+        - Class [android/widget/TextView]
+      [19] ldc #5
+        - Integer [2130968590]
+      [21] invokevirtual #97
+        - Methodref [android/widget/TextView.setText (I)V]
+      [24] aload_0 v0
+      [25] invokespecial #102
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.e ()V]
+      [28] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       e()V
+    Access flags: 0x2
+      = private void e()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 20, locals = 2, stack = 4):
+      [0] new #32
+        - Class [android/content/Intent]
+      [3] dup
+      [4] aload_0 v0
+      [5] ldc #45
+        - Class [de/widemeadows/android/bluetoothspptest/DeviceListActivity]
+      [7] invokespecial #85
+        - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+      [10] astore_1 v1
+      [11] aload_0 v0
+      [12] aload_1 v1
+      [13] sipush 1002
+      [16] invokevirtual #109
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.startActivityForResult (Landroid/content/Intent;I)V]
+      [19] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       c()V
+    Access flags: 0x11
+      = public final void c()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 15, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] ldc #20
+        - Integer [2131165197]
+      [3] invokevirtual #103
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.findViewById (I)Landroid/view/View;]
+      [6] checkcast #43
+        - Class [android/widget/TextView]
+      [9] ldc #6
+        - Integer [2130968591]
+      [11] invokevirtual #97
+        - Methodref [android/widget/TextView.setText (I)V]
+      [14] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       d()V
+    Access flags: 0x11
+      = public final void d()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 39, locals = 1, stack = 3):
+      [0] aload_0 v0
+      [1] ldc #9
+        - Integer [2130968595]
+      [3] iconst_0
+      [4] invokestatic #99
+        - Methodref [android/widget/Toast.makeText (Landroid/content/Context;II)Landroid/widget/Toast;]
+      [7] invokevirtual #100
+        - Methodref [android/widget/Toast.show ()V]
+      [10] aload_0 v0
+      [11] ldc #20
+        - Integer [2131165197]
+      [13] invokevirtual #103
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.findViewById (I)Landroid/view/View;]
+      [16] checkcast #43
+        - Class [android/widget/TextView]
+      [19] ldc #7
+        - Integer [2130968592]
+      [21] invokevirtual #97
+        - Methodref [android/widget/TextView.setText (I)V]
+      [24] aload_0 v0
+      [25] ldc #21
+        - Integer [2131165198]
+      [27] invokevirtual #103
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.findViewById (I)Landroid/view/View;]
+      [30] checkcast #43
+        - Class [android/widget/TextView]
+      [33] ldc #3
+        - Integer [2130968586]
+      [35] invokevirtual #97
+        - Methodref [android/widget/TextView.setText (I)V]
+      [38] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a(Ljava/lang/String;Ljava/lang/String;)V
+    Access flags: 0x11
+      = public final void a(java.lang.String,java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 69, locals = 3, stack = 3):
+      [0] aload_1 v1
+      [1] ifnonnull +13 (target=14)
+      [4] new #50
+        - Class [java/lang/IllegalArgumentException]
+      [7] dup
+      [8] ldc #26
+        - String [Argument 0 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/MainActivity.connectedTo must not be null]
+      [10] invokespecial #120
+        - Methodref [java/lang/IllegalArgumentException.<init> (Ljava/lang/String;)V]
+      [13] athrow
+      [14] aload_2 v2
+      [15] ifnonnull +13 (target=28)
+      [18] new #50
+        - Class [java/lang/IllegalArgumentException]
+      [21] dup
+      [22] ldc #27
+        - String [Argument 1 for @NotNull parameter of de/widemeadows/android/bluetoothspptest/MainActivity.connectedTo must not be null]
+      [24] invokespecial #120
+        - Methodref [java/lang/IllegalArgumentException.<init> (Ljava/lang/String;)V]
+      [27] athrow
+      [28] aload_0 v0
+      [29] ldc #21
+        - Integer [2131165198]
+      [31] invokevirtual #103
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.findViewById (I)Landroid/view/View;]
+      [34] checkcast #43
+        - Class [android/widget/TextView]
+      [37] new #54
+        - Class [java/lang/StringBuilder]
+      [40] dup
+      [41] invokespecial #122
+        - Methodref [java/lang/StringBuilder.<init> ()V]
+      [44] aload_1 v1
+      [45] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [48] ldc #22
+        - String [ (]
+      [50] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [53] aload_2 v2
+      [54] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [57] ldc #23
+        - String [)]
+      [59] invokevirtual #123
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [62] invokevirtual #124
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [65] invokevirtual #98
+        - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [68] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [14] Var: ..., Stack: (empty)
+        - [28] Var: ..., Stack: (empty)
+  + Method:       onActivityResult(IILandroid/content/Intent;)V
+    Access flags: 0x4
+      = protected void onActivityResult(int,int,android.content.Intent)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 65, locals = 4, stack = 4):
+      [0] iload_1 v1
+      [1] lookupswitch (2 offsets, default=56) (target=57)
+        1001: offset = 27, target = 28
+        1002: offset = 38, target = 39
+        default: offset = 56, target = 57
+      [28] invokestatic #114
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.b ()Z]
+      [31] ifeq +33 (target=64)
+      [34] aload_0 v0
+      [35] invokevirtual #101
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.b ()V]
+      [38] return
+      [39] iload_2 v2
+      [40] iconst_m1
+      [41] ificmpne +16 (target=57)
+      [44] aload_3 v3
+      [45] invokevirtual #86
+        - Methodref [android/content/Intent.getExtras ()Landroid/os/Bundle;]
+      [48] getstatic #58
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.a Ljava/lang/String;]
+      [51] invokevirtual #92
+        - Methodref [android/os/Bundle.getString (Ljava/lang/String;)Ljava/lang/String;]
+      [54] invokestatic #113
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.a (Ljava/lang/String;)V]
+      [57] aload_0 v0
+      [58] iload_1 v1
+      [59] iload_2 v2
+      [60] aload_3 v3
+      [61] invokespecial #79
+        - Methodref [android/app/Activity.onActivityResult (IILandroid/content/Intent;)V]
+      [64] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 4):
+        - [28] Var: ..., Stack: (empty)
+        - [39] Var: ..., Stack: (empty)
+        - [57] Var: ..., Stack: (empty)
+        - [64] Var: ..., Stack: (empty)
+  + Method:       onCreateOptionsMenu(Landroid/view/Menu;)Z
+    Access flags: 0x1
+      = public boolean onCreateOptionsMenu(android.view.Menu)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 24, locals = 2, stack = 3):
+      [0] invokestatic #110
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.a ()Z]
+      [3] ifeq +15 (target=18)
+      [6] aload_0 v0
+      [7] invokevirtual #105
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.getMenuInflater ()Landroid/view/MenuInflater;]
+      [10] ldc #11
+        - Integer [2131099648]
+      [12] aload_1 v1
+      [13] invokevirtual #96
+        - Methodref [android/view/MenuInflater.inflate (ILandroid/view/Menu;)V]
+      [16] iconst_1
+      [17] ireturn
+      [18] aload_0 v0
+      [19] aload_1 v1
+      [20] invokespecial #81
+        - Methodref [android/app/Activity.onCreateOptionsMenu (Landroid/view/Menu;)Z]
+      [23] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 1):
+        - [18] Var: ..., Stack: (empty)
+  + Method:       onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    Access flags: 0x1
+      = public boolean onOptionsItemSelected(android.view.MenuItem)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 45, locals = 2, stack = 1):
+      [0] aload_1 v1
+      [1] invokeinterface #127
+        - InterfaceMethodref [android/view/MenuItem.getItemId ()I]
+      [6] lookupswitch (1 offsets, default=37) (target=43)
+        2131165199: offset = 18, target = 24
+        default: offset = 37, target = 43
+      [24] invokestatic #114
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.b ()Z]
+      [27] ifne +10 (target=37)
+      [30] aload_0 v0
+      [31] invokestatic #111
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.a (Landroid/app/Activity;)Z]
+      [34] pop
+      [35] iconst_1
+      [36] ireturn
+      [37] aload_0 v0
+      [38] invokespecial #102
+        - Methodref [de/widemeadows/android/bluetoothspptest/MainActivity.e ()V]
+      [41] iconst_1
+      [42] ireturn
+      [43] iconst_0
+      [44] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 3):
+        - [24] Var: ..., Stack: (empty)
+        - [37] Var: ..., Stack: (empty)
+        - [43] Var: ..., Stack: (empty)
+  - Method:       <clinit>()V
+    Access flags: 0x8
+      = static void <clinit>()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 13, locals = 0, stack = 3):
+      [0] new #55
+        - Class [java/text/DecimalFormat]
+      [3] dup
+      [4] ldc #24
+        - String [,##0.00000]
+      [6] invokespecial #125
+        - Methodref [java/text/DecimalFormat.<init> (Ljava/lang/String;)V]
+      [9] putstatic #59
+        - Fieldref [de/widemeadows/android/bluetoothspptest/MainActivity.a Ljava/text/DecimalFormat;]
+      [12] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: de/widemeadows/android/bluetoothspptest/i
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x601
+    = public interface de.widemeadows.android.bluetoothspptest.i extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 11):
+  - Class [de/widemeadows/android/bluetoothspptest/i]
+  - Class [java/lang/Object]
+  + Utf8 [()V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [a]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [d]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/i]
+  + Utf8 [java/lang/Object]
+
+Fields (count = 0):
+
+Methods (count = 5):
+  + Method:       a()V
+    Access flags: 0x401
+      = public abstract void a()
+  + Method:       b()V
+    Access flags: 0x401
+      = public abstract void b()
+  + Method:       c()V
+    Access flags: 0x401
+      = public abstract void c()
+  + Method:       d()V
+    Access flags: 0x401
+      = public abstract void d()
+  + Method:       a(Ljava/lang/String;Ljava/lang/String;)V
+    Access flags: 0x401
+      = public abstract void a(java.lang.String,java.lang.String)
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: de/widemeadows/android/bluetoothspptest/DeviceListActivity
+  Superclass:    android/app/Activity
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class de.widemeadows.android.bluetoothspptest.DeviceListActivity extends android.app.Activity
+
+Interfaces (count = 0):
+
+Constant Pool (count = 225):
+  - Integer [2130903040]
+  - Integer [2130903041]
+  - Integer [2130968596]
+  - Integer [2130968598]
+  - Integer [2131165184]
+  - Integer [2131165185]
+  - Integer [2131165186]
+  - Integer [2131165187]
+  - Integer [2131165188]
+  - String [
+]
+  - String [DeviceListActivity]
+  - String [android.bluetooth.adapter.action.DISCOVERY_FINISHED]
+  - String [android.bluetooth.device.action.FOUND]
+  - String [device_address]
+  - String [doDiscovery()]
+  - Class [android/app/Activity]
+  - Class [android/bluetooth/BluetoothAdapter]
+  - Class [android/bluetooth/BluetoothDevice]
+  - Class [android/content/IntentFilter]
+  - Class [android/content/res/Resources]
+  - Class [android/os/Bundle]
+  - Class [android/util/Log]
+  - Class [android/view/View]
+  - Class [android/view/View$OnClickListener]
+  - Class [android/widget/AdapterView]
+  - Class [android/widget/AdapterView$OnItemClickListener]
+  - Class [android/widget/ArrayAdapter]
+  - Class [android/widget/Button]
+  - Class [android/widget/ListView]
+  - Class [de/widemeadows/android/bluetoothspptest/DeviceListActivity]
+  - Class [de/widemeadows/android/bluetoothspptest/a]
+  - Class [de/widemeadows/android/bluetoothspptest/b]
+  - Class [de/widemeadows/android/bluetoothspptest/c]
+  - Class [java/lang/Object]
+  - Class [java/lang/StringBuilder]
+  - Class [java/util/Iterator]
+  - Class [java/util/Set]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.a Ljava/lang/String;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.b Landroid/bluetooth/BluetoothAdapter;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.c Landroid/widget/ArrayAdapter;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.d Landroid/widget/ArrayAdapter;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.e Landroid/widget/AdapterView$OnItemClickListener;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.f Landroid/content/BroadcastReceiver;]
+  - Methodref [android/app/Activity.<init> ()V]
+  - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+  - Methodref [android/app/Activity.onDestroy ()V]
+  - Methodref [android/bluetooth/BluetoothAdapter.cancelDiscovery ()Z]
+  - Methodref [android/bluetooth/BluetoothAdapter.getBondedDevices ()Ljava/util/Set;]
+  - Methodref [android/bluetooth/BluetoothAdapter.getDefaultAdapter ()Landroid/bluetooth/BluetoothAdapter;]
+  - Methodref [android/bluetooth/BluetoothAdapter.isDiscovering ()Z]
+  - Methodref [android/bluetooth/BluetoothAdapter.startDiscovery ()Z]
+  - Methodref [android/bluetooth/BluetoothDevice.getAddress ()Ljava/lang/String;]
+  - Methodref [android/bluetooth/BluetoothDevice.getName ()Ljava/lang/String;]
+  - Methodref [android/content/IntentFilter.<init> (Ljava/lang/String;)V]
+  - Methodref [android/content/res/Resources.getText (I)Ljava/lang/CharSequence;]
+  - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
+  - Methodref [android/view/View.setVisibility (I)V]
+  - Methodref [android/widget/ArrayAdapter.<init> (Landroid/content/Context;I)V]
+  - Methodref [android/widget/ArrayAdapter.add (Ljava/lang/Object;)V]
+  - Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
+  - Methodref [android/widget/ListView.setAdapter (Landroid/widget/ListAdapter;)V]
+  - Methodref [android/widget/ListView.setOnItemClickListener (Landroid/widget/AdapterView$OnItemClickListener;)V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.findViewById (I)Landroid/view/View;]
+  - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.getResources ()Landroid/content/res/Resources;]
+  - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.registerReceiver (Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;]
+  - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.requestWindowFeature (I)Z]
+  - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.setContentView (I)V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.setProgressBarIndeterminateVisibility (Z)V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.setResult (I)V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.setTitle (I)V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.unregisterReceiver (Landroid/content/BroadcastReceiver;)V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/a.<init> (Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/b.<init> (Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)V]
+  - Methodref [de/widemeadows/android/bluetoothspptest/c.<init> (Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)V]
+  - Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+  - Methodref [java/lang/StringBuilder.<init> ()V]
+  - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  - InterfaceMethodref [java/util/Iterator.hasNext ()Z]
+  - InterfaceMethodref [java/util/Iterator.next ()Ljava/lang/Object;]
+  - InterfaceMethodref [java/util/Set.iterator ()Ljava/util/Iterator;]
+  - InterfaceMethodref [java/util/Set.size ()I]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Landroid/content/Context;I)V]
+  + NameAndType [<init> (Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)V]
+  + NameAndType [<init> (Ljava/lang/String;)V]
+  + NameAndType [a Ljava/lang/String;]
+  + NameAndType [add (Ljava/lang/Object;)V]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [b Landroid/bluetooth/BluetoothAdapter;]
+  + NameAndType [c Landroid/widget/ArrayAdapter;]
+  + NameAndType [cancelDiscovery ()Z]
+  + NameAndType [d (Ljava/lang/String;Ljava/lang/String;)I]
+  + NameAndType [d Landroid/widget/ArrayAdapter;]
+  + NameAndType [e Landroid/widget/AdapterView$OnItemClickListener;]
+  + NameAndType [f Landroid/content/BroadcastReceiver;]
+  + NameAndType [findViewById (I)Landroid/view/View;]
+  + NameAndType [getAddress ()Ljava/lang/String;]
+  + NameAndType [getBondedDevices ()Ljava/util/Set;]
+  + NameAndType [getDefaultAdapter ()Landroid/bluetooth/BluetoothAdapter;]
+  + NameAndType [getName ()Ljava/lang/String;]
+  + NameAndType [getResources ()Landroid/content/res/Resources;]
+  + NameAndType [getText (I)Ljava/lang/CharSequence;]
+  + NameAndType [hasNext ()Z]
+  + NameAndType [isDiscovering ()Z]
+  + NameAndType [iterator ()Ljava/util/Iterator;]
+  + NameAndType [next ()Ljava/lang/Object;]
+  + NameAndType [onCreate (Landroid/os/Bundle;)V]
+  + NameAndType [onDestroy ()V]
+  + NameAndType [registerReceiver (Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;]
+  + NameAndType [requestWindowFeature (I)Z]
+  + NameAndType [setAdapter (Landroid/widget/ListAdapter;)V]
+  + NameAndType [setContentView (I)V]
+  + NameAndType [setOnClickListener (Landroid/view/View$OnClickListener;)V]
+  + NameAndType [setOnItemClickListener (Landroid/widget/AdapterView$OnItemClickListener;)V]
+  + NameAndType [setProgressBarIndeterminateVisibility (Z)V]
+  + NameAndType [setResult (I)V]
+  + NameAndType [setTitle (I)V]
+  + NameAndType [setVisibility (I)V]
+  + NameAndType [size ()I]
+  + NameAndType [startDiscovery ()Z]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + NameAndType [unregisterReceiver (Landroid/content/BroadcastReceiver;)V]
+  + Utf8 [
+]
+  + Utf8 [()I]
+  + Utf8 [()Landroid/bluetooth/BluetoothAdapter;]
+  + Utf8 [()Landroid/content/res/Resources;]
+  + Utf8 [()Ljava/lang/Object;]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()Ljava/util/Iterator;]
+  + Utf8 [()Ljava/util/Set;]
+  + Utf8 [()V]
+  + Utf8 [()Z]
+  + Utf8 [(I)Landroid/view/View;]
+  + Utf8 [(I)Ljava/lang/CharSequence;]
+  + Utf8 [(I)V]
+  + Utf8 [(I)Z]
+  + Utf8 [(Landroid/content/BroadcastReceiver;)V]
+  + Utf8 [(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;]
+  + Utf8 [(Landroid/content/Context;I)V]
+  + Utf8 [(Landroid/os/Bundle;)V]
+  + Utf8 [(Landroid/view/View$OnClickListener;)V]
+  + Utf8 [(Landroid/widget/AdapterView$OnItemClickListener;)V]
+  + Utf8 [(Landroid/widget/ListAdapter;)V]
+  + Utf8 [(Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)Landroid/bluetooth/BluetoothAdapter;]
+  + Utf8 [(Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)Landroid/widget/ArrayAdapter;]
+  + Utf8 [(Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)V]
+  + Utf8 [(Ljava/lang/Object;)V]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
+  + Utf8 [(Z)V]
+  + Utf8 [<clinit>]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [DeviceListActivity]
+  + Utf8 [Landroid/bluetooth/BluetoothAdapter;]
+  + Utf8 [Landroid/content/BroadcastReceiver;]
+  + Utf8 [Landroid/widget/AdapterView$OnItemClickListener;]
+  + Utf8 [Landroid/widget/ArrayAdapter;]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [StackMapTable]
+  + Utf8 [a]
+  + Utf8 [add]
+  + Utf8 [android.bluetooth.adapter.action.DISCOVERY_FINISHED]
+  + Utf8 [android.bluetooth.device.action.FOUND]
+  + Utf8 [android/app/Activity]
+  + Utf8 [android/bluetooth/BluetoothAdapter]
+  + Utf8 [android/bluetooth/BluetoothDevice]
+  + Utf8 [android/content/IntentFilter]
+  + Utf8 [android/content/res/Resources]
+  + Utf8 [android/os/Bundle]
+  + Utf8 [android/util/Log]
+  + Utf8 [android/view/View]
+  + Utf8 [android/view/View$OnClickListener]
+  + Utf8 [android/widget/AdapterView]
+  + Utf8 [android/widget/AdapterView$OnItemClickListener]
+  + Utf8 [android/widget/ArrayAdapter]
+  + Utf8 [android/widget/Button]
+  + Utf8 [android/widget/ListView]
+  + Utf8 [append]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [cancelDiscovery]
+  + Utf8 [d]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/DeviceListActivity]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/a]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/b]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/c]
+  + Utf8 [device_address]
+  + Utf8 [doDiscovery()]
+  + Utf8 [e]
+  + Utf8 [f]
+  + Utf8 [findViewById]
+  + Utf8 [getAddress]
+  + Utf8 [getBondedDevices]
+  + Utf8 [getDefaultAdapter]
+  + Utf8 [getName]
+  + Utf8 [getResources]
+  + Utf8 [getText]
+  + Utf8 [hasNext]
+  + Utf8 [isDiscovering]
+  + Utf8 [iterator]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [java/util/Iterator]
+  + Utf8 [java/util/Set]
+  + Utf8 [next]
+  + Utf8 [onCreate]
+  + Utf8 [onDestroy]
+  + Utf8 [registerReceiver]
+  + Utf8 [requestWindowFeature]
+  + Utf8 [setAdapter]
+  + Utf8 [setContentView]
+  + Utf8 [setOnClickListener]
+  + Utf8 [setOnItemClickListener]
+  + Utf8 [setProgressBarIndeterminateVisibility]
+  + Utf8 [setResult]
+  + Utf8 [setTitle]
+  + Utf8 [setVisibility]
+  + Utf8 [size]
+  + Utf8 [startDiscovery]
+  + Utf8 [toString]
+  + Utf8 [unregisterReceiver]
+
+Fields (count = 6):
+  + Field:        a Ljava/lang/String;
+    Access flags: 0x9
+      = public static java.lang.String a
+  + Field:        b Landroid/bluetooth/BluetoothAdapter;
+    Access flags: 0x2
+      = private android.bluetooth.BluetoothAdapter b
+  + Field:        c Landroid/widget/ArrayAdapter;
+    Access flags: 0x2
+      = private android.widget.ArrayAdapter c
+  + Field:        d Landroid/widget/ArrayAdapter;
+    Access flags: 0x2
+      = private android.widget.ArrayAdapter d
+  + Field:        e Landroid/widget/AdapterView$OnItemClickListener;
+    Access flags: 0x2
+      = private android.widget.AdapterView$OnItemClickListener e
+  + Field:        f Landroid/content/BroadcastReceiver;
+    Access flags: 0x12
+      = private final android.content.BroadcastReceiver f
+
+Methods (count = 7):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public DeviceListActivity()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 29, locals = 1, stack = 4):
+      [0] aload_0 v0
+      [1] invokespecial #44
+        - Methodref [android/app/Activity.<init> ()V]
+      [4] aload_0 v0
+      [5] new #31
+        - Class [de/widemeadows/android/bluetoothspptest/a]
+      [8] dup
+      [9] aload_0 v0
+      [10] invokespecial #72
+        - Methodref [de/widemeadows/android/bluetoothspptest/a.<init> (Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)V]
+      [13] putfield #42
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.e Landroid/widget/AdapterView$OnItemClickListener;]
+      [16] aload_0 v0
+      [17] new #33
+        - Class [de/widemeadows/android/bluetoothspptest/c]
+      [20] dup
+      [21] aload_0 v0
+      [22] invokespecial #74
+        - Methodref [de/widemeadows/android/bluetoothspptest/c.<init> (Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)V]
+      [25] putfield #43
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.f Landroid/content/BroadcastReceiver;]
+      [28] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x4
+      = protected void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 284, locals = 3, stack = 5):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #45
+        - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] iconst_5
+      [7] invokevirtual #66
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.requestWindowFeature (I)Z]
+      [10] pop
+      [11] aload_0 v0
+      [12] ldc #1
+        - Integer [2130903040]
+      [14] invokevirtual #67
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.setContentView (I)V]
+      [17] aload_0 v0
+      [18] iconst_0
+      [19] invokevirtual #69
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.setResult (I)V]
+      [22] aload_0 v0
+      [23] ldc #9
+        - Integer [2131165188]
+      [25] invokevirtual #63
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.findViewById (I)Landroid/view/View;]
+      [28] checkcast #28
+        - Class [android/widget/Button]
+      [31] new #32
+        - Class [de/widemeadows/android/bluetoothspptest/b]
+      [34] dup
+      [35] aload_0 v0
+      [36] invokespecial #73
+        - Methodref [de/widemeadows/android/bluetoothspptest/b.<init> (Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)V]
+      [39] invokevirtual #60
+        - Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
+      [42] aload_0 v0
+      [43] new #27
+        - Class [android/widget/ArrayAdapter]
+      [46] dup
+      [47] aload_0 v0
+      [48] ldc #2
+        - Integer [2130903041]
+      [50] invokespecial #58
+        - Methodref [android/widget/ArrayAdapter.<init> (Landroid/content/Context;I)V]
+      [53] putfield #40
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.c Landroid/widget/ArrayAdapter;]
+      [56] aload_0 v0
+      [57] new #27
+        - Class [android/widget/ArrayAdapter]
+      [60] dup
+      [61] aload_0 v0
+      [62] ldc #2
+        - Integer [2130903041]
+      [64] invokespecial #58
+        - Methodref [android/widget/ArrayAdapter.<init> (Landroid/content/Context;I)V]
+      [67] putfield #41
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.d Landroid/widget/ArrayAdapter;]
+      [70] aload_0 v0
+      [71] ldc #6
+        - Integer [2131165185]
+      [73] invokevirtual #63
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.findViewById (I)Landroid/view/View;]
+      [76] checkcast #29
+        - Class [android/widget/ListView]
+      [79] dup
+      [80] astore_1 v1
+      [81] aload_0 v0
+      [82] getfield #40
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.c Landroid/widget/ArrayAdapter;]
+      [85] invokevirtual #61
+        - Methodref [android/widget/ListView.setAdapter (Landroid/widget/ListAdapter;)V]
+      [88] aload_1 v1
+      [89] aload_0 v0
+      [90] getfield #42
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.e Landroid/widget/AdapterView$OnItemClickListener;]
+      [93] invokevirtual #62
+        - Methodref [android/widget/ListView.setOnItemClickListener (Landroid/widget/AdapterView$OnItemClickListener;)V]
+      [96] aload_0 v0
+      [97] ldc #8
+        - Integer [2131165187]
+      [99] invokevirtual #63
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.findViewById (I)Landroid/view/View;]
+      [102] checkcast #29
+        - Class [android/widget/ListView]
+      [105] dup
+      [106] astore_1 v1
+      [107] aload_0 v0
+      [108] getfield #41
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.d Landroid/widget/ArrayAdapter;]
+      [111] invokevirtual #61
+        - Methodref [android/widget/ListView.setAdapter (Landroid/widget/ListAdapter;)V]
+      [114] aload_1 v1
+      [115] aload_0 v0
+      [116] getfield #42
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.e Landroid/widget/AdapterView$OnItemClickListener;]
+      [119] invokevirtual #62
+        - Methodref [android/widget/ListView.setOnItemClickListener (Landroid/widget/AdapterView$OnItemClickListener;)V]
+      [122] new #19
+        - Class [android/content/IntentFilter]
+      [125] dup
+      [126] ldc #13
+        - String [android.bluetooth.device.action.FOUND]
+      [128] invokespecial #54
+        - Methodref [android/content/IntentFilter.<init> (Ljava/lang/String;)V]
+      [131] astore_1 v1
+      [132] aload_0 v0
+      [133] aload_0 v0
+      [134] getfield #43
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.f Landroid/content/BroadcastReceiver;]
+      [137] aload_1 v1
+      [138] invokevirtual #65
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.registerReceiver (Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;]
+      [141] pop
+      [142] new #19
+        - Class [android/content/IntentFilter]
+      [145] dup
+      [146] ldc #12
+        - String [android.bluetooth.adapter.action.DISCOVERY_FINISHED]
+      [148] invokespecial #54
+        - Methodref [android/content/IntentFilter.<init> (Ljava/lang/String;)V]
+      [151] astore_1 v1
+      [152] aload_0 v0
+      [153] aload_0 v0
+      [154] getfield #43
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.f Landroid/content/BroadcastReceiver;]
+      [157] aload_1 v1
+      [158] invokevirtual #65
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.registerReceiver (Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;]
+      [161] pop
+      [162] aload_0 v0
+      [163] invokestatic #49
+        - Methodref [android/bluetooth/BluetoothAdapter.getDefaultAdapter ()Landroid/bluetooth/BluetoothAdapter;]
+      [166] putfield #39
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.b Landroid/bluetooth/BluetoothAdapter;]
+      [169] aload_0 v0
+      [170] getfield #39
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.b Landroid/bluetooth/BluetoothAdapter;]
+      [173] invokevirtual #48
+        - Methodref [android/bluetooth/BluetoothAdapter.getBondedDevices ()Ljava/util/Set;]
+      [176] dup
+      [177] astore_1 v1
+      [178] invokeinterface #82
+        - InterfaceMethodref [java/util/Set.size ()I]
+      [183] ifle +79 (target=262)
+      [186] aload_0 v0
+      [187] ldc #5
+        - Integer [2131165184]
+      [189] invokevirtual #63
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.findViewById (I)Landroid/view/View;]
+      [192] iconst_0
+      [193] invokevirtual #57
+        - Methodref [android/view/View.setVisibility (I)V]
+      [196] aload_1 v1
+      [197] invokeinterface #81
+        - InterfaceMethodref [java/util/Set.iterator ()Ljava/util/Iterator;]
+      [202] astore_1 v1
+      [203] aload_1 v1
+      [204] invokeinterface #79
+        - InterfaceMethodref [java/util/Iterator.hasNext ()Z]
+      [209] ifeq +52 (target=261)
+      [212] aload_1 v1
+      [213] invokeinterface #80
+        - InterfaceMethodref [java/util/Iterator.next ()Ljava/lang/Object;]
+      [218] checkcast #18
+        - Class [android/bluetooth/BluetoothDevice]
+      [221] astore_2 v2
+      [222] aload_0 v0
+      [223] getfield #40
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.c Landroid/widget/ArrayAdapter;]
+      [226] new #35
+        - Class [java/lang/StringBuilder]
+      [229] dup
+      [230] invokespecial #76
+        - Methodref [java/lang/StringBuilder.<init> ()V]
+      [233] aload_2 v2
+      [234] invokevirtual #53
+        - Methodref [android/bluetooth/BluetoothDevice.getName ()Ljava/lang/String;]
+      [237] invokevirtual #77
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [240] ldc #10
+        - String [
+]
+      [242] invokevirtual #77
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [245] aload_2 v2
+      [246] invokevirtual #52
+        - Methodref [android/bluetooth/BluetoothDevice.getAddress ()Ljava/lang/String;]
+      [249] invokevirtual #77
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [252] invokevirtual #78
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [255] invokevirtual #59
+        - Methodref [android/widget/ArrayAdapter.add (Ljava/lang/Object;)V]
+      [258] goto -55 (target=203)
+      [261] return
+      [262] aload_0 v0
+      [263] invokevirtual #64
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.getResources ()Landroid/content/res/Resources;]
+      [266] ldc #4
+        - Integer [2130968598]
+      [268] invokevirtual #55
+        - Methodref [android/content/res/Resources.getText (I)Ljava/lang/CharSequence;]
+      [271] invokevirtual #75
+        - Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+      [274] astore_1 v1
+      [275] aload_0 v0
+      [276] getfield #40
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.c Landroid/widget/ArrayAdapter;]
+      [279] aload_1 v1
+      [280] invokevirtual #59
+        - Methodref [android/widget/ArrayAdapter.add (Ljava/lang/Object;)V]
+      [283] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 4):
+        - [203] Var: [a:de/widemeadows/android/bluetoothspptest/DeviceListActivity][a:android/os/Bundle][a:android/widget/Button][a:android/widget/ListView][a:android/widget/ListView][a:android/content/IntentFilter][a:java/util/Set][a:java/util/Iterator], Stack: 
+        - [261] Var: -1, Stack: (empty)
+        - [262] Var: ..., Stack: (empty)
+        - [283] Var: ..., Stack: (empty)
+  + Method:       onDestroy()V
+    Access flags: 0x4
+      = protected void onDestroy()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 28, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] invokespecial #46
+        - Methodref [android/app/Activity.onDestroy ()V]
+      [4] aload_0 v0
+      [5] getfield #39
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.b Landroid/bluetooth/BluetoothAdapter;]
+      [8] ifnull +11 (target=19)
+      [11] aload_0 v0
+      [12] getfield #39
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.b Landroid/bluetooth/BluetoothAdapter;]
+      [15] invokevirtual #47
+        - Methodref [android/bluetooth/BluetoothAdapter.cancelDiscovery ()Z]
+      [18] pop
+      [19] aload_0 v0
+      [20] aload_0 v0
+      [21] getfield #43
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.f Landroid/content/BroadcastReceiver;]
+      [24] invokevirtual #71
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.unregisterReceiver (Landroid/content/BroadcastReceiver;)V]
+      [27] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 1):
+        - [19] Var: ..., Stack: (empty)
+  + Method:       a(Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)V
+    Access flags: 0x1008
+      = static void a(de.widemeadows.android.bluetoothspptest.DeviceListActivity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 58, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] astore_0 v0
+      [2] ldc #11
+        - String [DeviceListActivity]
+      [4] ldc #15
+        - String [doDiscovery()]
+      [6] invokestatic #56
+        - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
+      [9] pop
+      [10] aload_0 v0
+      [11] iconst_1
+      [12] invokevirtual #68
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.setProgressBarIndeterminateVisibility (Z)V]
+      [15] aload_0 v0
+      [16] ldc #3
+        - Integer [2130968596]
+      [18] invokevirtual #70
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.setTitle (I)V]
+      [21] aload_0 v0
+      [22] ldc #7
+        - Integer [2131165186]
+      [24] invokevirtual #63
+        - Methodref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.findViewById (I)Landroid/view/View;]
+      [27] iconst_0
+      [28] invokevirtual #57
+        - Methodref [android/view/View.setVisibility (I)V]
+      [31] aload_0 v0
+      [32] getfield #39
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.b Landroid/bluetooth/BluetoothAdapter;]
+      [35] invokevirtual #50
+        - Methodref [android/bluetooth/BluetoothAdapter.isDiscovering ()Z]
+      [38] ifeq +11 (target=49)
+      [41] aload_0 v0
+      [42] getfield #39
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.b Landroid/bluetooth/BluetoothAdapter;]
+      [45] invokevirtual #47
+        - Methodref [android/bluetooth/BluetoothAdapter.cancelDiscovery ()Z]
+      [48] pop
+      [49] aload_0 v0
+      [50] getfield #39
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.b Landroid/bluetooth/BluetoothAdapter;]
+      [53] invokevirtual #51
+        - Methodref [android/bluetooth/BluetoothAdapter.startDiscovery ()Z]
+      [56] pop
+      [57] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       b(Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)Landroid/bluetooth/BluetoothAdapter;
+    Access flags: 0x1008
+      = static android.bluetooth.BluetoothAdapter b(de.widemeadows.android.bluetoothspptest.DeviceListActivity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #39
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.b Landroid/bluetooth/BluetoothAdapter;]
+      [4] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       c(Lde/widemeadows/android/bluetoothspptest/DeviceListActivity;)Landroid/widget/ArrayAdapter;
+    Access flags: 0x1008
+      = static android.widget.ArrayAdapter c(de.widemeadows.android.bluetoothspptest.DeviceListActivity)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #41
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.d Landroid/widget/ArrayAdapter;]
+      [4] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       <clinit>()V
+    Access flags: 0x8
+      = static void <clinit>()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 6, locals = 0, stack = 1):
+      [0] ldc #14
+        - String [device_address]
+      [2] putstatic #38
+        - Fieldref [de/widemeadows/android/bluetoothspptest/DeviceListActivity.a Ljava/lang/String;]
+      [5] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: de/widemeadows/android/bluetoothspptest/j
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x30
+    = final class de.widemeadows.android.bluetoothspptest.j extends java.lang.Object
+
+Interfaces (count = 1):
+  - Class [java/lang/Runnable]
+
+Constant Pool (count = 36):
+  - String [unnamed]
+  - Class [de/widemeadows/android/bluetoothspptest/d]
+  - Class [de/widemeadows/android/bluetoothspptest/i]
+  - Class [de/widemeadows/android/bluetoothspptest/j]
+  - Class [java/lang/Object]
+  - Class [java/lang/Runnable]
+  - Class [java/lang/String]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/j.a Ljava/lang/String;]
+  - Fieldref [de/widemeadows/android/bluetoothspptest/j.b Ljava/lang/String;]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.i ()Lde/widemeadows/android/bluetoothspptest/i;]
+  - Methodref [java/lang/Object.<init> ()V]
+  - InterfaceMethodref [de/widemeadows/android/bluetoothspptest/i.a (Ljava/lang/String;Ljava/lang/String;)V]
+  + NameAndType [<init> ()V]
+  + NameAndType [a (Ljava/lang/String;Ljava/lang/String;)V]
+  + NameAndType [a Ljava/lang/String;]
+  + NameAndType [b Ljava/lang/String;]
+  + NameAndType [i ()Lde/widemeadows/android/bluetoothspptest/i;]
+  + Utf8 [()Lde/widemeadows/android/bluetoothspptest/i;]
+  + Utf8 [()V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [StackMapTable]
+  + Utf8 [a]
+  + Utf8 [b]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/d]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/i]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/j]
+  + Utf8 [i]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/Runnable]
+  + Utf8 [java/lang/String]
+  + Utf8 [run]
+  + Utf8 [unnamed]
+
+Fields (count = 2):
+  + Field:        a Ljava/lang/String;
+    Access flags: 0x1002
+      = private java.lang.String a
+  + Field:        b Ljava/lang/String;
+    Access flags: 0x1002
+      = private java.lang.String b
+
+Methods (count = 2):
+  - Method:       <init>(Ljava/lang/String;Ljava/lang/String;)V
+    Access flags: 0x0
+      = j(java.lang.String,java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 15, locals = 3, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #8
+        - Fieldref [de/widemeadows/android/bluetoothspptest/j.a Ljava/lang/String;]
+      [5] aload_0 v0
+      [6] aload_2 v2
+      [7] putfield #9
+        - Fieldref [de/widemeadows/android/bluetoothspptest/j.b Ljava/lang/String;]
+      [10] aload_0 v0
+      [11] invokespecial #11
+        - Methodref [java/lang/Object.<init> ()V]
+      [14] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       run()V
+    Access flags: 0x11
+      = public final void run()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 29, locals = 1, stack = 3):
+      [0] invokestatic #10
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.i ()Lde/widemeadows/android/bluetoothspptest/i;]
+      [3] aload_0 v0
+      [4] getfield #8
+        - Fieldref [de/widemeadows/android/bluetoothspptest/j.a Ljava/lang/String;]
+      [7] ifnonnull +8 (target=15)
+      [10] ldc #1
+        - String [unnamed]
+      [12] goto +7 (target=19)
+      [15] aload_0 v0
+      [16] getfield #8
+        - Fieldref [de/widemeadows/android/bluetoothspptest/j.a Ljava/lang/String;]
+      [19] aload_0 v0
+      [20] getfield #9
+        - Fieldref [de/widemeadows/android/bluetoothspptest/j.b Ljava/lang/String;]
+      [23] invokeinterface #12
+        - InterfaceMethodref [de/widemeadows/android/bluetoothspptest/i.a (Ljava/lang/String;Ljava/lang/String;)V]
+      [28] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [15] Var: ..., Stack: [a:de/widemeadows/android/bluetoothspptest/i]
+        - [19] Var: [a:de/widemeadows/android/bluetoothspptest/j], Stack: [a:de/widemeadows/android/bluetoothspptest/i][a:java/lang/String]
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: de/widemeadows/android/bluetoothspptest/k
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x30
+    = final class de.widemeadows.android.bluetoothspptest.k extends java.lang.Object
+
+Interfaces (count = 1):
+  - Class [java/lang/Runnable]
+
+Constant Pool (count = 24):
+  - Class [de/widemeadows/android/bluetoothspptest/d]
+  - Class [de/widemeadows/android/bluetoothspptest/i]
+  - Class [de/widemeadows/android/bluetoothspptest/k]
+  - Class [java/lang/Object]
+  - Class [java/lang/Runnable]
+  - Methodref [de/widemeadows/android/bluetoothspptest/d.i ()Lde/widemeadows/android/bluetoothspptest/i;]
+  - Methodref [java/lang/Object.<init> ()V]
+  - InterfaceMethodref [de/widemeadows/android/bluetoothspptest/i.d ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [d ()V]
+  + NameAndType [i ()Lde/widemeadows/android/bluetoothspptest/i;]
+  + Utf8 [()Lde/widemeadows/android/bluetoothspptest/i;]
+  + Utf8 [()V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [d]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/d]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/i]
+  + Utf8 [de/widemeadows/android/bluetoothspptest/k]
+  + Utf8 [i]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/Runnable]
+  + Utf8 [run]
+
+Fields (count = 0):
+
+Methods (count = 2):
+  - Method:       <init>()V
+    Access flags: 0x0
+      = k()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #7
+        - Methodref [java/lang/Object.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       run()V
+    Access flags: 0x11
+      = public final void run()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 9, locals = 1, stack = 1):
+      [0] invokestatic #6
+        - Methodref [de/widemeadows/android/bluetoothspptest/d.i ()Lde/widemeadows/android/bluetoothspptest/i;]
+      [3] invokeinterface #8
+        - InterfaceMethodref [de/widemeadows/android/bluetoothspptest/i.d ()V]
+      [8] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
