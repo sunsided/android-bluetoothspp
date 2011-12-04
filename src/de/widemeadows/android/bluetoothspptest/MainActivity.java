@@ -24,6 +24,7 @@ public class MainActivity extends Activity implements SensorEventListener, IBlue
 	 * Ausgabeformat für Dezimalzahlen
 	 */
 	@NotNull
+	// TODO: private static final DecimalFormat df = (DecimalFormat)DecimalFormat.getNumberInstance(Locale.US);
 	private static final DecimalFormat df = new DecimalFormat(",##0.00000");
 
 	/**
